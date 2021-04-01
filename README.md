@@ -1,6 +1,8 @@
-# HSP_GruppeF_Sprint1
+Woche 1
 
-Bis zum 07.04.21 Anforderungen an das Programm in einem Textdokument zusammenfassen.
+Bis zum 07.04.21:
+
+Anforderungen an das Programm in einem Textdokument zusammenfassen.
 Gerne im Repo hochladen.
 
 Sich für objektorientierte Programmierung vorbereiten:
