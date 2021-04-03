@@ -1,0 +1,24 @@
+Konsole Abfrage:
+
+- Material
+
+- Schraubenkopf:
+	- Art des Kopfes
+	- Abmaße
+
+- Schraubenhals:
+	- Länge
+	- Radius
+
+- Gewinde:
+	- Länge
+	- Gewindeart
+	- Steigung
+
+- "Schraube zum Warenkorb hinzufügen?"
+
+Konsole Ausgabe:
+
+- Streckgrenze
+
+- Schraube wurde zum Warenkorb hinzugefügt
