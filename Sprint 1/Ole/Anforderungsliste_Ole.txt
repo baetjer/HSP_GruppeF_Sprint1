@@ -63,3 +63,6 @@ Gewinde:
 - Liste mit versch. Gewindearten
 - links oder rechts
 - Länge usw. variabel
+
+
+ye
