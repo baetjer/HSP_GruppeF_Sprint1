@@ -10,6 +10,11 @@ namespace Sprint1
     {
         static void Main(string[] args)
         {
+            Schraubenkopf schraubenkopf = new Schraubenkopf();
+
+            Console.WriteLine(schraubenkopf.Innensechskant);
+
+            Console.ReadKey();
         }
     }
 }
