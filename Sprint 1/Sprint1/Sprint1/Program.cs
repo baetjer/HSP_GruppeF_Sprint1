@@ -10,14 +10,24 @@ namespace Sprint1
     {
         static void Main(string[] args)
         {
+            //Schraubenkopf
             Schraubenkopf sk = new Schraubenkopf();
             sk.Schraubenkopf_Array();
             sk.Schraubenkopf_Ausgabe();
 
+            //Schraubenschaft
             Schraubenschaft ss = new Schraubenschaft();
             ss.Schraubenschaft_Array();
             ss.Schraubenschaft_Ausgabe();
 
+            //Warenkorb
+            Console.WriteLine("Ihre Auswahl lautet:");
+            sk.Schraubenkopf_Warenkorb();
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine("Auswahl bestätigen?");
+            Warenkorb wk = new Warenkorb();
+            wk.Warenkorb_Array();
+            wk.Warenkorb_Ausgabe();
 
             Console.ReadKey();
         }
