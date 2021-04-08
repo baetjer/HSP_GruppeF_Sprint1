@@ -14,6 +14,9 @@ namespace Sprint1
             sk.Schraubenkopf_Array();
             sk.Schraubenkopf_Ausgabe();
 
+            Schraubenschaft ss = new Schraubenschaft();
+            ss.Schraubenschaft_Array();
+            ss.Schraubenschaft_Ausgabe();
 
 
             Console.ReadKey();
