@@ -40,6 +40,7 @@ namespace Sprint1
 
             string output_schraubenschaft = getSchraubenschaft_Array(input_schraubenschaft);
 
+            Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("Sie haben sich für die Länge {0} entschieden.", output_schraubenschaft);
             Console.WriteLine("--------------------------------------------------");
         }
