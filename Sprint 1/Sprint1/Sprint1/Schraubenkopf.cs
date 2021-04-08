@@ -8,6 +8,7 @@ namespace Sprint1
 {
     public class Schraubenkopf
     {
+        int input = 0;
         int schraubenkopf_zahl1;
 
         string[] schraubenkopf_array = new string[2] { "Innensechskant", "Sechskant" };
@@ -42,6 +43,12 @@ namespace Sprint1
 
             Console.WriteLine("Sie haben sich für {0} entschieden.", output_schraubenkopf);
             Console.WriteLine("--------------------------------------------------");
+        }
+
+        public void Schraubenkopf_Warenkorb()
+        {
+            string output = getSchraubenkopf_Array(input);
+            Console.WriteLine(output);
         }
     }
 }
