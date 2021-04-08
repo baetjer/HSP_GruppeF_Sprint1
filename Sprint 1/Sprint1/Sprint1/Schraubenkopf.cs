@@ -41,6 +41,7 @@ namespace Sprint1
 
             string output_schraubenkopf = getSchraubenkopf_Array(input_schraubenkopf);
 
+            Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("Sie haben sich für {0} entschieden.", output_schraubenkopf);
             Console.WriteLine("--------------------------------------------------");
         }
