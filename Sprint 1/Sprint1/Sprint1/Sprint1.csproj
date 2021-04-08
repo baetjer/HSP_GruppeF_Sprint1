@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Schraubenkopf.cs" />
-    <Compile Include="Schraubenhals.cs" />
+    <Compile Include="Schraubenschaft.cs" />
     <Compile Include="Gewinde.cs" />
     <Compile Include="Festigkeitsklasse.cs" />
     <Compile Include="Program.cs" />
