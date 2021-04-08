@@ -10,9 +10,17 @@ namespace Sprint1
     {
         static void Main(string[] args)
         {
-            Schraubenkopf schraubenkopf = new Schraubenkopf();
+            Console.WriteLine("Bitte wählen Sie einen Schraubenkopf aus:");
 
-            Console.WriteLine(schraubenkopf.Innensechskant);
+            Schraubenkopf sk = new Schraubenkopf();
+            sk.Schraubenkopf_Array();
+
+            int input_schraubenkopf = Convert.ToInt32(Console.ReadLine());
+            string output_schraubenkopf = sk.getSchraubenkopf_Array(input_schraubenkopf);
+
+            Console.WriteLine("Sie haben sich für {0} entschieden.", output_schraubenkopf);
+
+
 
             Console.ReadKey();
         }
