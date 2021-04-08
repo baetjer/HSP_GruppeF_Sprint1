@@ -8,8 +8,22 @@ namespace Sprint1
 {
     public class Schraubenkopf
     {
-        string innensechskant = "Innensechskant";
+        int schraubenkopf_zahl1;
 
-        public string Innensechskant { get => innensechskant; set => innensechskant = value; }
+        string[] schraubenkopf_array = new string[2] { "Innensechskant", "Sechskant" };
+
+        public void Schraubenkopf_Array()
+        {
+            foreach (string i in schraubenkopf_array)
+            {
+                Console.WriteLine(schraubenkopf_zahl1 + " " + i);
+                schraubenkopf_zahl1 += 1;
+            }
+        }
+
+        public string getSchraubenkopf_Array(int i)
+        {
+            return schraubenkopf_array[i];
+        }
     }
 }
