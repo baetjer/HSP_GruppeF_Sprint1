@@ -14,6 +14,8 @@ namespace Sprint1
 
         public void Schraubenkopf_Array()
         {
+            Console.WriteLine("Bitte wählen Sie einen Schraubenkopf aus:");
+
             foreach (string i in schraubenkopf_array)
             {
                 Console.WriteLine(schraubenkopf_zahl1 + " " + i);
@@ -24,6 +26,21 @@ namespace Sprint1
         public string getSchraubenkopf_Array(int i)
         {
             return schraubenkopf_array[i];
+        }
+
+        public void Schraubenkopf_Ausgabe()
+        {
+            int input_schraubenkopf = Convert.ToInt32(Console.ReadLine());
+
+            while ((input_schraubenkopf != 0) && (input_schraubenkopf != 1))
+            {
+                Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
+                input_schraubenkopf = Convert.ToInt32(Console.ReadLine());
+            }
+
+            string output_schraubenkopf = getSchraubenkopf_Array(input_schraubenkopf);
+
+            Console.WriteLine("Sie haben sich für {0} entschieden.", output_schraubenkopf);
         }
     }
 }
