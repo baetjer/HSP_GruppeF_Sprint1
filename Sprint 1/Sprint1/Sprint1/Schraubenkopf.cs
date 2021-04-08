@@ -18,7 +18,7 @@ namespace Sprint1
 
             foreach (string i in schraubenkopf_array)
             {
-                Console.WriteLine(schraubenkopf_zahl1 + " " + i);
+                Console.WriteLine(schraubenkopf_zahl1 + " = " + i);
                 schraubenkopf_zahl1 += 1;
             }
         }
@@ -41,6 +41,7 @@ namespace Sprint1
             string output_schraubenkopf = getSchraubenkopf_Array(input_schraubenkopf);
 
             Console.WriteLine("Sie haben sich für {0} entschieden.", output_schraubenkopf);
+            Console.WriteLine("--------------------------------------------------");
         }
     }
 }
