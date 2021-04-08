@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Sprint1
 {
     class Festigkeitsklasse
-    {
+    { 
+
     }
 }
