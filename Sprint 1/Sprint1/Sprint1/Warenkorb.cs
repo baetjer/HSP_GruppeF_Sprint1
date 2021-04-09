@@ -28,17 +28,17 @@ namespace Sprint1
 
         public void Warenkorb_Ausgabe()
         {
-            int input = Convert.ToInt32(Console.ReadLine());
+            int input_warenkorb = Convert.ToInt32(Console.ReadLine());
 
-            while ((input != 0) && (input != 1))
+            while ((input_warenkorb != 0) && (input_warenkorb != 1))
             {
                 Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
-                input = Convert.ToInt32(Console.ReadLine());
+                input_warenkorb = Convert.ToInt32(Console.ReadLine());
             }
 
-            string output = getWarenkorb_Array(input);
+            string output_warenkorb = getWarenkorb_Array(input_warenkorb);
 
-            if (input == 0)
+            if (input_warenkorb == 0)
             {
                 Console.WriteLine("--------------------------------------------------");
                 Console.WriteLine("Ihre Auswahl wurde gelöscht.");
