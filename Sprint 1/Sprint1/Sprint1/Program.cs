@@ -20,6 +20,11 @@ namespace Sprint1
             ss.Schraubenschaft_Array();
             ss.Schraubenschaft_Ausgabe();
 
+            // Gwinde
+            Gewinde gp = new Gewinde();
+            gp.Gewinde_Array();
+            gp.Gewinde_Ausgabe();
+
             //Warenkorb
             Console.WriteLine("Ihre Auswahl lautet:");
             sk.Schraubenkopf_Warenkorb();
