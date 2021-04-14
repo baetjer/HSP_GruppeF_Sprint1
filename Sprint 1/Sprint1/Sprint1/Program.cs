@@ -20,7 +20,7 @@ namespace Sprint1
             ss.Schraubenschaft_Array();
             ss.Schraubenschaft_Ausgabe();
 
-            // Gwinde
+            // Gewinde
             Gewinde gp = new Gewinde();
             gp.Gewinde_Array();
             gp.Gewinde_Ausgabe();
@@ -28,12 +28,14 @@ namespace Sprint1
             //Warenkorb
             Console.WriteLine("Ihre Auswahl lautet:");
             sk.Schraubenkopf_Warenkorb();
+            ss.Schraubenschaft_Warenkorb();
+            gp.Gewinde_Warenkorb();
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("Auswahl bestätigen?");
             Warenkorb wk = new Warenkorb();
             wk.Warenkorb_Array();
             wk.Warenkorb_Ausgabe();
-
+            
             Console.ReadKey();
         }
     }
