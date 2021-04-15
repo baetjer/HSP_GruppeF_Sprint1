@@ -13,7 +13,9 @@ namespace Sprint1
         int gewinde_zahl1;
 
         //string[,] gewinde_array2D = new string[,] { {"2mm","3mm"}, { "3.5mm", "4mm" }, { "4.5mm", "5mm" }, { "5.5mm", "6mm" }, { "6.5mm", "7mm" } };
-        string[] gewinde_array = new string[10] { "2mm","3mm",  "3.5mm", "4mm" ,  "4.5mm", "5mm" ,  "5.5mm", "6mm" , "6.5mm", "7mm" };
+        string[] gewinde_array = new string[10] { "M 3","3mm",  "3.5mm", "4mm" ,  "4.5mm", "5mm" ,  "5.5mm", "6mm" , "6.5mm", "7mm" };
+        int[] gewinde_daten = new int[] { 3,};
+
         public void Gewinde_Array()
         {
             Console.WriteLine("Bitte wählen Sie ein Gewinde aus:");
