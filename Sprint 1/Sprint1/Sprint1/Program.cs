@@ -25,6 +25,13 @@ namespace Sprint1
             gp.Gewinde_Array();
             gp.Gewinde_Ausgabe();
 
+            // Festigkeitsklasse
+            Festigkeitsklasse fk = new Festigkeitsklasse();
+            fk.Festigkeit_Array();
+            fk.Festigkeit_Ausgabe();
+            fk.Festigkeit_Spannung();
+
+
             //Warenkorb
             Console.WriteLine("Ihre Auswahl lautet:");
             sk.Schraubenkopf_Warenkorb();
