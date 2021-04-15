@@ -44,7 +44,7 @@ namespace Sprint1
                 Console.WriteLine("Ihre Auswahl wurde gelöscht.");
             }
 
-            else
+            else if (input_warenkorb == 1)
             {
                 Console.WriteLine("--------------------------------------------------");
                 Console.WriteLine("Ihre Auswahl wurde zum Warenkorb hinzugefügt.");
