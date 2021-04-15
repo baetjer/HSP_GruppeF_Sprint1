@@ -37,24 +37,24 @@ namespace Sprint1
             return festigkeit_klassen[i];
         }
 
-        public string getFestigkeit_Spannung5_8(int i)
+        public string getFestigkeit_Spannung5_8(int j)
         {
-            return festigkeit_spannung5_8[i];
+            return festigkeit_spannung5_8[j];
         }
 
-        public string getFestigkeit_Spannung8_8(int i)
+        public string getFestigkeit_Spannung8_8(int j)
         {
-            return festigkeit_spannung8_8[i];
+            return festigkeit_spannung8_8[j];
         }
 
-        public string getFestigkeit_Spannung9_8(int i)
+        public string getFestigkeit_Spannung9_8(int j)
         {
-            return festigkeit_spannung9_8[i];
+            return festigkeit_spannung9_8[j];
         }
 
-        public string getFestigkeit_Spannung10_8(int i)
+        public string getFestigkeit_Spannung10_8(int j)
         {
-            return festigkeit_spannung10_8[i];
+            return festigkeit_spannung10_8[j];
         }
 
         public void Festigkeit_Ausgabe()
@@ -76,48 +76,6 @@ namespace Sprint1
 
         public void Festigkeit_Spannung()
         {
-
-            if (input_festigkeit1 == 0)
-            {
-                foreach (string i in festigkeit_spannung5_8)
-                {
-                    Console.WriteLine(festigkeitszahl2 + " = " + i);
-                    festigkeitszahl2 += 1;
-                }
-
-
-            }
-
-            else if (input_festigkeit1 == 1)
-            {
-                foreach (string i in festigkeit_spannung8_8)
-                {
-                    Console.WriteLine(festigkeitszahl2 + " = " + i);
-                    festigkeitszahl2 += 1;
-                }
-                output_festigkeit2 = getFestigkeit_Spannung8_8(input_festigkeit2);
-            }
-
-            else if (input_festigkeit1 == 2)
-            {
-                foreach (string i in festigkeit_spannung9_8)
-                {
-                    Console.WriteLine(festigkeitszahl2 + " = " + i);
-                    festigkeitszahl2 += 1;
-                }
-                output_festigkeit2 = getFestigkeit_Spannung9_8(input_festigkeit2);
-            }
-
-            else if (input_festigkeit1 == 3)
-            {
-                foreach (string i in festigkeit_spannung10_8)
-                {
-                    Console.WriteLine(festigkeitszahl2 + " = " + i);
-                    festigkeitszahl2 += 1;
-                }
-                output_festigkeit2 = getFestigkeit_Spannung10_8(input_festigkeit2);
-            }
-
             input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
 
             while ((input_festigkeit2 != 0) && (input_festigkeit2 != 1))
@@ -125,6 +83,48 @@ namespace Sprint1
                 Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
                 input_festigkeit1 = Convert.ToInt32(Console.ReadLine());
             }
+
+
+            if (input_festigkeit1 == 0)
+            {
+                foreach (string j in festigkeit_spannung5_8)
+                {
+                    Console.WriteLine(festigkeitszahl2 + " = " + j);
+                    festigkeitszahl2 += 1;
+                }
+                output_festigkeit2 = getFestigkeit_Spannung8_8(input_festigkeit2);
+            }
+
+            else if (input_festigkeit1 == 1)
+            {
+                foreach (string j in festigkeit_spannung8_8)
+                {
+                    Console.WriteLine(festigkeitszahl2 + " = " + j);
+                    festigkeitszahl2 += 1;
+                }
+                output_festigkeit2 = getFestigkeit_Spannung8_8(input_festigkeit2);
+            }
+
+            else if (input_festigkeit1 == 2)
+            {
+                foreach (string j in festigkeit_spannung9_8)
+                {
+                    Console.WriteLine(festigkeitszahl2 + " = " + j);
+                    festigkeitszahl2 += 1;
+                }
+                output_festigkeit2 = getFestigkeit_Spannung9_8(input_festigkeit2);
+            }
+
+            else if (input_festigkeit1 == 3)
+            {
+                foreach (string j in festigkeit_spannung10_8)
+                {
+                    Console.WriteLine(festigkeitszahl2 + " = " + j);
+                    festigkeitszahl2 += 1;
+                }
+                output_festigkeit2 = getFestigkeit_Spannung10_8(input_festigkeit2);
+            }
+
 
             Console.WriteLine(output_festigkeit2);
         }
