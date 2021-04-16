@@ -9,8 +9,8 @@ namespace Sprint1
     class Schraubenschaft
     {
         int input_schraubenschaft = 0;
-        int output_schraubenschaft;
-        int schraubenschaft_zahl1;
+        int output_schraubenschaft = 0;
+        int schraubenschaft_zahl1 = 0;
 
         int[] schraubenschaft_array = new int[5] {10, 16, 20, 30, 40};
 
