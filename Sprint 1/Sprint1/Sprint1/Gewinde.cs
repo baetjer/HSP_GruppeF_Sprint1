@@ -9,8 +9,8 @@ namespace Sprint1
     class Gewinde
     {
         int input_gewinde = 0;
-        int output_gewinde;
-        int gewinde_zahl1;
+        int output_gewinde = 0;
+        int gewinde_zahl1 = 0;
 
         //string[,] gewinde_array2D = new string[,] { {"2mm","3mm"}, { "3.5mm", "4mm" }, { "4.5mm", "5mm" }, { "5.5mm", "6mm" }, { "6.5mm", "7mm" } };
         int[] gewinde_array = new int[12] {3, 4, 5, 6, 8, 10, 12, 14, 16, 20, 24, 30};
