@@ -21,7 +21,7 @@ namespace Sprint1
             foreach (string i in schraubenkopf_array)
             {
                 Console.WriteLine(schraubenkopf_zahl1 + " = " + i);
-                schraubenkopf_zahl1 += 1;
+                schraubenkopf_zahl1++;
             }
         }
 
