@@ -16,7 +16,7 @@ namespace Sprint1
             foreach (string i in warenkorb_array)
             {
                 Console.WriteLine(warenkorb_zahl1 + " = " + i);
-                warenkorb_zahl1 += 1;
+                warenkorb_zahl1++;
             }
         }
 
