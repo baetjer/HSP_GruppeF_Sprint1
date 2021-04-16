@@ -9,7 +9,7 @@ namespace Sprint1
     class Festigkeitsklasse
     {
         int festigkeitzahl1 = 0;
-        int festigkeitszahl2 = 0;
+        int festigkeitzahl2 = 0;
         int input_festigkeit1 = 0;
         int input_festigkeit2 = 0;
         string output_festigkeit1;
@@ -81,8 +81,8 @@ namespace Sprint1
             {
                 foreach (string j in festigkeit_spannung5_8)
                 {
-                    Console.WriteLine(festigkeitszahl2 + " = " + j);
-                    festigkeitszahl2 += 1;
+                    Console.WriteLine(festigkeitzahl2 + " = " + j);
+                    festigkeitzahl2 += 1;
                 }
 
                 input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
@@ -100,8 +100,8 @@ namespace Sprint1
             {
                 foreach (string j in festigkeit_spannung8_8)
                 {
-                    Console.WriteLine(festigkeitszahl2 + " = " + j);
-                    festigkeitszahl2 += 1;
+                    Console.WriteLine(festigkeitzahl2 + " = " + j);
+                    festigkeitzahl2 += 1;
                 }
                 
                 input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
@@ -119,8 +119,8 @@ namespace Sprint1
             {
                 foreach (string j in festigkeit_spannung9_8)
                 {
-                    Console.WriteLine(festigkeitszahl2 + " = " + j);
-                    festigkeitszahl2 += 1;
+                    Console.WriteLine(festigkeitzahl2 + " = " + j);
+                    festigkeitzahl2 += 1;
                 }
                 
                 input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
@@ -138,8 +138,8 @@ namespace Sprint1
             {
                 foreach (string j in festigkeit_spannung10_8)
                 {
-                    Console.WriteLine(festigkeitszahl2 + " = " + j);
-                    festigkeitszahl2 += 1;
+                    Console.WriteLine(festigkeitzahl2 + " = " + j);
+                    festigkeitzahl2 += 1;
                 }
 
                 input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
