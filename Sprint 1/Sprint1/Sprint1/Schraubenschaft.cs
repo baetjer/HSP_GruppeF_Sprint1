@@ -9,23 +9,23 @@ namespace Sprint1
     class Schraubenschaft
     {
         int input_schraubenschaft = 0;
-        string output_schraubenschaft;
+        int output_schraubenschaft;
         int schraubenschaft_zahl1;
 
-        string[] schraubenschaft_array = new string[5] { "10mm", "16mm", "20mm", "30mm", "40mm" };
+        int[] schraubenschaft_array = new int[5] {10, 16, 20, 30, 40};
 
         public void Schraubenschaft_Array()
         {
             Console.WriteLine("Bitte wählen Sie eine Schaftlänge aus:");
 
-            foreach (string i in schraubenschaft_array)
+            foreach (int i in schraubenschaft_array)
             {
-                Console.WriteLine(schraubenschaft_zahl1 + " = " + i);
+                Console.WriteLine(schraubenschaft_zahl1 + " = " + i + "mm");
                 schraubenschaft_zahl1 += 1;
             }
         }
         
-        public string getSchraubenschaft_Array(int i)
+        public int getSchraubenschaft_Array(int i)
         {
             return schraubenschaft_array[i];
         }
@@ -43,13 +43,13 @@ namespace Sprint1
             output_schraubenschaft = getSchraubenschaft_Array(input_schraubenschaft);
 
             Console.WriteLine("--------------------------------------------------");
-            Console.WriteLine("Sie haben sich für die Länge {0} entschieden.", output_schraubenschaft);
+            Console.WriteLine("Sie haben sich für die Länge {0} entschieden.", output_schraubenschaft + "mm");
             Console.WriteLine("--------------------------------------------------");
         }
 
         public void Schraubenschaft_Warenkorb()
         {
-            Console.WriteLine("Schraubenschaftlänge: " + output_schraubenschaft);
+            Console.WriteLine("Schraubenschaftlänge: " + output_schraubenschaft + "mm");
         }
     }
 }
