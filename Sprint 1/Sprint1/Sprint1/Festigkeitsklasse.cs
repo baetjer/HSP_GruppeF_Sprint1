@@ -28,7 +28,7 @@ namespace Sprint1
             foreach (string i in festigkeit_klassen)
             {
                 Console.WriteLine(festigkeitzahl1 + " = " + i);
-                festigkeitzahl1 += 1;
+                festigkeitzahl1 ++;
             }
         }
 
@@ -82,7 +82,7 @@ namespace Sprint1
                 foreach (string j in festigkeit_spannung5_8)
                 {
                     Console.WriteLine(festigkeitzahl2 + " = " + j);
-                    festigkeitzahl2 += 1;
+                    festigkeitzahl2++;
                 }
 
                 input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
@@ -101,7 +101,7 @@ namespace Sprint1
                 foreach (string j in festigkeit_spannung8_8)
                 {
                     Console.WriteLine(festigkeitzahl2 + " = " + j);
-                    festigkeitzahl2 += 1;
+                    festigkeitzahl2++;
                 }
                 
                 input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
@@ -120,7 +120,7 @@ namespace Sprint1
                 foreach (string j in festigkeit_spannung9_8)
                 {
                     Console.WriteLine(festigkeitzahl2 + " = " + j);
-                    festigkeitzahl2 += 1;
+                    festigkeitzahl2++;
                 }
                 
                 input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
@@ -139,7 +139,7 @@ namespace Sprint1
                 foreach (string j in festigkeit_spannung10_8)
                 {
                     Console.WriteLine(festigkeitzahl2 + " = " + j);
-                    festigkeitzahl2 += 1;
+                    festigkeitzahl2++;
                 }
 
                 input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
