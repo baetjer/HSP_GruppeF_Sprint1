@@ -22,7 +22,7 @@ namespace Sprint1
             foreach (int i in gewinde_array)
             {
                 Console.WriteLine(gewinde_zahl1 + " = " + "M{0}", i);
-                gewinde_zahl1 += 1;
+                gewinde_zahl1++;
             }
         }
 
