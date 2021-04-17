@@ -58,6 +58,7 @@ namespace Sprint1
             double flankendurchmesser = 0;
             double steigung = 0;
             double steigungswinkel = 0;
+            double platzhalter = 0;
 
             Console.WriteLine("Geben Sie die Gewindesteigung ein:");
             string input_gewinde2 = Console.ReadLine();
@@ -69,10 +70,11 @@ namespace Sprint1
             string input_gewinde3 = Console.ReadLine();
             flankendurchmesser = Convert.ToDouble(input_gewinde3);
 
-            steigungswinkel = Math.Atan(steigung / (flankendurchmesser * (Math.PI)));
+            platzhalter = Math.Atan(steigung / (flankendurchmesser * (Math.PI)));
+            steigungswinkel = (180 / Math.PI) * platzhalter;
 
             Console.WriteLine("--------------------------------------------------");
-            Console.WriteLine("Der Steigungswinkel lautet {0}°", steigungswinkel);
+            Console.WriteLine("Der Steigungswinkel lautet {0}°", Math.Round(steigungswinkel, 2));
             Console.WriteLine("--------------------------------------------------");
         }
     }
