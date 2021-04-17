@@ -52,5 +52,28 @@ namespace Sprint1
         {
             Console.WriteLine("Gewindedurchmesser: M{0}", output_gewinde);
         }
+
+        public void Gewinde_Steigung()
+        {
+            double flankendurchmesser = 0;
+            double steigung = 0;
+            double steigungswinkel = 0;
+
+            Console.WriteLine("Geben Sie die Gewindesteigung ein:");
+            string input_gewinde2 = Console.ReadLine();
+            steigung = Convert.ToDouble(input_gewinde2);
+
+            Console.WriteLine("--------------------------------------------------");
+
+            Console.WriteLine("Geben Sie den Flankendurchmesser ein:");
+            string input_gewinde3 = Console.ReadLine();
+            flankendurchmesser = Convert.ToDouble(input_gewinde3);
+
+            steigungswinkel = Math.Atan(steigung / (flankendurchmesser * (Math.PI)));
+
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine("Der Steigungswinkel lautet {0}°", steigungswinkel);
+            Console.WriteLine("--------------------------------------------------");
+        }
     }
 }
