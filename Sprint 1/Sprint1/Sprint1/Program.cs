@@ -24,6 +24,7 @@ namespace Sprint1
             Gewinde gp = new Gewinde();
             gp.Gewinde_Array();
             gp.Gewinde_Ausgabe();
+            gp.Gewinde_Steigung();
 
             // Festigkeitsklasse
             Festigkeitsklasse fk = new Festigkeitsklasse();
