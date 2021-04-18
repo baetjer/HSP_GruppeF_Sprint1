@@ -38,7 +38,7 @@ namespace Sprint1
             sk.Schraubenkopf_Warenkorb();
             ss.Schraubenschaft_Warenkorb();
             gp.Gewinde_Warenkorb();
-            gp.Steigungswinkel_Warenkorb();
+            gp.Gewinde_Steigung_Warenkorb();
             fk.Festigkeit_Warenkorb();
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("Auswahl bestätigen?");
