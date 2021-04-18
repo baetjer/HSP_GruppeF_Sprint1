@@ -157,6 +157,11 @@ namespace Sprint1
             Console.WriteLine(output_festigkeit2);
         }
 
+        public void Festigkeit_Warenkorb()
+        {
+            Console.WriteLine("Festigkeitsklasse: {0} | {1}", output_festigkeit1, output_festigkeit2);
+        }
+
         //static void Main(string[] args)
         //{
         //  string[,] FestigkeitsklassenTabelle = new string[4, 3];
