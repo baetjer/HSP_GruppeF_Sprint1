@@ -112,7 +112,7 @@ namespace Sprint1
             }
         }
 
-        public void Steigungswinkel_Warenkorb()
+        public void Gewinde_Steigung_Warenkorb()
         {
             Console.WriteLine("Gewindesteigungswinkel: {0}°", Math.Round(steigungswinkel, 2));
         }
