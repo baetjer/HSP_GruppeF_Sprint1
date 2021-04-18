@@ -38,6 +38,8 @@ namespace Sprint1
             sk.Schraubenkopf_Warenkorb();
             ss.Schraubenschaft_Warenkorb();
             gp.Gewinde_Warenkorb();
+            gp.Steigungswinkel_Warenkorb();
+            fk.Festigkeit_Warenkorb();
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("Auswahl bestätigen?");
             Warenkorb wk = new Warenkorb();
