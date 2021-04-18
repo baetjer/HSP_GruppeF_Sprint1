@@ -57,6 +57,7 @@ namespace Sprint1
         //Gewinde anpassen
         string[] gewinde_entscheidung = new string[2] { "nein", "ja" };
         double steigungswinkel = 0;
+        int input_gewinde4 = 0;
 
         public string getGewinde_Entscheidung(int i)
         {
@@ -69,7 +70,6 @@ namespace Sprint1
             double steigung = 0;
             double platzhalter = 0;
             int gewindezahl2 = 0;
-            int input_gewinde4 = 0;
 
             Console.WriteLine("Möchten Sie ihr Gewinde bearbeiten?");
             foreach (string i in gewinde_entscheidung)
@@ -107,14 +107,22 @@ namespace Sprint1
                 Console.WriteLine("--------------------------------------------------");
             }
 
-            else
+            else if (input_gewinde4 == 0)
             {
             }
         }
 
         public void Gewinde_Steigung_Warenkorb()
         {
-            Console.WriteLine("Gewindesteigungswinkel: {0}°", Math.Round(steigungswinkel, 2));
+            if (input_gewinde4 == 1)
+            {
+                Console.WriteLine("Gewindesteigungswinkel: {0}°", Math.Round(steigungswinkel, 2));
+            }
+
+            else
+            {
+
+            }
         }
     }
 }
