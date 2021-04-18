@@ -14,6 +14,7 @@ namespace Sprint1
             Schraubenkopf sk = new Schraubenkopf();
             sk.Schraubenkopf_Array();
             sk.Schraubenkopf_Ausgabe();
+            sk.Schraubenkopf_Erzeugung();
 
             //Schraubenschaft
             Schraubenschaft ss = new Schraubenschaft();
