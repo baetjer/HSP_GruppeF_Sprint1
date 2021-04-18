@@ -53,29 +53,68 @@ namespace Sprint1
             Console.WriteLine("Gewindedurchmesser: M{0}", output_gewinde);
         }
 
+
+        //Gewinde anpassen
+        string[] gewinde_entscheidung = new string[2] { "nein", "ja" };
+        double steigungswinkel = 0;
+
+        public string getGewinde_Entscheidung(int i)
+        {
+            return gewinde_entscheidung[i];
+        }
+
         public void Gewinde_Steigung()
         {
             double flankendurchmesser = 0;
             double steigung = 0;
-            double steigungswinkel = 0;
             double platzhalter = 0;
+            int gewindezahl2 = 0;
+            int input_gewinde4 = 0;
 
-            Console.WriteLine("Geben Sie die Gewindesteigung ein:");
-            string input_gewinde2 = Console.ReadLine();
-            steigung = Convert.ToDouble(input_gewinde2);
+            Console.WriteLine("Möchten Sie ihr Gewinde bearbeiten?");
+            foreach (string i in gewinde_entscheidung)
+            {
+                Console.WriteLine(gewindezahl2 + " = " + i);
+                gewindezahl2++;
+            }
+            input_gewinde4 = Convert.ToInt32(Console.ReadLine());
+
+            while ((input_gewinde4 != 0) && (input_gewinde4 != 1))
+            {
+                Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
+                input_gewinde4 = Convert.ToInt32(Console.ReadLine());
+            }
 
             Console.WriteLine("--------------------------------------------------");
 
-            Console.WriteLine("Geben Sie den Flankendurchmesser ein:");
-            string input_gewinde3 = Console.ReadLine();
-            flankendurchmesser = Convert.ToDouble(input_gewinde3);
+            if (input_gewinde4 == 1)
+            {
+                Console.WriteLine("Geben Sie die Gewindesteigung ein:");
+                string input_gewinde2 = Console.ReadLine();
+                steigung = Convert.ToDouble(input_gewinde2);
 
-            platzhalter = Math.Atan(steigung / (flankendurchmesser * (Math.PI)));
-            steigungswinkel = (180 / Math.PI) * platzhalter;
+                Console.WriteLine("--------------------------------------------------");
 
-            Console.WriteLine("--------------------------------------------------");
-            Console.WriteLine("Der Steigungswinkel lautet {0}°", Math.Round(steigungswinkel, 2));
-            Console.WriteLine("--------------------------------------------------");
+                Console.WriteLine("Geben Sie den Flankendurchmesser ein:");
+                string input_gewinde3 = Console.ReadLine();
+                flankendurchmesser = Convert.ToDouble(input_gewinde3);
+
+                platzhalter = Math.Atan(steigung / (flankendurchmesser * (Math.PI)));
+                steigungswinkel = (180 / Math.PI) * platzhalter;
+
+                Console.WriteLine("--------------------------------------------------");
+                Console.WriteLine("Der Steigungswinkel des Gewindes lautet {0}°", Math.Round(steigungswinkel, 2));
+                Console.WriteLine("--------------------------------------------------");
+            }
+
+            else
+            {
+            }
+        }
+
+        public void Steigungswinkel_Warenkorb()
+        {
+            Console.WriteLine("Gewindesteigungswinkel: {0}°", Math.Round(steigungswinkel, 2));
         }
     }
 }
