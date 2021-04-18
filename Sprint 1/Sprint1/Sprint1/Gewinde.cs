@@ -103,7 +103,7 @@ namespace Sprint1
                 steigungswinkel = (180 / Math.PI) * platzhalter;
 
                 Console.WriteLine("--------------------------------------------------");
-                Console.WriteLine("Der Steigungswinkel des Gewindes lautet {0}°", Math.Round(steigungswinkel, 2));
+                Console.WriteLine("Der Steigungswinkel des Gewindes lautet {0}°.", Math.Round(steigungswinkel, 2));
                 Console.WriteLine("--------------------------------------------------");
             }
 
