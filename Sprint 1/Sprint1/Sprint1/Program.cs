@@ -11,21 +11,26 @@ namespace Sprint1
         static void Main(string[] args)
         {
             //Schraubenkopf
-            Schraubenkopf sk = new Schraubenkopf();
-            sk.Schraubenkopf_Array();
-            sk.Schraubenkopf_Ausgabe();
-            sk.Schraubenkopf_Erzeugung();
-
-            //Schraubenschaft
-            Schraubenschaft ss = new Schraubenschaft();
-            ss.Schraubenschaft_Array();
-            ss.Schraubenschaft_Ausgabe();
+            //Schraubenkopf sk = new Schraubenkopf();
+            //sk.Schraubenkopf_Array();
+            //sk.Schraubenkopf_Ausgabe();
+            //sk.Schraubenkopf_Erzeugung();
 
             // Gewinde
             Gewinde gp = new Gewinde();
             gp.Gewinde_Array();
             gp.Gewinde_Ausgabe();
             gp.Gewinde_Steigung();
+
+            //Schraubenkopf
+            gp.Schraubenkopf_Array();
+            gp.Schraubenkopf_Ausgabe();
+            gp.Schraubenkopf_Erzeugung();
+
+            //Schraubenschaft
+            Schraubenschaft ss = new Schraubenschaft();
+            ss.Schraubenschaft_Array();
+            ss.Schraubenschaft_Ausgabe();
 
             // Festigkeitsklasse
             Festigkeitsklasse fk = new Festigkeitsklasse();
@@ -36,9 +41,10 @@ namespace Sprint1
 
             //Warenkorb
             Console.WriteLine("Ihre Auswahl lautet:");
-            sk.Schraubenkopf_Warenkorb();
-            ss.Schraubenschaft_Warenkorb();
+            //sk.Schraubenkopf_Warenkorb();
+            gp.Schraubenkopf_Warenkorb();
             gp.Gewinde_Warenkorb();
+            ss.Schraubenschaft_Warenkorb();
             gp.Gewinde_Steigung_Warenkorb();
             fk.Festigkeit_Warenkorb();
             Console.WriteLine("--------------------------------------------------");
