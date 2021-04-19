@@ -90,7 +90,7 @@ namespace Sprint1
                 while ((input_festigkeit2 != 0) && (input_festigkeit2 != 1))
                 {
                     Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
-                    input_festigkeit1 = Convert.ToInt32(Console.ReadLine());
+                    input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
                 }
 
                 output_festigkeit2 = getFestigkeit_Spannung8_8(input_festigkeit2);
@@ -109,7 +109,7 @@ namespace Sprint1
                 while ((input_festigkeit2 != 0) && (input_festigkeit2 != 1))
                 {
                     Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
-                    input_festigkeit1 = Convert.ToInt32(Console.ReadLine());
+                    input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
                 }
 
                 output_festigkeit2 = getFestigkeit_Spannung8_8(input_festigkeit2);
@@ -128,7 +128,7 @@ namespace Sprint1
                 while ((input_festigkeit2 != 0) && (input_festigkeit2 != 1))
                 {
                     Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
-                    input_festigkeit1 = Convert.ToInt32(Console.ReadLine());
+                    input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
                 }
 
                 output_festigkeit2 = getFestigkeit_Spannung9_8(input_festigkeit2);
@@ -147,7 +147,7 @@ namespace Sprint1
                 while ((input_festigkeit2 != 0) && (input_festigkeit2 != 1))
                 {
                     Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
-                    input_festigkeit1 = Convert.ToInt32(Console.ReadLine());
+                    input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
                 }
 
                 output_festigkeit2 = getFestigkeit_Spannung10_8(input_festigkeit2);
