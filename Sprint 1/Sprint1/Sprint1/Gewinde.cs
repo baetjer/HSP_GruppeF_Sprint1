@@ -180,7 +180,6 @@ namespace Sprint1
         double[] d1_is = new double[12] { 5.5, 7, 8.5, 10, 13, 16, 18, 21, 24, 30, 36, 45 };
         double[] k_is = new double[12] { 3, 4, 5, 6, 8, 10, 12, 14, 16, 20, 24, 30 };
         double[] s_is = new double[12] { 2.5, 3, 4, 5, 6, 8, 10, 12, 14, 17, 19, 22 };
-        double[] dh_is = new double[12] { 3.5, 4.5, 5.5, 6.6, 9, 11, 13.5, 15.5, 17.5, 22, 26, 33 };
 
         public double getS_SK(int i)
         {
