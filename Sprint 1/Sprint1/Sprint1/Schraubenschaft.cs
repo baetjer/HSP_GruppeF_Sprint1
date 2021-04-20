@@ -20,7 +20,7 @@ namespace Sprint1
 
             foreach (int i in schraubenschaft_array)
             {
-                Console.WriteLine(schraubenschaft_zahl1 + " = " + i + "mm");
+                Console.WriteLine(schraubenschaft_zahl1 + " = " + i + " mm");
                 schraubenschaft_zahl1++;
             }
         }
