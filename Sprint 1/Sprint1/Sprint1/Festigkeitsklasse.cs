@@ -9,11 +9,13 @@ namespace Sprint1
     class Festigkeitsklasse
     {
         int festigkeitzahl1 = 0;
-        int festigkeitzahl2 = 0;
+        //int festigkeitzahl2 = 0;
         int input_festigkeit1 = 0;
         int input_festigkeit2 = 0;
         string output_festigkeit1;
         string output_festigkeit2;
+        string output_festigkeit3;
+        string output_festigkeit4;
 
         string[] festigkeit_klassen = new string[4] {"5.8", "8.8", "9.8", "10.9" };
         string[] festigkeit_spannung5_8 = new string[2] {"500 N/mm²", "400 N/mm²" };
@@ -70,87 +72,98 @@ namespace Sprint1
             output_festigkeit1 = getFestigkeit_Array(input_festigkeit1);
 
             Console.WriteLine("--------------------------------------------------");
-            Console.WriteLine("Sie haben sich für den Durchmesser {0} entschieden.", output_festigkeit1);
+            Console.WriteLine("Sie haben sich für Festigkeitsklasse {0} entschieden.", output_festigkeit1);
             Console.WriteLine("--------------------------------------------------");
         }
 
         public void Festigkeit_Spannung()
         {
-
             if (input_festigkeit1 == 0)
             {
-                foreach (string j in festigkeit_spannung5_8)
-                {
-                    Console.WriteLine(festigkeitzahl2 + " = " + j);
-                    festigkeitzahl2++;
-                }
+                output_festigkeit3 = festigkeit_spannung5_8[0];
+                output_festigkeit4 = festigkeit_spannung5_8[1];
 
-                input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
+                //foreach (string j in festigkeit_spannung5_8)
+                //{
+                //    Console.WriteLine(festigkeitzahl2 + " = " + j);
+                //    festigkeitzahl2++;
+                //}
 
-                while ((input_festigkeit2 != 0) && (input_festigkeit2 != 1))
-                {
-                    Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
-                    input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
-                }
+                //input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
 
-                output_festigkeit2 = getFestigkeit_Spannung8_8(input_festigkeit2);
+                //while ((input_festigkeit2 != 0) && (input_festigkeit2 != 1))
+                //{
+                //    Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
+                //    input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
+                //}
+
+                //output_festigkeit2 = getFestigkeit_Spannung8_8(input_festigkeit2);
             }
 
             else if (input_festigkeit1 == 1)
             {
-                foreach (string j in festigkeit_spannung8_8)
-                {
-                    Console.WriteLine(festigkeitzahl2 + " = " + j);
-                    festigkeitzahl2++;
-                }
-                
-                input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
+                output_festigkeit3 = festigkeit_spannung8_8[0];
+                output_festigkeit4 = festigkeit_spannung8_8[1];
 
-                while ((input_festigkeit2 != 0) && (input_festigkeit2 != 1))
-                {
-                    Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
-                    input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
-                }
+                //foreach (string j in festigkeit_spannung8_8)
+                //{
+                //    Console.WriteLine(festigkeitzahl2 + " = " + j);
+                //    festigkeitzahl2++;
+                //}
 
-                output_festigkeit2 = getFestigkeit_Spannung8_8(input_festigkeit2);
+                //input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
+
+                //while ((input_festigkeit2 != 0) && (input_festigkeit2 != 1))
+                //{
+                //    Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
+                //    input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
+                //}
+
+                //output_festigkeit2 = getFestigkeit_Spannung8_8(input_festigkeit2);
             }
 
             else if (input_festigkeit1 == 2)
             {
-                foreach (string j in festigkeit_spannung9_8)
-                {
-                    Console.WriteLine(festigkeitzahl2 + " = " + j);
-                    festigkeitzahl2++;
-                }
-                
-                input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
+                output_festigkeit3 = festigkeit_spannung9_8[0];
+                output_festigkeit4 = festigkeit_spannung9_8[1];
 
-                while ((input_festigkeit2 != 0) && (input_festigkeit2 != 1))
-                {
-                    Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
-                    input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
-                }
+                //foreach (string j in festigkeit_spannung9_8)
+                //{
+                //    Console.WriteLine(festigkeitzahl2 + " = " + j);
+                //    festigkeitzahl2++;
+                //}
 
-                output_festigkeit2 = getFestigkeit_Spannung9_8(input_festigkeit2);
+                //input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
+
+                //while ((input_festigkeit2 != 0) && (input_festigkeit2 != 1))
+                //{
+                //    Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
+                //    input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
+                //}
+
+                //output_festigkeit2 = getFestigkeit_Spannung9_8(input_festigkeit2);
             }
 
             else if (input_festigkeit1 == 3)
             {
-                foreach (string j in festigkeit_spannung10_8)
-                {
-                    Console.WriteLine(festigkeitzahl2 + " = " + j);
-                    festigkeitzahl2++;
-                }
+                output_festigkeit3 = festigkeit_spannung10_8[0];
+                output_festigkeit4 = festigkeit_spannung10_8[1];
 
-                input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
+                //foreach (string j in festigkeit_spannung10_8)
+                //{
+                //    Console.WriteLine(festigkeitzahl2 + " = " + j);
+                //    festigkeitzahl2++;
+                //}
 
-                while ((input_festigkeit2 != 0) && (input_festigkeit2 != 1))
-                {
-                    Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
-                    input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
-                }
+                //input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
 
-                output_festigkeit2 = getFestigkeit_Spannung10_8(input_festigkeit2);
+                //while ((input_festigkeit2 != 0) && (input_festigkeit2 != 1))
+                //{
+                //    Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
+                //    input_festigkeit2 = Convert.ToInt32(Console.ReadLine());
+                //}
+
+                //output_festigkeit2 = getFestigkeit_Spannung10_8(input_festigkeit2);
             }
 
 
@@ -159,7 +172,7 @@ namespace Sprint1
 
         public void Festigkeit_Warenkorb()
         {
-            Console.WriteLine("Festigkeitsklasse: {0} | {1}", output_festigkeit1, output_festigkeit2);
+            Console.WriteLine("Festigkeitsklasse: {0} | Zugfestigkeit: {1} | Mindest-Streckgrenze {2}", output_festigkeit1, output_festigkeit3, output_festigkeit4);
         }
 
         //static void Main(string[] args)
