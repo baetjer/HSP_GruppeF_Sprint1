@@ -43,13 +43,13 @@ namespace Sprint1
             output_schraubenschaft = getSchraubenschaft_Array(input_schraubenschaft);
 
             Console.WriteLine("--------------------------------------------------");
-            Console.WriteLine("Sie haben sich für die Länge {0} entschieden.", output_schraubenschaft + "mm");
+            Console.WriteLine("Sie haben sich für die Schaftlänge {0} entschieden.", output_schraubenschaft + " mm");
             Console.WriteLine("--------------------------------------------------");
         }
 
         public void Schraubenschaft_Warenkorb()
         {
-            Console.WriteLine("Schraubenschaftlänge: " + output_schraubenschaft + "mm");
+            Console.WriteLine("Schraubenschaftlänge: " + output_schraubenschaft + " mm");
         }
     }
 }
