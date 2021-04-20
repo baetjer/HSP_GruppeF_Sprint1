@@ -57,7 +57,9 @@ namespace Sprint1
 
         //Gewinde anpassen
         string[] gewinde_entscheidung = new string[2] { "nein", "ja" };
+        double steigung = 0;
         double steigungswinkel = 0;
+        double flankendurchmesser = 0;
         int input_gewinde4 = 0;
 
         public string getGewinde_Entscheidung(int i)
@@ -67,8 +69,6 @@ namespace Sprint1
 
         public void Gewinde_Steigung()
         {
-            double flankendurchmesser = 0;
-            double steigung = 0;
             double platzhalter = 0;
             int gewindezahl2 = 0;
 
@@ -117,7 +117,7 @@ namespace Sprint1
         {
             if (input_gewinde4 == 1)
             {
-                Console.WriteLine("Gewindesteigungswinkel: {0}°", Math.Round(steigungswinkel, 2));
+                Console.WriteLine("Gewindesteigung: {0} mm | Flankendurchmesser: {1} mm | Gewindesteigungswinkel: {2}°", steigung, flankendurchmesser, Math.Round(steigungswinkel, 2));
             }
 
             else
@@ -171,7 +171,6 @@ namespace Sprint1
         double output2_Schraubenkopf;
         double output3_Schraubenkopf;
         double output4_Schraubenkopf;
-        double output5_Schraubenkopf;
 
         //Sechskant
         double[] s_sk = new double[12] { 5.5, 7, 8, 10, 13, 16, 18, 21, 24, 30, 36, 46 };
@@ -220,7 +219,6 @@ namespace Sprint1
                 output2_Schraubenkopf = getD1_IS(input_gewinde);
                 output3_Schraubenkopf = getK_IS(input_gewinde);
                 output4_Schraubenkopf = getS_IS(input_gewinde);
-                output5_Schraubenkopf = getDh_IS(input_gewinde);
             }
 
             else if (input_schraubenkopf == 1)
@@ -234,12 +232,12 @@ namespace Sprint1
         {
             if (input_schraubenkopf == 0)
             {
-                Console.WriteLine("{0} | d1 = {1} mm | k = {2} mm | s = {3} mm | dh = {4} mm", output_schraubenkopf, output2_Schraubenkopf, output3_Schraubenkopf, output4_Schraubenkopf, output5_Schraubenkopf);
+                Console.WriteLine("{0} | Schraubenkopfdurchmesser = {1} mm | Schraubenkopfdicke = {2} mm | Schlüsselweite = {3} mm", output_schraubenkopf, output2_Schraubenkopf, output3_Schraubenkopf, output4_Schraubenkopf);
             }
 
             else if (input_schraubenkopf == 1)
             {
-                Console.WriteLine("{0} | s = {1} mm | k = {2} mm", output_schraubenkopf, output2_Schraubenkopf, output3_Schraubenkopf);
+                Console.WriteLine("{0} | Schlüsselweite = {1} mm | Schraubenkopfdicke = {2} mm", output_schraubenkopf, output2_Schraubenkopf, output3_Schraubenkopf);
             }
         }
     }
