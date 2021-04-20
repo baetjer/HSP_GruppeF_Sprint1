@@ -38,14 +38,13 @@ namespace Sprint1
             fk.Festigkeit_Ausgabe();
             fk.Festigkeit_Spannung();
 
-
             //Warenkorb
             Console.WriteLine("Ihre Auswahl lautet:");
             //sk.Schraubenkopf_Warenkorb();
             gp.Schraubenkopf_Warenkorb();
             gp.Gewinde_Warenkorb();
-            ss.Schraubenschaft_Warenkorb();
             gp.Gewinde_Steigung_Warenkorb();
+            ss.Schraubenschaft_Warenkorb();
             fk.Festigkeit_Warenkorb();
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("Auswahl bestätigen?");
