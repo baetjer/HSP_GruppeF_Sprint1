@@ -17,9 +17,9 @@ namespace Sprint1
         string output_festigkeit3;
         string output_festigkeit4;
 
-        string[] festigkeit_klassen = new string[4] {"5.8", "8.8", "9.8", "10.9" };
-        string[] festigkeit_spannung5_8 = new string[2] {"500 N/mm²", "400 N/mm²" };
-        string[] festigkeit_spannung8_8 = new string[2] {"800 N/mm²", "640 N/mm²" };
+        string[] festigkeit_klassen = new string[4] { "5.8", "8.8", "9.8", "10.9" };
+        string[] festigkeit_spannung5_8 = new string[2] { "500 N/mm²", "400 N/mm²" };
+        string[] festigkeit_spannung8_8 = new string[2] { "800 N/mm²", "640 N/mm²" };
         string[] festigkeit_spannung9_8 = new string[2] { "900 N/mm²", "720 N/mm²" };
         string[] festigkeit_spannung10_8 = new string[2] { "1000 N/mm²", "900 N/mm²" };
 
