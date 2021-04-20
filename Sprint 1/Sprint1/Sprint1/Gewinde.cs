@@ -234,12 +234,12 @@ namespace Sprint1
         {
             if (input_schraubenkopf == 0)
             {
-                Console.WriteLine("{0} | d1 = {1} | k = {2} | s = {3} | dh = {4}", output_schraubenkopf, output2_Schraubenkopf, output3_Schraubenkopf, output4_Schraubenkopf, output5_Schraubenkopf);
+                Console.WriteLine("{0} | d1 = {1} mm | k = {2} mm | s = {3} mm | dh = {4} mm", output_schraubenkopf, output2_Schraubenkopf, output3_Schraubenkopf, output4_Schraubenkopf, output5_Schraubenkopf);
             }
 
             else if (input_schraubenkopf == 1)
             {
-                Console.WriteLine("{0} | s = {1} | k = {2}", output_schraubenkopf, output2_Schraubenkopf, output3_Schraubenkopf);
+                Console.WriteLine("{0} | s = {1} mm | k = {2} mm", output_schraubenkopf, output2_Schraubenkopf, output3_Schraubenkopf);
             }
         }
     }
