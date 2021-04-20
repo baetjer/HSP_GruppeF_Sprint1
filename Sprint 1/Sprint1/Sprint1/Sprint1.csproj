@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Stückzahl.cs" />
     <Compile Include="Warenkorb.cs" />
     <Compile Include="Schraubenkopf.cs" />
     <Compile Include="Schraubenschaft.cs" />
