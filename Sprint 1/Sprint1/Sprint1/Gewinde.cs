@@ -206,11 +206,6 @@ namespace Sprint1
             return s_is[i];
         }
 
-        public double getDh_IS(int i)
-        {
-            return dh_is[i];
-        }
-
         public void Schraubenkopf_Erzeugung()
         {
             if (input_schraubenkopf == 0)
