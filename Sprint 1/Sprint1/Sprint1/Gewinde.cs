@@ -78,6 +78,7 @@ namespace Sprint1
                 Console.WriteLine(gewindezahl2 + " = " + i);
                 gewindezahl2++;
             }
+
             input_gewinde4 = Convert.ToInt32(Console.ReadLine());
 
             while ((input_gewinde4 != 0) && (input_gewinde4 != 1))
@@ -168,9 +169,9 @@ namespace Sprint1
 
 
         //Schraubenkopf-Werte
-        double output2_Schraubenkopf;
-        double output3_Schraubenkopf;
-        double output4_Schraubenkopf;
+        double output2_Schraubenkopf = 0;
+        double output3_Schraubenkopf = 0;
+        double output4_Schraubenkopf = 0;
 
         //Sechskant
         double[] s_sk = new double[12] { 5.5, 7, 8, 10, 13, 16, 18, 21, 24, 30, 36, 46 };
