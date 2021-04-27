@@ -10,10 +10,9 @@ namespace Sprint2
     {
         int input_gewinde = 0;
 
-
         public void test_gewinde()
         {
-            Console.WriteLine("Gewinde auswaählen");
+            Console.WriteLine("Gewinde auswählen");
             try
             {
                 input_gewinde = Convert.ToInt32(Console.ReadLine());
