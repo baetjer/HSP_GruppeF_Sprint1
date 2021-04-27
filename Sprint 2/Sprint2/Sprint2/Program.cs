@@ -10,6 +10,10 @@ namespace Sprint2
     {
         static void Main(string[] args)
         {
+            Gewinde gw = new Gewinde();
+            Schraubenkopf sk = new Schraubenkopf(gw);
+
+            Console.ReadKey();
         }
     }
 }
