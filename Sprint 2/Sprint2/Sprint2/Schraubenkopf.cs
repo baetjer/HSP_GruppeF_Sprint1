@@ -160,12 +160,12 @@ namespace Sprint2
                 }
                 else if (input_schraubenkopf2 == 1)
                 {
-                    Console.WriteLine("{0} | Schraubenkopfdicke = {1} mm | Schraubenkopfdurchmesser = {2} mm", output_schraubenkopf3, output_schraubenkopf4);
+                    Console.WriteLine("{0} | Schraubenkopfdicke = {1} mm | Schraubenkopfdurchmesser = {2} mm", output_schraubenkopf2, output_schraubenkopf3, output_schraubenkopf4);
                 }
             }
             if (input_schraubenkopf1 == 2)
             {
-                Console.WriteLine("{0} | Schraubenkopfdurchmesser = {1} mm | Schraubenkopfdicke = {2} mm | Schlüsselweite = {3} mm", output_schraubenkopf3, output_schraubenkopf4, output_schraubenkopf5);
+                Console.WriteLine("{0} | Schraubenkopfdurchmesser = {1} mm | Schraubenkopfdicke = {2} mm | Schlüsselweite = {3} mm", output_schraubenkopf1, output_schraubenkopf3, output_schraubenkopf4, output_schraubenkopf5);
             }
         }
 
