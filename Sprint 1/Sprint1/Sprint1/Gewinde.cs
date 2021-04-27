@@ -27,6 +27,11 @@ namespace Sprint1
             }
         }
 
+        public int getOutput()
+        {
+            return output_gewinde;
+        }
+
         public int getGewinde_Array(int i)
         {
             return gewinde_array[i];
