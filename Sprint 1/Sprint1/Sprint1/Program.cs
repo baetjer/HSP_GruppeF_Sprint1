@@ -28,7 +28,7 @@ namespace Sprint1
             gp.Schraubenkopf_Erzeugung();
 
             //Schraubenschaft
-            Schraubenschaft ss = new Schraubenschaft();
+            Schraubenschaft ss = new Schraubenschaft(gp);
             ss.Schraubenschaft_Array();
             ss.Schraubenschaft_Ausgabe();
 
