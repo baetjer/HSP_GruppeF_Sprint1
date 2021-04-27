@@ -14,6 +14,11 @@ namespace Sprint1
 
         int[] schraubenschaft_array = new int[5] {10, 16, 20, 30, 40};
 
+        public Schraubenschaft(Gewinde gewinde)
+        {
+            gewinde.getOutput();
+        }
+
         public void Schraubenschaft_Array()
         {
             Console.WriteLine("Bitte wählen Sie eine Schaftlänge aus:");
