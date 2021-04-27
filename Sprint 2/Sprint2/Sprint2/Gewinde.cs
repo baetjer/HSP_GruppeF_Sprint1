@@ -13,14 +13,10 @@ namespace Sprint2
 
         public void test_gewinde()
         {
+            Console.WriteLine("Gewinde auswaählen");
             try
             {
                 input_gewinde = Convert.ToInt32(Console.ReadLine());
-                while ((input_gewinde != 0) && (input_gewinde != 1))
-                {
-                    Console.WriteLine("Falsche Eingabe, bitte wählen Sie nochmal.");
-                    input_gewinde = Convert.ToInt32(Console.ReadLine());
-                }
             }
             catch (Exception e)
             {
