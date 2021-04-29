@@ -26,9 +26,9 @@ namespace Sprint2
             double v_ergebnis_s;
             double v_ergebnis_gw;
 
-            v_ergebnis_k = Math.PI * (1 / 2) * Math.Pow(v_k_d, 2) * v_k_l;
-            v_ergebnis_s = Math.PI * (1 / 2) * Math.Pow(v_s_d, 2) * v_s_l;
-            v_ergebnis_gw = Math.PI * (1 / 2) * Math.Pow(v_gw_d, 2) * v_gw_l;
+            v_ergebnis_k = Math.PI * (1 / 4) * Math.Pow(v_k_d, 2) * v_k_l;
+            v_ergebnis_s = Math.PI * (1 / 4) * Math.Pow(v_s_d, 2) * v_s_l;
+            v_ergebnis_gw = Math.PI * (1 / 4) * Math.Pow(v_gw_d, 2) * v_gw_l;
 
             v_ergebnis = v_ergebnis_k + v_ergebnis_s + v_ergebnis_gw;
 
