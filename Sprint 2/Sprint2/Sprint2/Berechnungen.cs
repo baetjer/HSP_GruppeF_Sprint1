@@ -34,5 +34,24 @@ namespace Sprint2
 
             return v_ergebnis;
         }
+
+        //Gewicht 
+
+        public double getMasse(double v_ergebnis,double dichte,double stkzahl)
+        {
+            double m_packung_ergebnis;
+            double m_einzel_ergebnis;
+
+            m_packung_ergebnis = v_ergebnis * dichte * stkzahl;
+            m_einzel_ergebnis = v_ergebnis * dichte;
+            return m_einzel_ergebnis;
+            return m_packung_ergebnis;
+        }
+
+       
+
     }
+
+
+
 }
