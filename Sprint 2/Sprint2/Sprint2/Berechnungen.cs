@@ -44,11 +44,24 @@ namespace Sprint2
 
             m_packung_ergebnis = v_ergebnis * dichte * stkzahl;
             m_einzel_ergebnis = v_ergebnis * dichte;
+          
             return m_einzel_ergebnis;
             return m_packung_ergebnis;
         }
 
-       
+        //Preis
+
+        public double getPreis(double stkzahl, double m_einzel_ergebnis, double wspreis)
+        {
+            double p_ergebnis;
+
+            p_ergebnis = stkzahl * m_einzel_ergebnis * wspreis;
+
+            return p_ergebnis;
+
+
+        }
+
 
     }
 
