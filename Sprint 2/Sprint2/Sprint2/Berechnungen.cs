@@ -36,7 +36,6 @@ namespace Sprint2
         }
 
         //Gewicht 
-
         public double getMasse(double v_ergebnis,double dichte,double stkzahl)
         {
             double m_packung_ergebnis;
@@ -50,7 +49,6 @@ namespace Sprint2
         }
 
         //Preis
-
         public double getPreis(double stkzahl, double m_einzel_ergebnis, double wspreis)
         {
             double p_ergebnis;
