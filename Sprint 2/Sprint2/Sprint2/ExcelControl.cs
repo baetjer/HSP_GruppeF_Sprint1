@@ -3,23 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Excel = Microsoft.Office.Interop.Excel;
-
+using Microsoft.Office.Interop.Excel;
+using _Excel = Microsoft.Office.Interop.Excel;
 namespace Sprint2
 {
-    class ExcelControl
+    class Excel
     {
-        public ExcelControl()
+        string path = "";
+        _Application excel = new _Excel.Application();
+        Workbook wb;
+        Worksheet ws;
+
+        public Excel(string path, int sheet)
         {
-            Excel.Application excelAPP = new Excel.Application();
-            excelAPP.Visible = true;
-            excelAPP.Workbooks.Add();
+            this.path = path;
+            wb = excel.Workbooks.Open(path);
+            ws = wb.Worksheets[sheet];
+        }
 
-            Excel._Worksheet mySheet = (Excel.Worksheet) excelAPP.ActiveSheet;
-            mySheet.Cells[1, "A"] = "Hallo Welt";
-
-            var workSheet_range = mySheet.get_Range("A1", "B3");
-            workSheet_range.Borders[Excel.XlBordersIndex.xlEdgeBottom].Color = ConsoleColor.Green;
+        public string ReadCell(int i, int j)
+        {
+            i++;
+            j++;
+            if (ws.Cells[i, j].Value2 != null)
+                return ws.Cells[i, j].Value2;
+            else
+                return "";
         }
     }
 }
