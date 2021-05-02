@@ -26,7 +26,7 @@ namespace Sprint2
 
         public void OpenFile()
         {
-            Excel excel = new Excel(@"Datenbank Schraube.xlsx", 1);
+            Excel excel = new Excel(@"D:\Uni\Jade\HSP\HSP_Gruppe_F\Sprint 2\Sprint2\DatenbankSchraube.xlsx", 1);
 
             Console.WriteLine(excel.ReadCell(3, 3));
         }
