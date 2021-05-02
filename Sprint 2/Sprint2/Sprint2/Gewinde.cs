@@ -8,6 +8,15 @@ namespace Sprint2
 {
     class Gewinde
     {
+        public Gewinde()
+        {
+
+        }
+
+        public int getGewinde(int input_gewinde)
+        {
+            int 
+        }
 
 
 
