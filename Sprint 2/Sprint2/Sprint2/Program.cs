@@ -9,13 +9,26 @@ namespace Sprint2
 {
     class Program
     {
+        public Program()
+        {
+            OpenFile();
+        }
+
         static void Main(string[] args)
         {
-            new ExcelControl();
-            Gewinde gw = new Gewinde();
-            Schraubenkopf sk = new Schraubenkopf(gw);
+            Program program = new Program();
+
+            //Gewinde gw = new Gewinde();
+            //Schraubenkopf sk = new Schraubenkopf(gw);
 
             Console.ReadKey();
+        }
+
+        public void OpenFile()
+        {
+            Excel excel = new Excel(@"Datenbank Schraube.xlsx", 1);
+
+            Console.WriteLine(excel.ReadCell(3, 3));
         }
     }
 }
