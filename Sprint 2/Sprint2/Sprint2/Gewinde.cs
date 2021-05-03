@@ -12,10 +12,6 @@ namespace Sprint2
     {
         Excel excel = new Excel(System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "DatenbankSchraube.xlsx"), 1);
         int input_gw_g = 0;
-        double output_gw = 0;
-        double output_s = 0;
-        double output_e = 0;
-        double output_k = 0;
 
         public Gewinde()
         {
@@ -32,20 +28,24 @@ namespace Sprint2
             return input_gw;
         }
 
-        public void getWerte()
+        public List<double> getWerte()
         {
-            output_gw = excel.ReadCell(input_gw_g, 0);
-            output_s = excel.ReadCell(input_gw_g, 1);
-            output_e = excel.ReadCell(input_gw_g, 2);
-            output_k = excel.ReadCell(input_gw_g, 3);
+            List<double> liste = new List<double>();
+            liste.Add(excel.ReadCell(input_gw_g, 0));
+            liste.Add(excel.ReadCell(input_gw_g, 1));
+            liste.Add(excel.ReadCell(input_gw_g, 2));
+            liste.Add(excel.ReadCell(input_gw_g, 3));
+
+            return liste;
         }
 
         public void readWerte()
         {
-            Console.WriteLine(output_gw);
-            Console.WriteLine(output_s);
-            Console.WriteLine(output_e);
-            Console.WriteLine(output_k);
+            List<double> erg = getWerte();
+            Console.WriteLine(erg.ElementAt(0));
+            Console.WriteLine(erg.ElementAt(1));
+            Console.WriteLine(erg.ElementAt(2));
+            Console.WriteLine(erg.ElementAt(3));
         }
 
 
