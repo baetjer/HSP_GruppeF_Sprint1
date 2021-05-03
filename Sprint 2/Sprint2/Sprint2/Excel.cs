@@ -19,7 +19,6 @@ namespace Sprint2
         {
             _Application excel = new _Excel.Application();
             this.path = path;
-            Console.ReadKey();
             wb = excel.Workbooks.Open(path);
             ws = wb.Worksheets[sheet];
 
