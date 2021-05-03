@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Berechnungen.cs" />
     <Compile Include="Excel.cs" />
-    <Compile Include="Schraubenschaft.cs" />
+    <Compile Include="Result.cs" />
     <Compile Include="Gewinde.cs" />
     <Compile Include="Schraubenkopf.cs" />
     <Compile Include="Program.cs" />
