@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Office.Interop.Excel;
+using _Excel = Microsoft.Office.Interop.Excel;
 
 namespace Sprint2
 {
@@ -19,40 +21,31 @@ namespace Sprint2
         {
             input_gw_g = setGewinde();
             getWerte();
-
             readWerte();
         }
 
         public int setGewinde()
         {
             int input_gw = Convert.ToInt32(Console.ReadLine());
+            input_gw--;
 
             return input_gw;
         }
 
-        public double getWerte()
+        public void getWerte()
         {
             output_gw = excel.ReadCell(input_gw_g, 0);
             output_s = excel.ReadCell(input_gw_g, 1);
             output_e = excel.ReadCell(input_gw_g, 2);
             output_k = excel.ReadCell(input_gw_g, 3);
-
-            return output_gw;
-            return output_s;
-            return output_e;
-            return output_k;
         }
 
         public void readWerte()
         {
-
-            Console.WriteLine(getWerte());
-            
-            
-            //double output_s = 0;
-            //double output_e = 0;
-            //double output_k = 0;
-
+            Console.WriteLine(output_gw);
+            Console.WriteLine(output_s);
+            Console.WriteLine(output_e);
+            Console.WriteLine(output_k);
         }
 
 
