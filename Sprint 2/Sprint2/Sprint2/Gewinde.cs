@@ -12,10 +12,10 @@ namespace Sprint2
         int input_gw_g = 0;
 
 
-        public Gewinde(double output_gw, double output_s, double output_e, double output_k)
+        public Gewinde()
         {
             input_gw_g = setGewinde();
-
+            readWerte();
         }
 
         public int setGewinde()
@@ -37,6 +37,11 @@ namespace Sprint2
 
         public void readWerte()
         {
+            double output_gw = getWerte();
+            //double output_s = 0;
+            //double output_e = 0;
+            //double output_k = 0;
+
         }
 
 
