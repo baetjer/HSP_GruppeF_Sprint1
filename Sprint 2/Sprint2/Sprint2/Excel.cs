@@ -21,7 +21,6 @@ namespace Sprint2
             this.path = path;
             wb = excel.Workbooks.Open(path);
             ws = wb.Worksheets[sheet];
-
         }
 
         public double ReadCell(int i, int j)
