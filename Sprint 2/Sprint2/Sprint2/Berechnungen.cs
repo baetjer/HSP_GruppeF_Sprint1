@@ -56,13 +56,7 @@ namespace Sprint2
             p_ergebnis = stkzahl * m_einzel_ergebnis * wspreis;
 
             return p_ergebnis;
-
-
         }
 
-
     }
-
-
-
 }
