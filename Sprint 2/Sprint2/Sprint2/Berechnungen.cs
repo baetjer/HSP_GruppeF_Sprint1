@@ -45,7 +45,8 @@ namespace Sprint2
             m_einzel_ergebnis = v_ergebnis * dichte;
           
             return m_einzel_ergebnis;
-            return m_packung_ergebnis;
+            return m_packung_ergebnis;  // wie gewinde  public list.. 
+
         }
 
         //Preis
