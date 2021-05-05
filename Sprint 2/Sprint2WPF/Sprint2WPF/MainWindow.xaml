@@ -7,6 +7,54 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="143*"/>
+            <ColumnDefinition Width="255*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Width=" 220" RenderTransformOrigin="-0.2,0.507" Margin="10,10,55.5,-9.5">
+            <TextBlock>Schraubentyp</TextBlock>
+            <Button Margin=" 1">Sechskantschraube DIN 8676</Button>
+            <Button Margin="1">Zylinderschraube DIN 4762</Button>
+            <Button Margin=" 1">Zylindeerschraube DIN 1207</Button>
+            <Button Margin=" 1">Senkschraube DIN 10642</Button>
+        </StackPanel>
+
+        <StackPanel Width=" 60 " Margin="10,133,215.5,-132.5">
+            <TextBlock>Gewinde</TextBlock>
+            <RadioButton Margin=" 1">M3</RadioButton>
+            <RadioButton Margin=" 1">M4</RadioButton>
+            <RadioButton Margin=" 1">M5</RadioButton>
+            <RadioButton Margin=" 1">M6</RadioButton>
+            <RadioButton Margin=" 1">M8</RadioButton>
+            <RadioButton Margin=" 1">M10</RadioButton>
+            <RadioButton Margin=" 1">M12</RadioButton>
+            <RadioButton Margin=" 1">M14</RadioButton>
+            <RadioButton Margin=" 1">M16</RadioButton>
+            <RadioButton Margin=" 1">M20</RadioButton>
+            <RadioButton Margin=" 1">M24</RadioButton>
+            <RadioButton Margin=" 1">M30</RadioButton>
+            <RadioButton Margin=" 1">M36</RadioButton>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="0.5,9,224,-9.5">
+            <TextBlock Margin=" 1">Schraubenlänge</TextBlock>
+            <TextBox x:Name=" schraube_länge"></TextBox>
+            <TextBlock Margin=" 1">Packungsgröße</TextBlock>
+            <Button Margin="1">50</Button>
+            <Button Margin="1">100</Button>
+            <Button Margin=" 1">200</Button>
+            <Button Margin="1">500</Button>
+            
+            
+            
+        </StackPanel>
+        
+        
+        
+        
         
     </Grid>
+
+    
 </Window>
