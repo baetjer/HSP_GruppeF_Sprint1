@@ -10,7 +10,7 @@ namespace Sprint2
 {
     class Gewinde
     {
-        Excel excel = new Excel("DatenbankSchraube.xlsx", 1);
+        
         int input_gw_g = 0;
 
         public Gewinde()
@@ -30,6 +30,7 @@ namespace Sprint2
 
         public List<double> getWerte()
         {
+            Excel excel = new Excel("ye", 1);
             List<double> liste = new List<double>();
             liste.Add(excel.ReadCell(input_gw_g, 0));
             liste.Add(excel.ReadCell(input_gw_g, 1));
