@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Sprint2WPF
+namespace wpf_probe
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
@@ -23,6 +23,11 @@ namespace Sprint2WPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void cbx_gew_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
