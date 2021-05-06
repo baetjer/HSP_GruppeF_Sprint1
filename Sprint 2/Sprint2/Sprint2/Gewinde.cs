@@ -12,41 +12,42 @@ namespace Sprint2
     {
         
         int input_gw_g = 0;
+        int sk_auswahl;
 
         public Gewinde()
         {
-            input_gw_g = setGewinde();
-            getWerte();
+            setGewinde();
             readWerte();
         }
 
-        public int setGewinde()
+        public void setGewinde()
         {
-            int input_gw = Convert.ToInt32(Console.ReadLine());
-            input_gw--;
-
-            return input_gw;
+            sk_auswahl = Convert.ToInt32(Console.ReadLine());
+            input_gw_g = Convert.ToInt32(Console.ReadLine());
+            input_gw_g--;
         }
 
-        public List<double> getWerte()
+        public List<double> getWerte(int sk_auswahl)
         {
-            Excel excel = new Excel("ye", 1);
+            this.sk_auswahl = sk_auswahl;
+            Excel excel = new Excel("filler", sk_auswahl);
             List<double> liste = new List<double>();
-            liste.Add(excel.ReadCell(input_gw_g, 0));
-            liste.Add(excel.ReadCell(input_gw_g, 1));
-            liste.Add(excel.ReadCell(input_gw_g, 2));
-            liste.Add(excel.ReadCell(input_gw_g, 3));
+
+            for (int i = 0; i < 4; i++)
+            {
+                liste.Add(excel.ReadCell(input_gw_g, i));
+            }
 
             return liste;
         }
 
         public void readWerte()
         {
-            List<double> erg = getWerte();
-            Console.WriteLine(erg.ElementAt(0));
-            Console.WriteLine(erg.ElementAt(1));
-            Console.WriteLine(erg.ElementAt(2));
-            Console.WriteLine(erg.ElementAt(3));
+            List<double> erg = getWerte(sk_auswahl);
+            foreach (double i in erg)
+            {
+                Console.WriteLine(i);
+            }
         }
 
 
