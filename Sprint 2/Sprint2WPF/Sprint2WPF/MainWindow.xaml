@@ -1,60 +1,85 @@
-﻿<Window x:Class="Sprint2WPF.MainWindow"
+﻿<Window x:Class="wpf_probe.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Sprint2WPF"
+        xmlns:local="clr-namespace:wpf_probe"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="143*"/>
-            <ColumnDefinition Width="255*"/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Width=" 220" RenderTransformOrigin="-0.2,0.507" Margin="10,10,55.5,-9.5">
-            <TextBlock>Schraubentyp</TextBlock>
-            <Button Margin=" 1">Sechskantschraube DIN 8676</Button>
-            <Button Margin="1">Zylinderschraube DIN 4762</Button>
-            <Button Margin=" 1">Zylindeerschraube DIN 1207</Button>
-            <Button Margin=" 1">Senkschraube DIN 10642</Button>
-        </StackPanel>
+    <Grid Margin="160,120,0,0" HorizontalAlignment="Left" Width="613" Height="242" VerticalAlignment="Top">
+        <TabControl >
+            <TabItem Header="Eingabe ">
+                <Grid Background="#FFFDF9F9">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="43*"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="170*"/>
+                    </Grid.RowDefinitions>
 
-        <StackPanel Width=" 60 " Margin="10,133,215.5,-132.5">
-            <TextBlock>Gewinde</TextBlock>
-            <RadioButton Margin=" 1">M3</RadioButton>
-            <RadioButton Margin=" 1">M4</RadioButton>
-            <RadioButton Margin=" 1">M5</RadioButton>
-            <RadioButton Margin=" 1">M6</RadioButton>
-            <RadioButton Margin=" 1">M8</RadioButton>
-            <RadioButton Margin=" 1">M10</RadioButton>
-            <RadioButton Margin=" 1">M12</RadioButton>
-            <RadioButton Margin=" 1">M14</RadioButton>
-            <RadioButton Margin=" 1">M16</RadioButton>
-            <RadioButton Margin=" 1">M20</RadioButton>
-            <RadioButton Margin=" 1">M24</RadioButton>
-            <RadioButton Margin=" 1">M30</RadioButton>
-            <RadioButton Margin=" 1">M36</RadioButton>
 
-        </StackPanel>
+                    <Label Width="60" Height="25" Margin="56,10,491,8">Gewinde</Label>
+                    <ComboBox x:Name="cbx_gew" MaxDropDownHeight="60" Margin="56,34,0,160" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" Grid.RowSpan="3" HorizontalAlignment="Left" Width="80">
+                        <ComboBoxItem Content="M3" Visibility="Collapsed"/>
+                        <ComboBoxItem Content="M4"/>
+                        <ComboBoxItem Content="M5"/>
+                        <ComboBoxItem Content="M6"/>
+                        <ComboBoxItem Content="M8"/>
+                        <ComboBoxItem Content="M10"/>
+                        <ComboBoxItem Content="M12"/>
+                        <ComboBoxItem Content="M16"/>
+                        <ComboBoxItem Content="M20"/>
+                        <ComboBoxItem Content="M24"/>
+                        <ComboBoxItem Content="M30"/>
+                        <ComboBoxItem Content="M36"/>
 
-        <StackPanel Grid.Column="1" Margin="0.5,9,224,-9.5">
-            <TextBlock Margin=" 1">Schraubenlänge</TextBlock>
-            <TextBox x:Name="schraube_laenge"></TextBox>
-            <TextBlock Margin=" 1">Packungsgröße</TextBlock>
-            <Button Margin="1">50</Button>
-            <Button Margin="1">100</Button>
-            <Button Margin=" 1">200</Button>
-            <Button Margin="1">500</Button>
-            
-            
-            
-        </StackPanel>
-        
-        
-        
-        
-        
+
+                    </ComboBox>
+
+
+
+                    <Label Width="110" Height="25" Margin="146,9,351,9">Schaftlänge (mm)</Label>
+                    <ComboBox x:Name="cbx_länge" MaxDropDownHeight="60" Margin="0,34,381,160" Grid.RowSpan="3" HorizontalAlignment="Right" Width="80">
+                        <ComboBoxItem Content="10"/>
+                        <ComboBoxItem Content="16"/>
+                        <ComboBoxItem Content="20"/>
+                        <ComboBoxItem Content="30"/>
+                        <ComboBoxItem Content="40"/>
+
+
+                    </ComboBox>
+
+
+                    <Label Width="100" Height="25" Margin="256,9,251,9">Stückzahl</Label>
+                    <ComboBox x:Name="cbx_stkz" MaxDropDownHeight="60"  Margin="0,34,266,160" Grid.RowSpan="3" HorizontalAlignment="Right" Width="80">
+                        <ComboBoxItem Content="50"/>
+                        <ComboBoxItem Content="100"/>
+                        <ComboBoxItem Content="200"/>
+                        <ComboBoxItem Content="500"/>
+
+
+                    </ComboBox>
+
+                    <Label Width="120" Height="25" Margin="356,10,0,8" HorizontalAlignment="Left">festigkeitsklasse</Label>
+
+                    <RadioButton Height=" 20" Margin="356,39,0,155" Grid.RowSpan="3" HorizontalAlignment="Left" Width="49">5.8</RadioButton>
+
+                    <RadioButton Height="20" Margin="356,12,0,138" Grid.Row="2" HorizontalAlignment="Left" Width="49">8.8</RadioButton>
+
+                    <RadioButton Height="20" Margin="356,32,0,118" Grid.Row="2" HorizontalAlignment="Left" Width="45">9.8</RadioButton>
+
+                    <RadioButton Height="20" Margin="356,52,0,98" Grid.Row="2" HorizontalAlignment="Left" Width="45">10.9</RadioButton>
+
+                    <Image Source="" Width="150" Height="100" Margin="457,9,0,105" Grid.RowSpan="3"></Image>
+
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Ausgabe">
+
+
+
+            </TabItem>
+
+        </TabControl>
     </Grid>
-
-    
 </Window>
