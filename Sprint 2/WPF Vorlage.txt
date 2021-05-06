@@ -1,0 +1,18 @@
+Auswahl:
+- Schraubenkopf (Baum)
+
+=(einzelner Ast)=
+- Bild der Schraube
+- Gewinde (ComboBox)
+- Länge der Schraube (ComboBox)
+- Länge des Gewindes (Textfeld)
+- Festigkeitsklasse (RadioButton)
+- Stückzahl (ComboBox)
+
+Ausgabe:
+- Bild der Schraube(mit Variablen)
+- zugewiesene Werte
+- Flächenträgheitsmoment
+- Volumen
+- Masse
+- Preis
