@@ -10,17 +10,26 @@ namespace Sprint2
 {
     class Excel
     {
+        string filename = "DatenbankSchraube.xlsx";
         string path = "";
-        
+
         Workbook wb;
         Worksheet ws;
 
         public Excel(string path, int sheet)
         {
             _Application excel = new _Excel.Application();
+            excel.Visible = true;
+
             this.path = path;
-            wb = excel.Workbooks.Open(path);
-            ws = wb.Worksheets[sheet];
+
+            path = System.IO.Path.GetFullPath(filename);
+
+            if (System.IO.File.Exists(path))
+            {
+                wb = excel.Workbooks.Open(path);
+                ws = wb.Worksheets[sheet];
+            }
         }
 
         public double ReadCell(int i, int j)
