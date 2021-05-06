@@ -27,7 +27,7 @@ namespace Sprint2
 
         public void OpenFile()
         {
-            Excel excel = new Excel(System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "DatenbankSchraube.xlsx"), 1);
+            //Excel excel = new Excel("DatenbankSchraube.xlsx", 1);
 
             Gewinde gewinde = new Gewinde();
         }
