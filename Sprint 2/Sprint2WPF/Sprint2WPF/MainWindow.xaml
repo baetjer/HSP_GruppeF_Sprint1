@@ -39,7 +39,7 @@
 
         <StackPanel Grid.Column="1" Margin="0.5,9,224,-9.5">
             <TextBlock Margin=" 1">Schraubenlänge</TextBlock>
-            <TextBox x:Name=" schraube_länge"></TextBox>
+            <TextBox x:Name="schraube_laenge"></TextBox>
             <TextBlock Margin=" 1">Packungsgröße</TextBlock>
             <Button Margin="1">50</Button>
             <Button Margin="1">100</Button>
