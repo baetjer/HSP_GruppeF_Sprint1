@@ -10,7 +10,7 @@ namespace Sprint2
 {
     class Gewinde
     {
-        Excel excel = new Excel(System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "DatenbankSchraube.xlsx"), 1);
+        Excel excel = new Excel("DatenbankSchraube.xlsx", 1);
         int input_gw_g = 0;
 
         public Gewinde()
