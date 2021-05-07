@@ -5,9 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpf_probe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Margin="160,120,0,0" HorizontalAlignment="Left" Width="613" Height="242" VerticalAlignment="Top">
-        <TabControl >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="106*"/>
+        </Grid.RowDefinitions>
+
+        <TreeView Width="180" Height="200" Margin="-160,-72,593,114" Grid.RowSpan="2">
+            <TreeViewItem x:Name="tvi_sk" Header="Sechskant DIN 8765" Selected="tvi_sk_Selected"/>
+            <TreeViewItem x:Name="tvi_zy1"  Header="Zylinderschraube DIN 4762 "></TreeViewItem>
+            <TreeViewItem x:Name="tvi_zy2" Header="Zylinderschraube DIN 1207"></TreeViewItem>
+            <TreeViewItem x:Name="tvi_ss" Header="senkschraube DIN 10642"></TreeViewItem>
+
+        </TreeView>
+
+
+        <TabControl Margin="44,0,-10,0" Grid.RowSpan="2" >
             <TabItem Header="Eingabe ">
                 <Grid Background="#FFFDF9F9">
                     <Grid.RowDefinitions>
@@ -17,8 +31,8 @@
                     </Grid.RowDefinitions>
 
 
-                    <Label Width="60" Height="25" Margin="56,10,491,8">Gewinde</Label>
-                    <ComboBox x:Name="cbx_gew" MaxDropDownHeight="60" Margin="56,34,0,160" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" Grid.RowSpan="3" HorizontalAlignment="Left" Width="80">
+                    <Label Width="60" Height="25" Margin="10,10,503,8">Gewinde</Label>
+                    <ComboBox x:Name="cbx_gew" MaxDropDownHeight="60" Margin="10,34,0,160" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" Grid.RowSpan="3" HorizontalAlignment="Left" Width="80">
                         <ComboBoxItem Content="M3" Visibility="Collapsed"/>
                         <ComboBoxItem Content="M4"/>
                         <ComboBoxItem Content="M5"/>
@@ -37,7 +51,7 @@
 
 
 
-                    <Label Width="110" Height="25" Margin="146,9,351,9">Schaftlänge (mm)</Label>
+                    <Label Width="110" Height="25" Margin="112,10,351,8">Schaftlänge (mm)</Label>
                     <ComboBox x:Name="cbx_länge" MaxDropDownHeight="60" Margin="0,34,381,160" Grid.RowSpan="3" HorizontalAlignment="Right" Width="80">
                         <ComboBoxItem Content="10"/>
                         <ComboBoxItem Content="16"/>
@@ -49,7 +63,7 @@
                     </ComboBox>
 
 
-                    <Label Width="100" Height="25" Margin="256,9,251,9">Stückzahl</Label>
+                    <Label Width="100" Height="25" Margin="227,10,246,8">Stückzahl</Label>
                     <ComboBox x:Name="cbx_stkz" MaxDropDownHeight="60"  Margin="0,34,266,160" Grid.RowSpan="3" HorizontalAlignment="Right" Width="80">
                         <ComboBoxItem Content="50"/>
                         <ComboBoxItem Content="100"/>
@@ -59,15 +73,15 @@
 
                     </ComboBox>
 
-                    <Label Width="120" Height="25" Margin="356,10,0,8" HorizontalAlignment="Left">festigkeitsklasse</Label>
+                    <Label Width="120" Height="25" Margin="352,10,0,8" HorizontalAlignment="Left">festigkeitsklasse</Label>
 
-                    <RadioButton Height=" 20" Margin="356,39,0,155" Grid.RowSpan="3" HorizontalAlignment="Left" Width="49">5.8</RadioButton>
+                    <RadioButton Height=" 20" Margin="352,40,0,154" HorizontalAlignment="Left" Width="49" Grid.RowSpan="3">5.8</RadioButton>
 
-                    <RadioButton Height="20" Margin="356,12,0,138" Grid.Row="2" HorizontalAlignment="Left" Width="49">8.8</RadioButton>
+                    <RadioButton Height="20" Margin="352,16,0,134" Grid.Row="2" HorizontalAlignment="Left" Width="49">8.8</RadioButton>
 
-                    <RadioButton Height="20" Margin="356,32,0,118" Grid.Row="2" HorizontalAlignment="Left" Width="45">9.8</RadioButton>
+                    <RadioButton Height="20" Margin="352,36,0,114" Grid.Row="2" HorizontalAlignment="Left" Width="45">9.8</RadioButton>
 
-                    <RadioButton Height="20" Margin="356,52,0,98" Grid.Row="2" HorizontalAlignment="Left" Width="45">10.9</RadioButton>
+                    <RadioButton Height="20" Margin="352,56,0,94" Grid.Row="2" HorizontalAlignment="Left" Width="45">10.9</RadioButton>
 
                     <Image Source="" Width="150" Height="100" Margin="457,9,0,105" Grid.RowSpan="3"></Image>
 
