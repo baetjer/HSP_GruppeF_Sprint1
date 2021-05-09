@@ -8,16 +8,20 @@ namespace Sprint2WPF
 {
     class ExcelControl
     {
-        int input_excel = 0;
-
-        public List<double> getWerte(int sk_auswahl)
+        public ExcelControl(int sheet_excel, int zeile_excel)
         {
-            Excel excel = new Excel("filler", sk_auswahl);
+            getWerte(sheet_excel, zeile_excel);
+        }
+
+
+        public List<double> getWerte(int sheet_excel, int zeile_excel)
+        {
+            Excel excel = new Excel("filler", sheet_excel);
             List<double> liste = new List<double>();
 
             for (int i = 0; i < 4; i++)
             {
-                liste.Add(excel.ReadCell(input_excel, i));
+                liste.Add(excel.ReadCell(zeile_excel, i));
             }
 
             return liste;
