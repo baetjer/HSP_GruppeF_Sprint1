@@ -14,9 +14,9 @@
 
         <TreeView Width="180" Height="200" Margin="-160,-72,593,114" Grid.RowSpan="2">
             <TreeViewItem x:Name="tvi_sk" Header="Sechskant DIN 8765" Selected="tvi_sk_Selected"/>
-            <TreeViewItem x:Name="tvi_zy1"  Header="Zylinderschraube DIN 4762 "></TreeViewItem>
-            <TreeViewItem x:Name="tvi_zy2" Header="Zylinderschraube DIN 1207"></TreeViewItem>
-            <TreeViewItem x:Name="tvi_ss" Header="senkschraube DIN 10642"></TreeViewItem>
+            <TreeViewItem x:Name="tvi_zy1"  Header="Zylinderschraube DIN 4762 " Selected="tvi_zy1_Selected"></TreeViewItem>
+            <TreeViewItem x:Name="tvi_zy2" Header="Zylinderschraube DIN 1207" Selected="tvi_zy2_Selected"></TreeViewItem>
+            <TreeViewItem x:Name="tvi_ss" Header="senkschraube DIN 10642" Selected="tvi_ss_Selected"></TreeViewItem>
 
         </TreeView>
 
