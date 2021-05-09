@@ -115,7 +115,7 @@
             </TabItem>
 
         </TabControl>
-        <Grid Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
+        <Grid x:Name="Img_DIN_10642" Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
             
             <Image Source="/Bilder/DIN 10642.jpg" />
 
@@ -123,20 +123,20 @@
         </Grid>
 
 
-        <Grid Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
+        <Grid x:Name="img_DIN_1207" Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
 
             <Image Source="/Bilder/DIN 1207.jpg" />
 
         </Grid>
 
-        <Grid Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
+        <Grid  x:Name="img_DIN_4014" Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
 
             <Image Source="/Bilder/DIN 4014.jpg" />
 
         </Grid>
 
 
-        <Grid Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
+        <Grid  x:Name="img_DIN_4762" Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
 
             <Image Source="/Bilder/DIN 4762.jpg" />
 
