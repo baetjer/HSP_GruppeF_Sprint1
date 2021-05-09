@@ -59,6 +59,11 @@ namespace wpf_probe
             hideallimages();
         }
 
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
 
 
         //Treeview Actions
