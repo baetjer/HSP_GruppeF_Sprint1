@@ -138,7 +138,8 @@
 
         <Grid Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
 
-            
+            <Image Source="/Bilder/DIN 4762.jpg" />
+
 
         </Grid>
 
