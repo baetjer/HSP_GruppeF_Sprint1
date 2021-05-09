@@ -89,6 +89,21 @@
 
             </TabItem>
             <TabItem Header="Ausgabe">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel>
+                        <Image Margin="10, 10"></Image>
+                    </StackPanel>
+                    
+                </Grid>
 
 
 
