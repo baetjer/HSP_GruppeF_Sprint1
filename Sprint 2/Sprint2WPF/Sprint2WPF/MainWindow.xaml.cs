@@ -33,7 +33,10 @@ namespace wpf_probe
         // Treeview Actions 
         private void hideallimages()
         {
-
+            img_DIN_1207.Visibility = Visibility.Hidden;
+            img_DIN_4014.Visibility = Visibility.Hidden;
+            img_DIN_4762.visibility = Visibility.Hidden;
+            Img_DIN_10642.Visibility = Visibility.Hidden;
         }
 
         
@@ -42,21 +45,25 @@ namespace wpf_probe
         private void tvi_sk_Selected(object sender, RoutedEventArgs e)
         {
             hideallimages();
+            img_DIN_4014.Visibility = Visibility.Visible;
         }
 
         private void tvi_zy1_Selected(object sender, RoutedEventArgs e)
         {
             hideallimages();
+            img_DIN_4762.Visibility = Visibility.Visible;
         }
 
         private void tvi_zy2_Selected(object sender, RoutedEventArgs e)
         {
             hideallimages();
+            img_DIN_1207.Visibility = Visibility.Visible;
         }
 
         private void tvi_ss_Selected(object sender, RoutedEventArgs e)
         {
             hideallimages();
+            Img_DIN_10642.Visibility = Visibility.Visible;
         }
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
