@@ -104,10 +104,29 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel>
-                        <Image Margin="10, 10"></Image>
-                    </StackPanel>
-                    
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <StackPanel Margin="10">
+                        <Label x:Name="sk_ausgabe">Schraubenart</Label>
+                        <Label x:Name="gw_ausgabe">Gewinde</Label>
+                        <Label x:Name="laenge">Länge</Label>
+                        </StackPanel>
+
+                        <StackPanel Margin="10" Grid.Column="2">
+                            <Label x:Name="wert1_ausgabe">Wert1</Label>
+                            <Label x:Name="wert2_ausgabe">Wert2</Label>
+                            <Label x:Name="wert3_ausgabe">Wert3</Label>
+                        </StackPanel>
+                    </Grid>
+
                 </Grid>
 
 
@@ -138,7 +157,7 @@
 
         <Grid Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
 
-            <Image sour
+            <Image></Image>
 
         </Grid>
 
