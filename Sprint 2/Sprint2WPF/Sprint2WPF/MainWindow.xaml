@@ -21,7 +21,7 @@
 
         </TreeView>
 
-        <TabControl Margin="44,0,-10,0" Grid.RowSpan="2" SelectionChanged="TabControl_SelectionChanged" >
+        <TabControl Margin="44,0,-10,0" Grid.RowSpan="2" SelectionChanged="TabControl_SelectionChanged">
 
 
 
@@ -138,7 +138,7 @@
 
         <Grid Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
 
-            <Image sour
+            
 
         </Grid>
 
