@@ -101,7 +101,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Bilder\cheems.jpg" />
+    <Resource Include="Bilder\DIN 1207.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\DIN 4014.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\DIN 10642.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,16 +12,23 @@
             <RowDefinition Height="106*"/>
         </Grid.RowDefinitions>
 
+
         <TreeView Width="180" Height="200" Margin="-160,-72,593,114" Grid.RowSpan="2">
-            <TreeViewItem x:Name="tvi_sk" Header="Sechskant DIN 8765" Selected="tvi_sk_Selected"/>
+            <TreeViewItem x:Name="tvi_sk" Header="Sechskant DIN 4014" Selected="tvi_sk_Selected"/>
             <TreeViewItem x:Name="tvi_zy1"  Header="Zylinderschraube DIN 4762 " Selected="tvi_zy1_Selected"></TreeViewItem>
             <TreeViewItem x:Name="tvi_zy2" Header="Zylinderschraube DIN 1207" Selected="tvi_zy2_Selected"></TreeViewItem>
             <TreeViewItem x:Name="tvi_ss" Header="senkschraube DIN 10642" Selected="tvi_ss_Selected"></TreeViewItem>
 
         </TreeView>
 
+        <TabControl Margin="44,0,-10,0" Grid.RowSpan="2" SelectionChanged="TabControl_SelectionChanged">
 
-        <TabControl Margin="44,0,-10,0" Grid.RowSpan="2" >
+
+
+
+
+
+
             <TabItem Header="Eingabe ">
                 <Grid Background="#FFFDF9F9">
                     <Grid.RowDefinitions>
@@ -83,17 +90,58 @@
 
                     <RadioButton Height="20" Margin="352,56,0,94" Grid.Row="2" HorizontalAlignment="Left" Width="45">10.9</RadioButton>
 
-                    <Image Source="Bilder\cheems.jpg" Width="150" Height="100" Margin="457,9,0,105" Grid.RowSpan="3"></Image>
-
                 </Grid>
 
             </TabItem>
             <TabItem Header="Ausgabe">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel>
+                        <Image Margin="10, 10"></Image>
+                    </StackPanel>
+                    
+                </Grid>
 
 
 
             </TabItem>
 
         </TabControl>
+        <Grid Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
+            
+            <Image Source="/Bilder/DIN 10642.jpg" />
+
+            
+        </Grid>
+
+
+        <Grid Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
+
+            <Image Source="/Bilder/DIN 1207.jpg" />
+
+        </Grid>
+
+        <Grid Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
+
+            <Image Source="/Bilder/DIN 4014.jpg" />
+
+        </Grid>
+
+
+        <Grid Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
+
+            
+
+        </Grid>
+
+
     </Grid>
 </Window>
