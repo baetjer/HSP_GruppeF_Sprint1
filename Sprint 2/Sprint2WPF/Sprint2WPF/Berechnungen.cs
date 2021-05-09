@@ -8,6 +8,13 @@ namespace Sprint2WPF
 {
     class Berechnungen
     {
+        public Berechnungen(double fl_d, double v_k_d, double v_k_l, double v_s_d, double v_s_l, double v_ergebnis, double dichte, double stkzahl)
+        {
+            getFlächenträgeitsmoment(fl_d);
+            getVolumen(v_k_d, v_k_l, v_s_d, v_s_l);
+            getMasse(v_ergebnis, dichte, stkzahl);
+        }
+
         //Flächenträgheitsmoment
         public double getFlächenträgeitsmoment(double fl_d)
         {
