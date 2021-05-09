@@ -75,7 +75,7 @@
 
                     <Label Width="120" Height="25" Margin="352,10,0,8" HorizontalAlignment="Left">festigkeitsklasse</Label>
 
-                    <RadioButton Height=" 20" Margin="352,40,0,154" HorizontalAlignment="Left" Width="49" Grid.RowSpan="3">5.8</RadioButton>
+                    <RadioButton IsChecked="True" Height=" 20" Margin="352,40,0,154" HorizontalAlignment="Left" Width="49" Grid.RowSpan="3">5.8</RadioButton>
 
                     <RadioButton Height="20" Margin="352,16,0,134" Grid.Row="2" HorizontalAlignment="Left" Width="49">8.8</RadioButton>
 
@@ -83,7 +83,7 @@
 
                     <RadioButton Height="20" Margin="352,56,0,94" Grid.Row="2" HorizontalAlignment="Left" Width="45">10.9</RadioButton>
 
-                    <Image Source="" Width="150" Height="100" Margin="457,9,0,105" Grid.RowSpan="3"></Image>
+                    <Image Source="Bilder\cheems.jpg" Width="150" Height="100" Margin="457,9,0,105" Grid.RowSpan="3"></Image>
 
                 </Grid>
 
