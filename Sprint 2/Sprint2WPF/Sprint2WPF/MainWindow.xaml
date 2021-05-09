@@ -120,11 +120,33 @@
                         <Label x:Name="laenge">Länge</Label>
                         </StackPanel>
 
-                        <StackPanel Margin="10" Grid.Column="2">
+                        <StackPanel Margin="10" Grid.Column="1">
                             <Label x:Name="wert1_ausgabe">Wert1</Label>
                             <Label x:Name="wert2_ausgabe">Wert2</Label>
                             <Label x:Name="wert3_ausgabe">Wert3</Label>
                         </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                        <StackPanel Margin="10" Grid.Column="0">
+                            <Label x:Name="festigkeit_ausgabe">Festigkeitsklasse</Label>
+                            <Label x:Name="material_ausgabe">Material</Label>
+                        </StackPanel>
+
+                        <StackPanel Margin="10" Grid.Column="1">
+                            <Label x:Name="zugfestigkeit_ausgabe">Zugfestigkeit</Label>
+                            <Label x:Name="streckgrenze_ausgabe">Streckgrenze</Label>
+                        </StackPanel>
+
                     </Grid>
 
                 </Grid>
