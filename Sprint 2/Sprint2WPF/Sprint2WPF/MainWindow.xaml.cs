@@ -35,7 +35,7 @@ namespace wpf_probe
         {
             img_DIN_1207.Visibility = Visibility.Hidden;
             img_DIN_4014.Visibility = Visibility.Hidden;
-            img_DIN_4762.visibility = Visibility.Hidden;
+            img_DIN_4762.Visibility = Visibility.Hidden;
             Img_DIN_10642.Visibility = Visibility.Hidden;
         }
 
