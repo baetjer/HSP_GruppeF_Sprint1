@@ -138,13 +138,27 @@
                     </Grid.ColumnDefinitions>
 
                         <StackPanel Margin="10" Grid.Column="0">
-                            <Label x:Name="festigkeit_ausgabe">Festigkeitsklasse</Label>
-                            <Label x:Name="material_ausgabe">Material</Label>
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="10">Festigkeitsklasse:</Label>
+                            <Label x:Name="festigkeit_ausgabe" TextBlock.FontSize="10">---</Label>
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="10">Material:</Label>
+                            <Label x:Name="material_ausgabe" TextBlock.FontSize="10">---</Label>
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="10">Volumen:</Label>
+                            <Label x:Name="volumen_ausgabe" TextBlock.FontSize="10">---</Label>
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="10">Gewicht:</Label>
+                            <Label x:Name="gewicht_ausgabe" TextBlock.FontSize="10">---</Label>
                         </StackPanel>
 
                         <StackPanel Margin="10" Grid.Column="1">
-                            <Label x:Name="zugfestigkeit_ausgabe">Zugfestigkeit</Label>
-                            <Label x:Name="streckgrenze_ausgabe">Streckgrenze</Label>
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="7">Zugfestigkeit:</Label>
+                            <Label x:Name="zugfestigkeit_ausgabe" TextBlock.FontSize="7">---</Label>
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="7">Streckgrenze:</Label>
+                            <Label x:Name="streckgrenze_ausgabe" TextBlock.FontSize="7">---</Label>
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="7">Dichte:</Label>
+                            <Label x:Name="dichte_ausgabe" TextBlock.FontSize="7">---</Label>
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="7">Flächenträgheitsmoment:</Label>
+                            <Label x:Name="traegheit_ausgabe" TextBlock.FontSize="7">---</Label>
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="9">Preis:</Label>
+                            <Label x:Name="preis_ausgabe" TextBlock.FontSize="10">---</Label>
                         </StackPanel>
 
                     </Grid>
