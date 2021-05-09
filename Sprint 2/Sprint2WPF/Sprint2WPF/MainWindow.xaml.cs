@@ -33,7 +33,6 @@ namespace wpf_probe
         // Treeview Actions 
         private void hideallimages()
         {
-          
 
         }
 
@@ -42,22 +41,22 @@ namespace wpf_probe
 
         private void tvi_sk_Selected(object sender, RoutedEventArgs e)
         {
-            hideallimages;
+            hideallimages();
         }
 
         private void tvi_zy1_Selected(object sender, RoutedEventArgs e)
         {
-            hideallimages;
+            hideallimages();
         }
 
         private void tvi_zy2_Selected(object sender, RoutedEventArgs e)
         {
-            hideallimages;
+            hideallimages();
         }
 
         private void tvi_ss_Selected(object sender, RoutedEventArgs e)
         {
-            hideallimages;
+            hideallimages();
         }
 
 
