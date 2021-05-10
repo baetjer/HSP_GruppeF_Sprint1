@@ -30,8 +30,8 @@ namespace Sprint2WPF
             double v_ergebnis_k;
             double v_ergebnis_s;
 
-            v_ergebnis_k = Math.PI * (1 / 4) * Math.Pow(v_k_d, 2) * v_k_l;
-            v_ergebnis_s = Math.PI * (1 / 4) * Math.Pow(v_s_d, 2) * v_s_l;
+            v_ergebnis_k = Math.PI * 1 / 4 * Math.Pow(v_k_d, 2) * v_k_l;
+            v_ergebnis_s = Math.PI * 1 / 4 * Math.Pow(v_s_d, 2) * v_s_l;
 
             v_ergebnis = v_ergebnis_k + v_ergebnis_s;
 
@@ -43,7 +43,7 @@ namespace Sprint2WPF
         {
             double m_packung_ergebnis;
 
-            m_packung_ergebnis = v_ergebnis * dichte * stkzahl;
+            m_packung_ergebnis = v_ergebnis * dichte * stkzahl * Math.Pow(10, -6);
 
             return m_packung_ergebnis;
         }
