@@ -58,8 +58,6 @@ namespace wpf_probe
         {
             hideallimages();
             img_DIN_1207.Visibility = Visibility.Visible;
-            
-            
         }
 
         private void tvi_ss_Selected(object sender, RoutedEventArgs e)
