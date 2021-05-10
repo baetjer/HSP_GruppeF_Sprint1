@@ -58,6 +58,8 @@ namespace wpf_probe
         {
             hideallimages();
             img_DIN_1207.Visibility = Visibility.Visible;
+            
+            
         }
 
         private void tvi_ss_Selected(object sender, RoutedEventArgs e)
@@ -65,9 +67,9 @@ namespace wpf_probe
             hideallimages();
             Img_DIN_10642.Visibility = Visibility.Visible;
 
-            //cbx_m24.Visibility = Visibility.Hidden;
-            //cbx_m30.Visibility = Visibility.Hidden;
-            //cbx_m36.Visibility = Visibility.Hidden;
+            cbx_m24.Visibility = Visibility.Hidden;
+            cbx_m30.Visibility = Visibility.Hidden;
+            cbx_m36.Visibility = Visibility.Hidden;
         }
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
