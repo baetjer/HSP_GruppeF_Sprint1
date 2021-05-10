@@ -8,11 +8,9 @@ namespace Sprint2WPF
 {
     class Berechnungen
     {
-        public Berechnungen(double fl_d, double v_k_d, double v_k_l, double v_s_d, double v_s_l, double v_ergebnis, double dichte, double stkzahl)
+        public Berechnungen()
         {
-            getFlächenträgeitsmoment(fl_d);
-            getVolumen(v_k_d, v_k_l, v_s_d, v_s_l);
-            getMasse(v_ergebnis, dichte, stkzahl);
+            
         }
 
         //Flächenträgheitsmoment
@@ -22,7 +20,7 @@ namespace Sprint2WPF
 
             fl_ergebnis = (Math.PI * Math.Pow(fl_d, 4)) / 64;
 
-            return fl_ergebnis;
+            return Math.Round(fl_ergebnis, 3);
         }
 
         //Volumen
