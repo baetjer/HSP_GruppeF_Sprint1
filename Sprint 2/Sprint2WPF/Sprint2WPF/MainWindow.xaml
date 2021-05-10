@@ -190,19 +190,16 @@
             <Image Source="/Bilder/DIN 4762.jpg" />
         </Grid>
 
-        <Grid Height="90" Width="180" Margin="10,30,684,412" Grid.ColumnSpan="2">
+        <Grid Height="90" Width="180" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="13*"/>
                 <ColumnDefinition Width="87*"/>
             </Grid.ColumnDefinitions>
-            <Image Source="/Bilder/jade Wappen.gif" Grid.ColumnSpan="2" />
-
+            <Image Source="/Bilder/jade.png" Grid.ColumnSpan="2" />
         </Grid>
 
         <Grid Height="90" Width="180" Margin="10,412,10,20">
             <Image Source="/Bilder/HSP bild.png" />
-
-            
         </Grid>
     </Grid>
 </Window>
