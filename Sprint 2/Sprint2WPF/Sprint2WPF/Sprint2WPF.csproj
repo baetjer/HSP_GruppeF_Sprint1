@@ -118,5 +118,8 @@
   <ItemGroup>
     <Resource Include="Bilder\DIN 4014_.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\jade Wappen.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
