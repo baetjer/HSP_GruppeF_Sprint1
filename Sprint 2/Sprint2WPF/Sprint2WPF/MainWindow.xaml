@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:wpf_probe"
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="900" ResizeMode="NoResize">
+    
     <Grid Margin="160,120,0,0" HorizontalAlignment="Left" Width="613" Height="242" VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition Height="15*"/>
