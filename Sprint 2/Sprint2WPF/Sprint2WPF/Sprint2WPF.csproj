@@ -121,5 +121,8 @@
   <ItemGroup>
     <Resource Include="Bilder\jade Wappen.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\HSP bild.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
