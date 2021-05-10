@@ -48,6 +48,8 @@ namespace Sprint2
             {
                 Console.WriteLine(i);
             }
+            Berechnungen berechnungen = new Berechnungen();
+            Console.WriteLine(berechnungen.getVolumen(1, 2, 3, 4));
         }
 
 
