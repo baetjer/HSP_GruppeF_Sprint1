@@ -13,25 +13,66 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace wpf_probe
+namespace Sprint2WPF
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        int sheet_sk = 1;
+        int sheet_l = 5;
+        int sheet_fst = 6;
+        int sheet_stz = 7;
+
+        int zeile_gw = 3;
+        int zeile_l = 3;
+        int zeile_stz = 3;
+        int zeile_fst = 3;
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
+
         private void cbx_gew_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (cbx_gew.SelectedItem != null)
+            {
+                bool parseOK = Int32.TryParse(cbx_gew.SelectedValue.ToString(), out zeile_gw);
+            }
+            else
+            { //Value is null 
+            }
 
+            //bool parseOK = Int32.TryParse(cbx_gew.SelectedValue.ToString(), out zeile);
+        }
+
+        private void cbx_laenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cbx_laenge.SelectedItem != null)
+            {
+                bool parseOK = Int32.TryParse(cbx_laenge.SelectedValue.ToString(), out zeile_l);
+            }
+            else
+            { //Value is null 
+            }
+        }
+
+        private void cbx_stkz_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cbx_stkz.SelectedItem != null)
+            {
+                bool parseOK = Int32.TryParse(cbx_stkz.SelectedValue.ToString(), out zeile_stz);
+            }
+            else
+            { //Value is null 
+            }
         }
 
         // Treeview Actions 
-        private void hideallimages()
+        public void hideallimages()
         {
             img_DIN_1207.Visibility = Visibility.Hidden;
             img_DIN_4014.Visibility = Visibility.Hidden;
@@ -62,7 +103,6 @@ namespace wpf_probe
       
         private void tvi_sk_Selected(object sender, RoutedEventArgs e)
         {
-
             //Visibility Image
             hideallimages();
             img_DIN_4014.Visibility = Visibility.Visible;
@@ -71,6 +111,9 @@ namespace wpf_probe
             //Visibility Gewinde
             showallgewinde();
             cbx_m14.Visibility = Visibility.Hidden;
+
+            //excel-Zugriff
+            sheet_sk = 1;
         }
 
         private void tvi_zy1_Selected(object sender, RoutedEventArgs e)
@@ -82,6 +125,9 @@ namespace wpf_probe
             //visibility Gewinde
             showallgewinde();
             cbx_m14.Visibility = Visibility.Hidden;
+
+            //excel-Zugriff
+            sheet_sk = 2;
         }
 
         private void tvi_zy2_Selected(object sender, RoutedEventArgs e)
@@ -101,6 +147,8 @@ namespace wpf_probe
             cbx_m30.Visibility = Visibility.Hidden;
             cbx_m36.Visibility = Visibility.Hidden;
 
+            //excel-Zugriff
+            sheet_sk = 4;
         }
 
         private void tvi_ss_Selected(object sender, RoutedEventArgs e)
@@ -118,8 +166,8 @@ namespace wpf_probe
             cbx_m30.Visibility = Visibility.Hidden;
             cbx_m36.Visibility = Visibility.Hidden;
 
-
-          
+            //excel-Zugriff
+            sheet_sk = 3;
         }
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -135,5 +183,13 @@ namespace wpf_probe
        
 
 
+<<<<<<< Updated upstream
+=======
+
+
+
+
+        //Treeview Actions
+>>>>>>> Stashed changes
     }
 }
