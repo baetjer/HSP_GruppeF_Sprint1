@@ -8,9 +8,9 @@ namespace Sprint2WPF
 {
     class ExcelControl
     {
-        public ExcelControl(int sheet_excel, int zeile_excel)
+        public ExcelControl()
         {
-            getWerte(sheet_excel, zeile_excel);
+
         }
 
 

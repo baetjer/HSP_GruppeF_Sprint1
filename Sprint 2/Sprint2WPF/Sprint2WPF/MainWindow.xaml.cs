@@ -179,5 +179,15 @@ namespace Sprint2WPF
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ExcelControl excelControl = new ExcelControl();
+
+            if (rb_5_8.IsChecked == true)
+            {
+                festigkeit_ausgabe.Content = 
+            }
+        }
     }
 }
