@@ -30,6 +30,7 @@ namespace Sprint2WPF
         int zeile_stz = 3;
         int zeile_fst = 3;
 
+
         ExcelControl excelControl = new ExcelControl();
 
         public MainWindow()
@@ -40,13 +41,13 @@ namespace Sprint2WPF
 
         private void cbx_gew_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (cbx_gew.SelectedItem != null)
-            {
-                bool parseOK = Int32.TryParse(cbx_gew.SelectedValue.ToString(), out zeile_gw);
-            }
-            else
-            { //Value is null 
-            }
+            //if (cbx_gew.SelectedItem != null)
+            //{
+            //    bool parseOK = Int32.TryParse(cbx_gew.SelectedValue.ToString(), out zeile_gw);
+            //}
+            //else
+            //{ //Value is null 
+            //}
 
             //bool parseOK = Int32.TryParse(cbx_gew.SelectedValue.ToString(), out zeile);
         }
@@ -87,19 +88,19 @@ namespace Sprint2WPF
         //Gewinde Actions
         private void showallgewinde()
         {
-            cbx_m3.Visibility = Visibility.Visible;
-            cbx_m4.Visibility = Visibility.Visible;
-            cbx_m5.Visibility = Visibility.Visible;
-            cbx_m6.Visibility = Visibility.Visible;
-            cbx_m8.Visibility = Visibility.Visible;
-            cbx_m10.Visibility = Visibility.Visible;
-            cbx_m12.Visibility = Visibility.Visible;
-            cbx_m14.Visibility = Visibility.Visible;
-            cbx_m16.Visibility = Visibility.Visible;
-            cbx_m20.Visibility = Visibility.Visible;
-            cbx_m24.Visibility = Visibility.Visible;
-            cbx_m30.Visibility = Visibility.Visible;
-            cbx_m36.Visibility = Visibility.Visible;
+            //cbx_m3.Visibility = Visibility.Visible;
+            //cbx_m4.Visibility = Visibility.Visible;
+            //cbx_m5.Visibility = Visibility.Visible;
+            //cbx_m6.Visibility = Visibility.Visible;
+            //cbx_m8.Visibility = Visibility.Visible;
+            //cbx_m10.Visibility = Visibility.Visible;
+            //cbx_m12.Visibility = Visibility.Visible;
+            //cbx_m14.Visibility = Visibility.Visible;
+            //cbx_m16.Visibility = Visibility.Visible;
+            //cbx_m20.Visibility = Visibility.Visible;
+            //cbx_m24.Visibility = Visibility.Visible;
+            //cbx_m30.Visibility = Visibility.Visible;
+            //cbx_m36.Visibility = Visibility.Visible;
         }
 
 
@@ -112,7 +113,7 @@ namespace Sprint2WPF
 
             //Visibility Gewinde
             showallgewinde();
-            cbx_m14.Visibility = Visibility.Hidden;
+            //cbx_m14.Visibility = Visibility.Hidden;
 
             //excel-Zugriff
             sheet_sk = 1;
@@ -126,7 +127,7 @@ namespace Sprint2WPF
 
             //visibility Gewinde
             showallgewinde();
-            cbx_m14.Visibility = Visibility.Hidden;
+            //cbx_m14.Visibility = Visibility.Hidden;
 
             //excel-Zugriff
             sheet_sk = 2;
@@ -141,13 +142,13 @@ namespace Sprint2WPF
 
             // Visibility Gewinde
             showallgewinde();
-            cbx_m12.Visibility = Visibility.Hidden;
-            cbx_m14.Visibility = Visibility.Hidden;
-            cbx_m16.Visibility = Visibility.Hidden;
-            cbx_m20.Visibility = Visibility.Hidden;
-            cbx_m24.Visibility = Visibility.Hidden;
-            cbx_m30.Visibility = Visibility.Hidden;
-            cbx_m36.Visibility = Visibility.Hidden;
+            //cbx_m12.Visibility = Visibility.Hidden;
+            //cbx_m14.Visibility = Visibility.Hidden;
+            //cbx_m16.Visibility = Visibility.Hidden;
+            //cbx_m20.Visibility = Visibility.Hidden;
+            //cbx_m24.Visibility = Visibility.Hidden;
+            //cbx_m30.Visibility = Visibility.Hidden;
+            //cbx_m36.Visibility = Visibility.Hidden;
 
             //excel-Zugriff
             sheet_sk = 4;
@@ -163,10 +164,10 @@ namespace Sprint2WPF
             // Visibility Gewinde
 
             showallgewinde();
-            cbx_m14.Visibility = Visibility.Hidden;
-            cbx_m24.Visibility = Visibility.Hidden;
-            cbx_m30.Visibility = Visibility.Hidden;
-            cbx_m36.Visibility = Visibility.Hidden;
+            //cbx_m14.Visibility = Visibility.Hidden;
+            //cbx_m24.Visibility = Visibility.Hidden;
+            //cbx_m30.Visibility = Visibility.Hidden;
+            //cbx_m36.Visibility = Visibility.Hidden;
 
             //excel-Zugriff
             sheet_sk = 3;
@@ -237,22 +238,7 @@ namespace Sprint2WPF
 
         public void getGewinde()
         {
-            if (cbx_gew.SelectedItem != null)
-            {
-                bool parseOK = Int32.TryParse(cbx_gew.SelectedValue.ToString(), out zeile_gw);
-                
-                if (tvi_sk.IsSelected == true)
-                {
-                    List<double> erg = excelControl.getWerte(1, zeile_gw);
-                }
-                else if(tvi_zy1.IsSelected == true)
-                {
-                    List<double> erg = excelControl.getWerte(2, zeile_gw);
-                }
-            }
-            else
-            { //Value is null 
-            }
+           
         }
 
         public void getStueckzahl()
