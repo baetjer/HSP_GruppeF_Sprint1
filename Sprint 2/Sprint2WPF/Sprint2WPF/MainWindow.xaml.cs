@@ -186,7 +186,7 @@ namespace Sprint2WPF
 
             if (rb_5_8.IsChecked == true)
             {
-                festigkeit_ausgabe.Content = 
+                //festigkeit_ausgabe.Content = ;
             }
         }
     }
