@@ -7,21 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="900" ResizeMode="NoResize">
     
-    <Grid Margin="160,120,0,0" HorizontalAlignment="Left" Width="613" Height="242" VerticalAlignment="Top">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
         <Grid.RowDefinitions>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="106*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
 
-        <TreeView Width="180" Height="200" Margin="-160,-72,593,114" Grid.RowSpan="2">
-            <TreeViewItem x:Name="tvi_sk" Header="Sechskant DIN 4014" Selected="tvi_sk_Selected"/>
-            <TreeViewItem x:Name="tvi_zy1"  Header="Zylinderschraube DIN 4762 " Selected="tvi_zy1_Selected"></TreeViewItem>
-            <TreeViewItem x:Name="tvi_zy2" Header="Zylinderschraube DIN 1207" Selected="tvi_zy2_Selected"></TreeViewItem>
-            <TreeViewItem x:Name="tvi_ss" Header="senkschraube DIN 10642" Selected="tvi_ss_Selected"></TreeViewItem>
+        <TreeView Width="180" Height="200" Grid.Column="0">
+            <TreeViewItem x:Name="tvi_sk" Header="Sechskant DIN 4014" Selected="tvi_sk_Selected" Margin="0,10,0,0"/>
+            <TreeViewItem x:Name="tvi_zy1"  Header="Zylinderschraube DIN 4762 " Selected="tvi_zy1_Selected" Margin="0,10,0,0"></TreeViewItem>
+            <TreeViewItem x:Name="tvi_zy2" Header="Zylinderschraube DIN 1207" Selected="tvi_zy2_Selected" Margin="0,10,0,0"></TreeViewItem>
+            <TreeViewItem x:Name="tvi_ss" Header="senkschraube DIN 10642" Selected="tvi_ss_Selected" Margin="0,10,0,0"></TreeViewItem>
         </TreeView>
 
-        <TabControl Height="300" Margin="44,0,-10,0" Grid.RowSpan="2" SelectionChanged="TabControl_SelectionChanged">
+        <TabControl Grid.Column="1" Margin="20" SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="Eingabe ">
                 <Grid Background="#FFFDF9F9">
                     <Grid.RowDefinitions>
@@ -160,44 +164,27 @@
                             <Label Margin="0, 0, 0, 0" TextBlock.FontSize="9">Preis:</Label>
                             <Label x:Name="preis_ausgabe" TextBlock.FontSize="10">---</Label>
                         </StackPanel>
-
                     </Grid>
-
                 </Grid>
-
-
-
             </TabItem>
 
         </TabControl>
-        <Grid x:Name="Img_DIN_10642" Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
 
+        <Grid x:Name="Img_DIN_10642" Height=" 200" Width="250" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
             <Image Source="/Bilder/DIN 10642.jpg" />
-
-
         </Grid>
 
-
-        <Grid x:Name="img_DIN_1207" Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
-
+        <Grid x:Name="img_DIN_1207" Height=" 200" Width="250"  Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
             <Image Source="/Bilder/DIN 1207.jpg" />
-
         </Grid>
 
-        <Grid  x:Name="img_DIN_4014" Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
-
+        <Grid  x:Name="img_DIN_4014" Height=" 200" Width="250" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
             <Image Source="/Bilder/DIN 4014_.png" />
-
         </Grid>
 
-
-        <Grid  x:Name="img_DIN_4762" Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
-
+        <Grid  x:Name="img_DIN_4762" Height=" 200" Width="250" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40"> 
             <Image Source="/Bilder/DIN 4762.jpg" />
-
-
         </Grid>
-
 
     </Grid>
 </Window>
