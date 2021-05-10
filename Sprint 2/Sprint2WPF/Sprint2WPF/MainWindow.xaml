@@ -6,16 +6,18 @@
         xmlns:local="clr-namespace:Sprint2WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="900" ResizeMode="NoResize">
-    
+
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
+
+       
 
 
         <TreeView Width="180" Height="200" Grid.Column="0">
@@ -184,9 +186,17 @@
             <Image Source="/Bilder/DIN 4014_.png" />
         </Grid>
 
-        <Grid  x:Name="img_DIN_4762" Height=" 200" Width="250" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40"> 
+        <Grid  x:Name="img_DIN_4762" Height=" 200" Width="250" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
             <Image Source="/Bilder/DIN 4762.jpg" />
         </Grid>
 
+        <Grid Height="80" Width="180" Margin="10,30,684,412" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="13*"/>
+                <ColumnDefinition Width="87*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/Bilder/jade Wappen.gif" Grid.ColumnSpan="2" />
+
+        </Grid>
     </Grid>
 </Window>
