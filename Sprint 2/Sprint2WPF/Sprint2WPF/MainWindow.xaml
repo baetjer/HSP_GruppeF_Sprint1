@@ -24,7 +24,7 @@
             <TreeViewItem x:Name="tvi_sk" Header="Sechskant DIN 4014" Selected="tvi_sk_Selected" Margin="0,10,0,0"/>
             <TreeViewItem x:Name="tvi_zy1"  Header="Zylinderschraube DIN 4762 " Selected="tvi_zy1_Selected" Margin="0,10,0,0"></TreeViewItem>
             <TreeViewItem x:Name="tvi_zy2" Header="Zylinderschraube DIN 1207" Selected="tvi_zy2_Selected" Margin="0,10,0,0"></TreeViewItem>
-            <TreeViewItem x:Name="tvi_ss" Header="senkschraube DIN 10642" Selected="tvi_ss_Selected" Margin="0,10,0,0"></TreeViewItem>
+            <TreeViewItem x:Name="tvi_ss" Header="Senkschraube DIN 10642" Selected="tvi_ss_Selected" Margin="0,10,0,0"></TreeViewItem>
         </TreeView>
 
         <TabControl Grid.Column="1" Margin="20" SelectionChanged="TabControl_SelectionChanged">
@@ -123,15 +123,21 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Margin="10">
-                            <Label x:Name="sk_ausgabe">Schraubenart</Label>
-                            <Label x:Name="gw_ausgabe">Gewinde</Label>
-                            <Label x:Name="laenge">Länge</Label>
+                            <Label>Schraubenart:</Label>
+                            <Label x:Name="sk_ausgabe">---</Label>
+                            <Label>Gewinde:</Label>
+                            <Label x:Name="gw_ausgabe">---</Label>
+                            <Label>Länge:</Label>
+                            <Label x:Name="laenge">---</Label>
                         </StackPanel>
 
                         <StackPanel Margin="10" Grid.Column="1">
-                            <Label x:Name="wert1_ausgabe">Wert1</Label>
-                            <Label x:Name="wert2_ausgabe">Wert2</Label>
-                            <Label x:Name="wert3_ausgabe">Wert3</Label>
+                            <Label>Wert1</Label>
+                            <Label x:Name="wert1_ausgabe">---</Label>
+                            <Label>Wert2</Label>
+                            <Label x:Name="wert2_ausgabe">---</Label>
+                            <Label>Wert3</Label>
+                            <Label x:Name="wert3_ausgabe">---</Label>
                         </StackPanel>
                     </Grid>
 
@@ -157,9 +163,9 @@
                         </StackPanel>
 
                         <StackPanel Margin="10" Grid.Column="1">
-                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="7">Zugfestigkeit:</Label>
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="7">Zugfestigkeit [N/mm²]:</Label>
                             <Label x:Name="zugfestigkeit_ausgabe" TextBlock.FontSize="7">---</Label>
-                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="7">Streckgrenze:</Label>
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="7">Streckgrenze [N/mm²]:</Label>
                             <Label x:Name="streckgrenze_ausgabe" TextBlock.FontSize="7">---</Label>
                             <Label Margin="0, 0, 0, 0" TextBlock.FontSize="7">Dichte:</Label>
                             <Label x:Name="dichte_ausgabe" TextBlock.FontSize="7">---</Label>
