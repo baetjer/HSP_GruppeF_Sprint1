@@ -20,17 +20,6 @@ namespace Sprint2WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        int sheet_sk = 1;
-        int sheet_l = 5;
-        int sheet_fst = 6;
-        int sheet_stz = 7;
-
-        int zeile_gw = 3;
-        int zeile_l = 3;
-        int zeile_stz = 3;
-        int zeile_fst = 3;
-
-
         ExcelControl excelControl = new ExcelControl();
 
         public MainWindow()
@@ -54,24 +43,12 @@ namespace Sprint2WPF
 
         private void cbx_laenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (cbx_laenge.SelectedItem != null)
-            {
-                bool parseOK = Int32.TryParse(cbx_laenge.SelectedValue.ToString(), out zeile_l);
-            }
-            else
-            { //Value is null 
-            }
+
         }
 
         private void cbx_stkz_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (cbx_stkz.SelectedItem != null)
-            {
-                bool parseOK = Int32.TryParse(cbx_stkz.SelectedValue.ToString(), out zeile_stz);
-            }
-            else
-            { //Value is null 
-            }
+
         }
 
         // Treeview Actions 
@@ -88,19 +65,19 @@ namespace Sprint2WPF
         //Gewinde Actions
         private void showallgewinde()
         {
-            //cbx_m3.Visibility = Visibility.Visible;
-            //cbx_m4.Visibility = Visibility.Visible;
-            //cbx_m5.Visibility = Visibility.Visible;
-            //cbx_m6.Visibility = Visibility.Visible;
-            //cbx_m8.Visibility = Visibility.Visible;
-            //cbx_m10.Visibility = Visibility.Visible;
-            //cbx_m12.Visibility = Visibility.Visible;
-            //cbx_m14.Visibility = Visibility.Visible;
-            //cbx_m16.Visibility = Visibility.Visible;
-            //cbx_m20.Visibility = Visibility.Visible;
-            //cbx_m24.Visibility = Visibility.Visible;
-            //cbx_m30.Visibility = Visibility.Visible;
-            //cbx_m36.Visibility = Visibility.Visible;
+            cbx_m3.Visibility = Visibility.Visible;
+            cbx_m4.Visibility = Visibility.Visible;
+            cbx_m5.Visibility = Visibility.Visible;
+            cbx_m6.Visibility = Visibility.Visible;
+            cbx_m8.Visibility = Visibility.Visible;
+            cbx_m10.Visibility = Visibility.Visible;
+            cbx_m12.Visibility = Visibility.Visible;
+            cbx_m14.Visibility = Visibility.Visible;
+            cbx_m16.Visibility = Visibility.Visible;
+            cbx_m20.Visibility = Visibility.Visible;
+            cbx_m24.Visibility = Visibility.Visible;
+            cbx_m30.Visibility = Visibility.Visible;
+            cbx_m36.Visibility = Visibility.Visible;
         }
 
 
@@ -113,10 +90,9 @@ namespace Sprint2WPF
 
             //Visibility Gewinde
             showallgewinde();
-            //cbx_m14.Visibility = Visibility.Hidden;
+            cbx_m14.Visibility = Visibility.Hidden;
 
             //excel-Zugriff
-            sheet_sk = 1;
         }
 
         private void tvi_zy1_Selected(object sender, RoutedEventArgs e)
@@ -127,10 +103,9 @@ namespace Sprint2WPF
 
             //visibility Gewinde
             showallgewinde();
-            //cbx_m14.Visibility = Visibility.Hidden;
+            cbx_m14.Visibility = Visibility.Hidden;
 
             //excel-Zugriff
-            sheet_sk = 2;
         }
 
         private void tvi_zy2_Selected(object sender, RoutedEventArgs e)
@@ -142,16 +117,15 @@ namespace Sprint2WPF
 
             // Visibility Gewinde
             showallgewinde();
-            //cbx_m12.Visibility = Visibility.Hidden;
-            //cbx_m14.Visibility = Visibility.Hidden;
-            //cbx_m16.Visibility = Visibility.Hidden;
-            //cbx_m20.Visibility = Visibility.Hidden;
-            //cbx_m24.Visibility = Visibility.Hidden;
-            //cbx_m30.Visibility = Visibility.Hidden;
-            //cbx_m36.Visibility = Visibility.Hidden;
+            cbx_m12.Visibility = Visibility.Hidden;
+            cbx_m14.Visibility = Visibility.Hidden;
+            cbx_m16.Visibility = Visibility.Hidden;
+            cbx_m20.Visibility = Visibility.Hidden;
+            cbx_m24.Visibility = Visibility.Hidden;
+            cbx_m30.Visibility = Visibility.Hidden;
+            cbx_m36.Visibility = Visibility.Hidden;
 
             //excel-Zugriff
-            sheet_sk = 4;
         }
 
         private void tvi_ss_Selected(object sender, RoutedEventArgs e)
@@ -164,13 +138,12 @@ namespace Sprint2WPF
             // Visibility Gewinde
 
             showallgewinde();
-            //cbx_m14.Visibility = Visibility.Hidden;
-            //cbx_m24.Visibility = Visibility.Hidden;
-            //cbx_m30.Visibility = Visibility.Hidden;
-            //cbx_m36.Visibility = Visibility.Hidden;
+            cbx_m14.Visibility = Visibility.Hidden;
+            cbx_m24.Visibility = Visibility.Hidden;
+            cbx_m30.Visibility = Visibility.Hidden;
+            cbx_m36.Visibility = Visibility.Hidden;
 
             //excel-Zugriff
-            sheet_sk = 3;
         }
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -236,30 +209,52 @@ namespace Sprint2WPF
             }
         }
 
-        public void getGewinde()
+        public int getSheet()
         {
-           
+            int sheet;
+
+            if (tvi_sk.IsSelected == true)
+            {
+                sheet = 1;
+            }
+            else if (tvi_zy1.IsSelected == true)
+            {
+                sheet = 2;
+            }
+            else if (tvi_zy2.IsSelected == true)
+            {
+                sheet = 3;
+            }
+            else if (tvi_ss.IsSelected == true)
+            {
+                sheet = 4;
+            }
+
+            return sheet;
         }
 
-        public void getStueckzahl()
+        public List<double> getGewinde(int sheet)
         {
-            double stueckzahl = 0;
-
-            if (cbx_stkz.SelectedItem != null)
+            List<double> gewinde = new List<double>();
+            if (cbx_m3.IsSelected == true)
             {
-                bool parseOK = double.TryParse(cbx_stkz.SelectedValue.ToString(), out stueckzahl);
+                gewinde = excelControl.getWerte(sheet, 4);
             }
-            else
-            { //Value is null 
-            }
+
+            return gewinde;
+        }
+
+        public void readGewinde(List<double> gewinde)
+        {
+            gw_ausgabe.Content = gewinde[0];
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            gw_ausgabe.Content = zeile_gw;
             getFestigkeit();
             getSchraube();
-            getGewinde();
+            int sheet = getSheet();
+            readGewinde(getGewinde(sheet));
         }
     }
 }
