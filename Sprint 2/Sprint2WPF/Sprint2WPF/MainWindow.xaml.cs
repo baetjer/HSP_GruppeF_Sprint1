@@ -39,34 +39,78 @@ namespace wpf_probe
             Img_DIN_10642.Visibility = Visibility.Hidden;
         }
 
-        
 
-
+        private void showallgewinde()
+        {
+            cbx_m3.Visibility = Visibility.Visible;
+            cbx_m4.Visibility = Visibility.Visible;
+            cbx_m5.Visibility = Visibility.Visible;
+            cbx_m6.Visibility = Visibility.Visible;
+            cbx_m8.Visibility = Visibility.Visible;
+            cbx_m10.Visibility = Visibility.Visible;
+            cbx_m12.Visibility = Visibility.Visible;
+            cbx_m14.Visibility = Visibility.Visible;
+            cbx_m16.Visibility = Visibility.Visible;
+            cbx_m20.Visibility = Visibility.Visible;
+            cbx_m24.Visibility = Visibility.Visible;
+            cbx_m30.Visibility = Visibility.Visible;
+            cbx_m36.Visibility = Visibility.Visible;
+        }
+      
+      
         private void tvi_sk_Selected(object sender, RoutedEventArgs e)
         {
+
+            //Visibility Image
             hideallimages();
             img_DIN_4014.Visibility = Visibility.Visible;
+
+
+            //Visibility Gewinde
+            showallgewinde();
+            cbx_m14.Visibility = Visibility.Hidden;
         }
 
         private void tvi_zy1_Selected(object sender, RoutedEventArgs e)
         {
+            //Visibility Image
             hideallimages();
             img_DIN_4762.Visibility = Visibility.Visible;
+
+            //visibility Gewinde
+            showallgewinde();
+            cbx_m14.Visibility = Visibility.Hidden;
         }
 
         private void tvi_zy2_Selected(object sender, RoutedEventArgs e)
         {
+            //Visibility Image
             hideallimages();
             img_DIN_1207.Visibility = Visibility.Visible;
+
+
+            // Visibility Gewinde
+            showallgewinde();
+            cbx_m12.Visibility = Visibility.Hidden;
+            cbx_m14.Visibility = Visibility.Hidden;
+            cbx_m16.Visibility = Visibility.Hidden;
+            cbx_m20.Visibility = Visibility.Hidden;
+            cbx_m24.Visibility = Visibility.Hidden;
+            cbx_m30.Visibility = Visibility.Hidden;
+            cbx_m36.Visibility = Visibility.Hidden;
+
         }
 
         private void tvi_ss_Selected(object sender, RoutedEventArgs e)
         {
+            //Visibility Image
             hideallimages();
             Img_DIN_10642.Visibility = Visibility.Visible;
 
 
             // Visibility Gewinde
+
+            showallgewinde();
             cbx_m14.Visibility = Visibility.Hidden;
             cbx_m24.Visibility = Visibility.Hidden;
             cbx_m30.Visibility = Visibility.Hidden;
