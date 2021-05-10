@@ -186,7 +186,7 @@
 
         <Grid  x:Name="img_DIN_4014" Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
 
-            <Image Source="/Bilder/DIN 4014.jpg" />
+            <Image Source="/Bilder/DIN 4014_.png" />
 
         </Grid>
 
