@@ -35,6 +35,7 @@ namespace Sprint2WPF
         double laenge_output;
         double dichte_output = 7.85;
         double stueckzahl_output;
+        double volumen_output;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -46,9 +47,10 @@ namespace Sprint2WPF
             setStckzahl();
             Berechnungen berechnungen = new Berechnungen();
             dichte_ausgabe.Content = dichte_output;
-            volumen_ausgabe.Content = berechnungen.getVolumen(wert1_output, wert2_output, gw_output, laenge_output);
             traegheit_ausgabe.Content = berechnungen.getFlächenträgeitsmoment(gw_output);
-            gewicht_ausgabe.Content = berechnungen.getMasse(berechnungen.getVolumen(wert1_output, wert2_output, gw_output, laenge_output), dichte_output, stueckzahl_output);
+            volumen_output = Math.Round(berechnungen.getVolumen(wert1_output, wert2_output, gw_output, laenge_output), 3);
+            volumen_ausgabe.Content = volumen_output;
+            gewicht_ausgabe.Content = Math.Round(berechnungen.getMasse(volumen_output, dichte_output, stueckzahl_output), 3);
         }
 
         private void cbx_gew_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -382,33 +384,27 @@ namespace Sprint2WPF
         {
             List<double> stueckzahl = new List<double>();
 
-            if (l10.IsSelected == true)
+            if (stk50.IsSelected == true)
             {
                 stueckzahl = excelControl.getWerte(7, 2);
                 stueckzahl_ausgabe.Content = stueckzahl[0];
                 stueckzahl_output = stueckzahl[0];
             }
-            else if (l16.IsSelected == true)
+            else if (stk100.IsSelected == true)
             {
                 stueckzahl = excelControl.getWerte(7, 3);
                 stueckzahl_ausgabe.Content = stueckzahl[0];
                 stueckzahl_output = stueckzahl[0];
             }
-            else if (l20.IsSelected == true)
+            else if (stk200.IsSelected == true)
             {
                 stueckzahl = excelControl.getWerte(7, 4);
                 stueckzahl_ausgabe.Content = stueckzahl[0];
                 stueckzahl_output = stueckzahl[0];
             }
-            else if (l30.IsSelected == true)
+            else if (stk500.IsSelected == true)
             {
                 stueckzahl = excelControl.getWerte(7, 5);
-                stueckzahl_ausgabe.Content = stueckzahl[0];
-                stueckzahl_output = stueckzahl[0];
-            }
-            else if (l40.IsSelected == true)
-            {
-                stueckzahl = excelControl.getWerte(7, 6);
                 stueckzahl_ausgabe.Content = stueckzahl[0];
                 stueckzahl_output = stueckzahl[0];
             }
