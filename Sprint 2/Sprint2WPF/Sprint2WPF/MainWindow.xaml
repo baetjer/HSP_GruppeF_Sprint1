@@ -40,18 +40,18 @@
 
                     <Label Width="60" Height="25" Margin="10,10,503,8">Gewinde</Label>
                     <ComboBox x:Name="cbx_gew" MaxDropDownHeight="60" Margin="10,41,0,210" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" HorizontalAlignment="Left" Width="80" Grid.RowSpan="3">
-                        <ComboBoxItem Content="M3" Visibility="Collapsed"/>
-                        <ComboBoxItem Content="M4"/>
-                        <ComboBoxItem Content="M5"/>
-                        <ComboBoxItem Content="M6"/>
-                        <ComboBoxItem Content="M8"/>
-                        <ComboBoxItem Content="M10"/>
-                        <ComboBoxItem Content="M12"/>
-                        <ComboBoxItem Content="M16"/>
-                        <ComboBoxItem Content="M20"/>
-                        <ComboBoxItem Content="M24"/>
-                        <ComboBoxItem Content="M30"/>
-                        <ComboBoxItem Content="M36"/>
+                        <ComboBoxItem x: Name="cbx_m3" Content="M3" Visibility="Collapsed"/>
+                        <ComboBoxItem x: Name="cbx_m4" Content="M4"/>
+                        <ComboBoxItem x: Name="cbx_m5" Content="M5"/>
+                        <ComboBoxItem x: Name="cbx_m6" Content="M6"/>
+                        <ComboBoxItem x: Name="cbx_m8" Content="M8"/>
+                        <ComboBoxItem x: Name="cbx_m10" Content="M10"/>
+                        <ComboBoxItem x: Name="cbx_m12" Content="M12"/>
+                        <ComboBoxItem x: Name="cbx_m16" Content="M16"/>
+                        <ComboBoxItem x: Name="cbx_m20" Content="M20"/>
+                        <ComboBoxItem x: Name="cbx_m24" Content="M24" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x: Name="cbx_m30" Content="M30"/>
+                        <ComboBoxItem x: Name="cbx_m36" Content="M36"/>
 
 
                     </ComboBox>
