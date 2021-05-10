@@ -16,7 +16,7 @@ namespace Sprint2WPF
         Workbook wb;
         Worksheet ws;
 
-        public Excel(string path, int sheet)
+        public Excel(string path)
         {
             _Application excel = new _Excel.Application();
             excel.Visible = true;
@@ -28,8 +28,12 @@ namespace Sprint2WPF
             if (System.IO.File.Exists(path))
             {
                 wb = excel.Workbooks.Open(path);
-                ws = wb.Worksheets[sheet];
             }
+        }
+
+        public void getSheet(int sheet)
+        {
+            ws = wb.Worksheets[sheet];
         }
 
         public double ReadCell(int i, int j)
