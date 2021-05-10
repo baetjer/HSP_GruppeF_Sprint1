@@ -64,11 +64,11 @@
                     <StackPanel Grid.Column="1">
                         <Label Width="110" Height="25" >Schaftlänge (mm)</Label>
                         <ComboBox x:Name="cbx_laenge" MaxDropDownHeight="100" Width="80" SelectionChanged="cbx_laenge_SelectionChanged">
-                            <ComboBoxItem Content="10"/>
-                            <ComboBoxItem Content="16"/>
-                            <ComboBoxItem Content="20"/>
-                            <ComboBoxItem Content="30"/>
-                            <ComboBoxItem Content="40"/>
+                            <ComboBoxItem x:Name="l10" Content="10"/>
+                            <ComboBoxItem x:Name="l16" Content="16"/>
+                            <ComboBoxItem x:Name="l20" Content="20"/>
+                            <ComboBoxItem x:Name="l30" Content="30"/>
+                            <ComboBoxItem x:Name="l40" Content="40"/>
                         </ComboBox>
                     </StackPanel>
 
@@ -83,10 +83,10 @@
                                     <TranslateTransform X="-0.325"/>
                                 </TransformGroup>
                             </ComboBox.RenderTransform>
-                            <ComboBoxItem Content="50"/>
-                            <ComboBoxItem Content="100"/>
-                            <ComboBoxItem Content="200"/>
-                            <ComboBoxItem Content="500"/>
+                            <ComboBoxItem x:Name="stk50" Content="50"/>
+                            <ComboBoxItem x:Name="stk100" Content="100"/>
+                            <ComboBoxItem x:Name="stk200" Content="200"/>
+                            <ComboBoxItem x:Name="stk500" Content="500"/>
                         </ComboBox>
                     </StackPanel>
 
@@ -133,11 +133,11 @@
                         </StackPanel>
 
                         <StackPanel Margin="10" Grid.Column="1">
-                            <Label>Wert1</Label>
+                            <Label x:Name="wert1">Wert1</Label>
                             <Label x:Name="wert1_ausgabe">---</Label>
-                            <Label>Wert2</Label>
+                            <Label x:Name="wert2">Wert2</Label>
                             <Label x:Name="wert2_ausgabe">---</Label>
-                            <Label>Wert3</Label>
+                            <Label x:Name="wert3">Wert3</Label>
                             <Label x:Name="wert3_ausgabe">---</Label>
                         </StackPanel>
                     </Grid>
@@ -161,6 +161,8 @@
                             <Label x:Name="volumen_ausgabe" TextBlock.FontSize="10">---</Label>
                             <Label Margin="0, 0, 0, 0" TextBlock.FontSize="10">Gewicht:</Label>
                             <Label x:Name="gewicht_ausgabe" TextBlock.FontSize="10">---</Label>
+                            <Label>Stückzahl</Label>
+                            <Label x:Name="stueckzahl_ausgabe">---</Label>
                         </StackPanel>
 
                         <StackPanel Margin="10" Grid.Column="1">
