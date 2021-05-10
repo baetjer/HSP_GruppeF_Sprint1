@@ -27,18 +27,33 @@ namespace Sprint2WPF
             InitializeComponent();
         }
 
+        int sheet_sk;
+
+        double gw_output;
+        double wert1_output;
+        double wert2_output;
+        double laenge_output;
+        double dichte_output = 7.85;
+        double stueckzahl_output;
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            getFestigkeit();
+            getSchraube();
+            getGewindeSheet();
+            readGewinde(getGewinde(sheet_sk));
+            setLaenge();
+            setStckzahl();
+            Berechnungen berechnungen = new Berechnungen();
+            dichte_ausgabe.Content = dichte_output;
+            volumen_ausgabe.Content = berechnungen.getVolumen(wert1_output, wert2_output, gw_output, laenge_output);
+            traegheit_ausgabe.Content = berechnungen.getFlächenträgeitsmoment(gw_output);
+            gewicht_ausgabe.Content = berechnungen.getMasse(berechnungen.getVolumen(wert1_output, wert2_output, gw_output, laenge_output), dichte_output, stueckzahl_output);
+        }
 
         private void cbx_gew_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //if (cbx_gew.SelectedItem != null)
-            //{
-            //    bool parseOK = Int32.TryParse(cbx_gew.SelectedValue.ToString(), out zeile_gw);
-            //}
-            //else
-            //{ //Value is null 
-            //}
 
-            //bool parseOK = Int32.TryParse(cbx_gew.SelectedValue.ToString(), out zeile);
         }
 
         private void cbx_laenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -87,12 +102,9 @@ namespace Sprint2WPF
             hideallimages();
             img_DIN_4014.Visibility = Visibility.Visible;
 
-
             //Visibility Gewinde
             showallgewinde();
             cbx_m14.Visibility = Visibility.Hidden;
-
-            //excel-Zugriff
         }
 
         private void tvi_zy1_Selected(object sender, RoutedEventArgs e)
@@ -104,8 +116,6 @@ namespace Sprint2WPF
             //visibility Gewinde
             showallgewinde();
             cbx_m14.Visibility = Visibility.Hidden;
-
-            //excel-Zugriff
         }
 
         private void tvi_zy2_Selected(object sender, RoutedEventArgs e)
@@ -113,7 +123,6 @@ namespace Sprint2WPF
             //Visibility Image
             hideallimages();
             img_DIN_1207.Visibility = Visibility.Visible;
-
 
             // Visibility Gewinde
             showallgewinde();
@@ -124,8 +133,6 @@ namespace Sprint2WPF
             cbx_m24.Visibility = Visibility.Hidden;
             cbx_m30.Visibility = Visibility.Hidden;
             cbx_m36.Visibility = Visibility.Hidden;
-
-            //excel-Zugriff
         }
 
         private void tvi_ss_Selected(object sender, RoutedEventArgs e)
@@ -136,14 +143,11 @@ namespace Sprint2WPF
 
 
             // Visibility Gewinde
-
             showallgewinde();
             cbx_m14.Visibility = Visibility.Hidden;
             cbx_m24.Visibility = Visibility.Hidden;
             cbx_m30.Visibility = Visibility.Hidden;
             cbx_m36.Visibility = Visibility.Hidden;
-
-            //excel-Zugriff
         }
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -190,7 +194,6 @@ namespace Sprint2WPF
 
         public void getSchraube()
         {
-            
             if (tvi_sk.IsSelected == true)
             {
                 sk_ausgabe.Content = "Sechskant DIN 4014";
@@ -209,28 +212,24 @@ namespace Sprint2WPF
             }
         }
 
-        public int getSheet()
+        public void getGewindeSheet()
         {
-            int sheet;
-
             if (tvi_sk.IsSelected == true)
             {
-                sheet = 1;
+                sheet_sk = 1;
             }
             else if (tvi_zy1.IsSelected == true)
             {
-                sheet = 2;
+                sheet_sk = 2;
             }
             else if (tvi_zy2.IsSelected == true)
             {
-                sheet = 3;
+                sheet_sk = 4;
             }
             else if (tvi_ss.IsSelected == true)
             {
-                sheet = 4;
+                sheet_sk = 3;
             }
-
-            return sheet;
         }
 
         public List<double> getGewinde(int sheet)
@@ -238,7 +237,55 @@ namespace Sprint2WPF
             List<double> gewinde = new List<double>();
             if (cbx_m3.IsSelected == true)
             {
+                gewinde = excelControl.getWerte(sheet, 2);
+            }
+            else if (cbx_m4.IsSelected == true)
+            {
+                gewinde = excelControl.getWerte(sheet, 3);
+            }
+            else if (cbx_m5.IsSelected == true)
+            {
                 gewinde = excelControl.getWerte(sheet, 4);
+            }
+            else if (cbx_m6.IsSelected == true)
+            {
+                gewinde = excelControl.getWerte(sheet, 5);
+            }
+            else if (cbx_m8.IsSelected == true)
+            {
+                gewinde = excelControl.getWerte(sheet, 6);
+            }
+            else if (cbx_m10.IsSelected == true)
+            {
+                gewinde = excelControl.getWerte(sheet, 7);
+            }
+            else if (cbx_m12.IsSelected == true)
+            {
+                gewinde = excelControl.getWerte(sheet, 8);
+            }
+            else if (cbx_m14.IsSelected == true)
+            {
+                gewinde = excelControl.getWerte(sheet, 9);
+            }
+            else if (cbx_m16.IsSelected == true)
+            {
+                gewinde = excelControl.getWerte(sheet, 10);
+            }
+            else if (cbx_m20.IsSelected == true)
+            {
+                gewinde = excelControl.getWerte(sheet, 11);
+            }
+            else if (cbx_m24.IsSelected == true)
+            {
+                gewinde = excelControl.getWerte(sheet, 12);
+            }
+            else if (cbx_m30.IsSelected == true)
+            {
+                gewinde = excelControl.getWerte(sheet, 13);
+            }
+            else if (cbx_m36.IsSelected == true)
+            {
+                gewinde = excelControl.getWerte(sheet, 14);
             }
 
             return gewinde;
@@ -247,14 +294,124 @@ namespace Sprint2WPF
         public void readGewinde(List<double> gewinde)
         {
             gw_ausgabe.Content = gewinde[0];
+            gw_output = gewinde[0];
+
+            if (tvi_sk.IsSelected == true)
+            {
+                wert1.Content = "s:";
+                wert1_ausgabe.Content = gewinde[1];
+                wert1_output = gewinde[1];
+                wert2.Content = "e:";
+                wert2_ausgabe.Content = gewinde[2];
+                wert2_output = gewinde[2];
+                wert3.Content = "k:";
+                wert3_ausgabe.Content = gewinde[3];
+            }
+            else if (tvi_zy1.IsSelected == true)
+            {
+                wert1.Content = "s:";
+                wert1_ausgabe.Content = gewinde[1];
+                wert1_output = gewinde[1];
+                wert2.Content = "dk:";
+                wert2_ausgabe.Content = gewinde[2];
+                wert2_output = gewinde[2];
+                wert3.Content = "k:";
+                wert3_ausgabe.Content = gewinde[3];
+            }
+            else if (tvi_zy2.IsSelected == true)
+            {
+                wert1.Content = "dk:";
+                wert1_ausgabe.Content = gewinde[1];
+                wert1_output = gewinde[1];
+                wert2.Content = "n:";
+                wert2_ausgabe.Content = gewinde[2];
+                wert2_output = gewinde[2];
+                wert3.Content = "k:";
+                wert3_ausgabe.Content = gewinde[3];
+            }
+            else if (tvi_ss.IsSelected == true)
+            {
+                wert1.Content = "s:";
+                wert1_ausgabe.Content = gewinde[1];
+                wert1_output = gewinde[1];
+                wert2.Content = "dk:";
+                wert2_ausgabe.Content = gewinde[2];
+                wert2_output = gewinde[2];
+                wert3.Content = "k:";
+                wert3_ausgabe.Content = gewinde[3];
+            }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void setLaenge()
         {
-            getFestigkeit();
-            getSchraube();
-            int sheet = getSheet();
-            readGewinde(getGewinde(sheet));
+            List<double> laenge_liste = new List<double>();
+
+            if (l10.IsSelected == true)
+            {
+                laenge_liste = excelControl.getWerte(5, 2);
+                laenge.Content = laenge_liste[0];
+                laenge_output = laenge_liste[0];
+            }
+            else if (l16.IsSelected == true)
+            {
+                laenge_liste = excelControl.getWerte(5, 3);
+                laenge.Content = laenge_liste[0];
+                laenge_output = laenge_liste[0];
+            }
+            else if (l20.IsSelected == true)
+            {
+                laenge_liste = excelControl.getWerte(5, 4);
+                laenge.Content = laenge_liste[0];
+                laenge_output = laenge_liste[0];
+            }
+            else if (l30.IsSelected == true)
+            {
+                laenge_liste = excelControl.getWerte(5, 5);
+                laenge.Content = laenge_liste[0];
+                laenge_output = laenge_liste[0];
+            }
+            else if (l40.IsSelected == true)
+            {
+                laenge_liste = excelControl.getWerte(5, 6);
+                laenge.Content = laenge_liste[0];
+                laenge_output = laenge_liste[0];
+            }
+        }
+
+        public void setStckzahl()
+        {
+            List<double> stueckzahl = new List<double>();
+
+            if (l10.IsSelected == true)
+            {
+                stueckzahl = excelControl.getWerte(7, 2);
+                stueckzahl_ausgabe.Content = stueckzahl[0];
+                stueckzahl_output = stueckzahl[0];
+            }
+            else if (l16.IsSelected == true)
+            {
+                stueckzahl = excelControl.getWerte(7, 3);
+                stueckzahl_ausgabe.Content = stueckzahl[0];
+                stueckzahl_output = stueckzahl[0];
+            }
+            else if (l20.IsSelected == true)
+            {
+                stueckzahl = excelControl.getWerte(7, 4);
+                stueckzahl_ausgabe.Content = stueckzahl[0];
+                stueckzahl_output = stueckzahl[0];
+            }
+            else if (l30.IsSelected == true)
+            {
+                stueckzahl = excelControl.getWerte(7, 5);
+                stueckzahl_ausgabe.Content = stueckzahl[0];
+                stueckzahl_output = stueckzahl[0];
+            }
+            else if (l40.IsSelected == true)
+            {
+                stueckzahl = excelControl.getWerte(7, 6);
+                stueckzahl_ausgabe.Content = stueckzahl[0];
+                stueckzahl_output = stueckzahl[0];
+            }
         }
     }
 }
