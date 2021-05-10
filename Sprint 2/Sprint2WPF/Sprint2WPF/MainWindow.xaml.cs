@@ -90,6 +90,7 @@ namespace wpf_probe
             hideallimages();
             img_DIN_1207.Visibility = Visibility.Visible;
 
+
             // Visibility Gewinde
             showallgewinde();
             cbx_m12.Visibility = Visibility.Hidden;
@@ -99,6 +100,7 @@ namespace wpf_probe
             cbx_m24.Visibility = Visibility.Hidden;
             cbx_m30.Visibility = Visibility.Hidden;
             cbx_m36.Visibility = Visibility.Hidden;
+
         }
 
         private void tvi_ss_Selected(object sender, RoutedEventArgs e)
