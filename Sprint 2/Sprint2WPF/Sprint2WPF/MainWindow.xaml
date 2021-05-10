@@ -96,7 +96,7 @@
                         <RadioButton x:Name="rb_9_8" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="45">9.8</RadioButton>
                         <RadioButton x:Name="rb_10_9" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="45">10.9</RadioButton>
 
-                        <Button Margin="10,280,10,0" Height="50">Auswahl bestätigen</Button>
+                        <Button Margin="10,280,10,0" Height="50" FontSize="14">Auswahl bestätigen</Button>
                     </StackPanel>
                 </Grid>
 
