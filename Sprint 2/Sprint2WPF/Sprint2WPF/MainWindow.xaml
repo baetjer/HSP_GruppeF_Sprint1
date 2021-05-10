@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpf_probe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+        Title="MainWindow" Height="550" Width="900" ResizeMode="NoResize">
     <Grid Margin="160,120,0,0" HorizontalAlignment="Left" Width="613" Height="242" VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition Height="15*"/>
@@ -21,7 +21,7 @@
 
         </TreeView>
 
-        <TabControl Margin="44,0,-10,0" Grid.RowSpan="2" SelectionChanged="TabControl_SelectionChanged">
+        <TabControl Height="300" Margin="44,0,-10,0" Grid.RowSpan="2" SelectionChanged="TabControl_SelectionChanged">
 
 
 
@@ -39,7 +39,7 @@
 
 
                     <Label Width="60" Height="25" Margin="10,10,503,8">Gewinde</Label>
-                    <ComboBox x:Name="cbx_gew" MaxDropDownHeight="60" Margin="10,34,0,160" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" Grid.RowSpan="3" HorizontalAlignment="Left" Width="80">
+                    <ComboBox x:Name="cbx_gew" MaxDropDownHeight="60" Margin="10,41,0,210" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" HorizontalAlignment="Left" Width="80" Grid.RowSpan="3">
                         <ComboBoxItem Content="M3" Visibility="Collapsed"/>
                         <ComboBoxItem Content="M4"/>
                         <ComboBoxItem Content="M5"/>
@@ -58,8 +58,8 @@
 
 
 
-                    <Label Width="110" Height="25" Margin="112,10,351,8">Schaftlänge (mm)</Label>
-                    <ComboBox x:Name="cbx_länge" MaxDropDownHeight="60" Margin="0,34,381,160" Grid.RowSpan="3" HorizontalAlignment="Right" Width="80">
+                    <Label Width="110" Height="25" Margin="112,16,351,14">Schaftlänge (mm)</Label>
+                    <ComboBox x:Name="cbx_länge" MaxDropDownHeight="60" Margin="0,41,381,209" Grid.RowSpan="3" HorizontalAlignment="Right" Width="80">
                         <ComboBoxItem Content="10"/>
                         <ComboBoxItem Content="16"/>
                         <ComboBoxItem Content="20"/>
@@ -70,8 +70,16 @@
                     </ComboBox>
 
 
-                    <Label Width="100" Height="25" Margin="227,10,246,8">Stückzahl</Label>
-                    <ComboBox x:Name="cbx_stkz" MaxDropDownHeight="60"  Margin="0,34,266,160" Grid.RowSpan="3" HorizontalAlignment="Right" Width="80">
+                    <Label Width="100" Height="25" Margin="234,16,239,14">Stückzahl</Label>
+                    <ComboBox x:Name="cbx_stkz" MaxDropDownHeight="60"  Margin="0,39,260,211" Grid.RowSpan="3" HorizontalAlignment="Right" Width="80" RenderTransformOrigin="0.5,0.5">
+                        <ComboBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="-0.477"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="-0.325"/>
+                            </TransformGroup>
+                        </ComboBox.RenderTransform>
                         <ComboBoxItem Content="50"/>
                         <ComboBoxItem Content="100"/>
                         <ComboBoxItem Content="200"/>
@@ -113,11 +121,11 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        
+
                         <StackPanel Margin="10">
-                        <Label x:Name="sk_ausgabe">Schraubenart</Label>
-                        <Label x:Name="gw_ausgabe">Gewinde</Label>
-                        <Label x:Name="laenge">Länge</Label>
+                            <Label x:Name="sk_ausgabe">Schraubenart</Label>
+                            <Label x:Name="gw_ausgabe">Gewinde</Label>
+                            <Label x:Name="laenge">Länge</Label>
                         </StackPanel>
 
                         <StackPanel Margin="10" Grid.Column="1">
@@ -128,14 +136,14 @@
                     </Grid>
 
                     <Grid Grid.Column="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
 
                         <StackPanel Margin="10" Grid.Column="0">
                             <Label Margin="0, 0, 0, 0" TextBlock.FontSize="10">Festigkeitsklasse:</Label>
@@ -171,10 +179,10 @@
 
         </TabControl>
         <Grid x:Name="Img_DIN_10642" Height=" 120" Width=" 180" Margin="77,89,356,33" Grid.Row="1">
-            
+
             <Image Source="/Bilder/DIN 10642.jpg" />
 
-            
+
         </Grid>
 
 
