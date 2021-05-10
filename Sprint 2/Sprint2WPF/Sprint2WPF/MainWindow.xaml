@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sprint2WPF"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="900" ResizeMode="NoResize">
 
@@ -43,7 +44,7 @@
 
                     <StackPanel Grid.Column="0">
                         <Label Width="60" Height="25">Gewinde</Label>
-                        <ComboBox x:Name="cbx_gew" MaxDropDownHeight="200" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" Width="80" Grid.RowSpan="3">
+                        <!--<ComboBox x:Name="cbx_gew" MaxDropDownHeight="200" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" Width="80" Grid.RowSpan="3">
                             <ComboBoxItem x:Name="cbx_m3" Content="3" Visibility="Collapsed"/>
                             <ComboBoxItem  x:Name="cbx_m4" Content="4"></ComboBoxItem>
                             <ComboBoxItem  x:Name="cbx_m5" Content="5"/>
@@ -57,6 +58,26 @@
                             <ComboBoxItem  x:Name="cbx_m24" Content="24"/>
                             <ComboBoxItem  x:Name="cbx_m30" Content="30"/>
                             <ComboBoxItem  x:Name="cbx_m36" Content="36"/>
+                        </ComboBox>-->
+
+                        <ComboBox SelectedItem="{Binding Path=gwliste, Mode=TwoWay}">
+                            <ComboBox.ItemsSource>
+                                <x:Array Type="{x:Type sys:Int32}">
+                                    <sys:Int32>3</sys:Int32>
+                                    <sys:Int32>4</sys:Int32>
+                                    <sys:Int32>5</sys:Int32>
+                                    <sys:Int32>6</sys:Int32>
+                                    <sys:Int32>8</sys:Int32>
+                                    <sys:Int32>10</sys:Int32>
+                                    <sys:Int32>12</sys:Int32>
+                                    <sys:Int32>14</sys:Int32>
+                                    <sys:Int32>16</sys:Int32>
+                                    <sys:Int32>20</sys:Int32>
+                                    <sys:Int32>24</sys:Int32>
+                                    <sys:Int32>30</sys:Int32>
+                                    <sys:Int32>36</sys:Int32>
+                                </x:Array>
+                            </ComboBox.ItemsSource>
                         </ComboBox>
                     </StackPanel>
 
