@@ -30,6 +30,8 @@ namespace Sprint2WPF
         int zeile_stz = 3;
         int zeile_fst = 3;
 
+        ExcelControl excelControl = new ExcelControl();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -180,14 +182,98 @@ namespace Sprint2WPF
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void getFestigkeit()
         {
-            ExcelControl excelControl = new ExcelControl();
-
             if (rb_5_8.IsChecked == true)
             {
-                //festigkeit_ausgabe.Content = ;
+                festigkeit_ausgabe.Content = "5.8";
+                List<double> erg = excelControl.getWerte(6, 2);
+                zugfestigkeit_ausgabe.Content = erg[0];
+                streckgrenze_ausgabe.Content = erg[1];
             }
+            else if (rb_8_8.IsChecked == true)
+            {
+                festigkeit_ausgabe.Content = "8.8";
+                List<double> erg = excelControl.getWerte(6, 3);
+                zugfestigkeit_ausgabe.Content = erg[0];
+                streckgrenze_ausgabe.Content = erg[1];
+            }
+            else if (rb_9_8.IsChecked == true)
+            {
+                festigkeit_ausgabe.Content = "9.8";
+                List<double> erg = excelControl.getWerte(6, 4);
+                zugfestigkeit_ausgabe.Content = erg[0];
+                streckgrenze_ausgabe.Content = erg[1];
+            }
+            else if (rb_10_9.IsChecked == true)
+            {
+                festigkeit_ausgabe.Content = "10.9";
+                List<double> erg = excelControl.getWerte(6, 5);
+                zugfestigkeit_ausgabe.Content = erg[0];
+                streckgrenze_ausgabe.Content = erg[1];
+            }
+        }
+
+        public void getSchraube()
+        {
+            
+            if (tvi_sk.IsSelected == true)
+            {
+                sk_ausgabe.Content = "Sechskant DIN 4014";
+            }
+            else if (tvi_zy1.IsSelected == true)
+            {
+                sk_ausgabe.Content = "Zylinderschraube DIN 4762";
+            }
+            else if (tvi_zy2.IsSelected == true)
+            {
+                sk_ausgabe.Content = "Zylinderschraube DIN 1207";
+            }
+            else if (tvi_ss.IsSelected == true)
+            {
+                sk_ausgabe.Content = "Senkschraube DIN 10642";
+            }
+        }
+
+        public void getGewinde()
+        {
+            if (cbx_gew.SelectedItem != null)
+            {
+                bool parseOK = Int32.TryParse(cbx_gew.SelectedValue.ToString(), out zeile_gw);
+                
+                if (tvi_sk.IsSelected == true)
+                {
+                    List<double> erg = excelControl.getWerte(1, zeile_gw);
+                }
+                else if(tvi_zy1.IsSelected == true)
+                {
+                    List<double> erg = excelControl.getWerte(2, zeile_gw);
+                }
+            }
+            else
+            { //Value is null 
+            }
+        }
+
+        public void getStueckzahl()
+        {
+            double stueckzahl = 0;
+
+            if (cbx_stkz.SelectedItem != null)
+            {
+                bool parseOK = double.TryParse(cbx_stkz.SelectedValue.ToString(), out stueckzahl);
+            }
+            else
+            { //Value is null 
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            gw_ausgabe.Content = zeile_gw;
+            getFestigkeit();
+            getSchraube();
+            getGewinde();
         }
     }
 }
