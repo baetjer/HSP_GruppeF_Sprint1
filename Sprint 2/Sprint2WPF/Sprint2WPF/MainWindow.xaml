@@ -34,67 +34,6 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
-<<<<<<< Updated upstream
-                    <Label Width="60" Height="25" Margin="10,10,503,8">Gewinde</Label>
-                    <ComboBox x:Name="cbx_gew" MaxDropDownHeight="60" Margin="10,41,0,210" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" HorizontalAlignment="Left" Width="80" Grid.RowSpan="3">
-                        <ComboBoxItem x: Name="cbx_m3" Content="M3" Visibility="Collapsed"/>
-                        <ComboBoxItem x: Name="cbx_m4" Content="M4"/>
-                        <ComboBoxItem x: Name="cbx_m5" Content="M5"/>
-                        <ComboBoxItem x: Name="cbx_m6" Content="M6"/>
-                        <ComboBoxItem x: Name="cbx_m8" Content="M8"/>
-                        <ComboBoxItem x: Name="cbx_m10" Content="M10"/>
-                        <ComboBoxItem x: Name="cbx_m12" Content="M12"/>
-                        <ComboBoxItem x: Name="cbx_m16" Content="M16"/>
-                        <ComboBoxItem x: Name="cbx_m20" Content="M20"/>
-                        <ComboBoxItem x: Name="cbx_m24" Content="M24" Selected="ComboBoxItem_Selected"/>
-                        <ComboBoxItem x: Name="cbx_m30" Content="M30"/>
-                        <ComboBoxItem x: Name="cbx_m36" Content="M36"/>
-
-
-                    </ComboBox>
-
-
-
-                    <Label Width="110" Height="25" Margin="112,16,351,14">Schaftlänge (mm)</Label>
-                    <ComboBox x:Name="cbx_länge" MaxDropDownHeight="60" Margin="0,41,381,209" Grid.RowSpan="3" HorizontalAlignment="Right" Width="80">
-                        <ComboBoxItem Content="10"/>
-                        <ComboBoxItem Content="16"/>
-                        <ComboBoxItem Content="20"/>
-                        <ComboBoxItem Content="30"/>
-                        <ComboBoxItem Content="40"/>
-
-
-                    </ComboBox>
-
-
-                    <Label Width="100" Height="25" Margin="234,16,239,14">Stückzahl</Label>
-                    <ComboBox x:Name="cbx_stkz" MaxDropDownHeight="60"  Margin="0,39,260,211" Grid.RowSpan="3" HorizontalAlignment="Right" Width="80" RenderTransformOrigin="0.5,0.5">
-                        <ComboBox.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform AngleX="-0.477"/>
-                                <RotateTransform/>
-                                <TranslateTransform X="-0.325"/>
-                            </TransformGroup>
-                        </ComboBox.RenderTransform>
-                        <ComboBoxItem Content="50"/>
-                        <ComboBoxItem Content="100"/>
-                        <ComboBoxItem Content="200"/>
-                        <ComboBoxItem Content="500"/>
-
-
-                    </ComboBox>
-
-                    <Label Width="120" Height="25" Margin="352,10,0,8" HorizontalAlignment="Left">festigkeitsklasse</Label>
-
-                    <RadioButton IsChecked="True" Height=" 20" Margin="352,40,0,154" HorizontalAlignment="Left" Width="49" Grid.RowSpan="3">5.8</RadioButton>
-
-                    <RadioButton Height="20" Margin="352,16,0,134" Grid.Row="2" HorizontalAlignment="Left" Width="49">8.8</RadioButton>
-
-                    <RadioButton Height="20" Margin="352,36,0,114" Grid.Row="2" HorizontalAlignment="Left" Width="45">9.8</RadioButton>
-
-                    <RadioButton Height="20" Margin="352,56,0,94" Grid.Row="2" HorizontalAlignment="Left" Width="45">10.9</RadioButton>
-=======
                     <StackPanel Grid.Column="0">
                         <Label Width="60" Height="25">Gewinde</Label>
                         <ComboBox x:Name="cbx_gew" MaxDropDownHeight="60" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" Width="80" Grid.RowSpan="3">
@@ -149,8 +88,6 @@
                         <RadioButton Height="20" HorizontalAlignment="Left" Width="45">9.8</RadioButton>
                         <RadioButton Height="20" HorizontalAlignment="Left" Width="45">10.9</RadioButton>
                     </StackPanel>
->>>>>>> Stashed changes
-
                 </Grid>
 
             </TabItem>
