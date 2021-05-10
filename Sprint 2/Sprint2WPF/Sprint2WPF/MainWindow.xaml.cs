@@ -99,8 +99,8 @@ namespace Sprint2WPF
             cbx_m30.Visibility = Visibility.Visible;
             cbx_m36.Visibility = Visibility.Visible;
         }
-      
-      
+
+
         private void tvi_sk_Selected(object sender, RoutedEventArgs e)
         {
             //Visibility Image
@@ -179,17 +179,5 @@ namespace Sprint2WPF
         {
 
         }
-
-       
-
-
-<<<<<<< Updated upstream
-=======
-
-
-
-
-        //Treeview Actions
->>>>>>> Stashed changes
     }
 }
