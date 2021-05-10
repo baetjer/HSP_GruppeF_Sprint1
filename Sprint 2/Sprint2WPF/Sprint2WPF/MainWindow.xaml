@@ -199,7 +199,7 @@
 
         </Grid>
 
-        <Grid Height="90" Width="180" Margin="10,412,10,20">
+        <Grid  HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20">
             <Image Source="/Bilder/HSP bild.png" />
 
             
