@@ -41,8 +41,8 @@
 
                     <StackPanel Grid.Column="0">
                         <Label Width="60" Height="25">Gewinde</Label>
-                        <ComboBox x:Name="cbx_gew" MaxDropDownHeight="60" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" Width="80" Grid.RowSpan="3">
-                            <ComboBoxItem x:Name="cbx_m3" Content="M3" Visibility="Collapsed"/>
+                        <ComboBox x:Name="cbx_gew" MaxDropDownHeight="60" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" Width="80" Grid.RowSpan="3" RequestBringIntoView="cbx_gew_RequestBringIntoView">
+                            <ComboBoxItem x:Name="cbx_m3" Content="M3" Visibility="Collapsed" RequestBringIntoView="cbx_m3_RequestBringIntoView"/>
                             <ComboBoxItem  x:Name="cbx_m4" Content="M4"/>
                             <ComboBoxItem  x:Name="cbx_m5" Content="M5"/>
                             <ComboBoxItem  x:Name="cbx_m6" Content="M6"/>
