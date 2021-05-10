@@ -41,22 +41,6 @@
 
                     <StackPanel Grid.Column="0">
                         <Label Width="60" Height="25">Gewinde</Label>
-<<<<<<< Updated upstream
-                        <ComboBox x:Name="cbx_gew" MaxDropDownHeight="60" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" Width="80" Grid.RowSpan="3" RequestBringIntoView="cbx_gew_RequestBringIntoView">
-                            <ComboBoxItem x:Name="cbx_m3" Content="M3" Visibility="Collapsed" RequestBringIntoView="cbx_m3_RequestBringIntoView"/>
-                            <ComboBoxItem  x:Name="cbx_m4" Content="M4"/>
-                            <ComboBoxItem  x:Name="cbx_m5" Content="M5"/>
-                            <ComboBoxItem  x:Name="cbx_m6" Content="M6"/>
-                            <ComboBoxItem  x:Name="cbx_m8" Content="M8"/>
-                            <ComboBoxItem  x:Name="cbx_m10" Content="M10"/>
-                            <ComboBoxItem  x:Name="cbx_m12" Content="M12"/>
-                            <ComboBoxItem  x:Name="cbx_m14" Content="M14"/>
-                            <ComboBoxItem  x:Name="cbx_m16" Content="M16"/>
-                            <ComboBoxItem  x:Name="cbx_m20" Content="M20"/>
-                            <ComboBoxItem  x:Name="cbx_m24" Content="M24"/>
-                            <ComboBoxItem  x:Name="cbx_m30" Content="M30"/>
-                            <ComboBoxItem  x:Name="cbx_m36" Content="M36"/>
-=======
                         <ComboBox x:Name="cbx_gew" MaxDropDownHeight="200" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" Width="80" Grid.RowSpan="3">
                             <ComboBoxItem x:Name="cbx_m3" Content="3" Visibility="Collapsed"/>
                             <ComboBoxItem  x:Name="cbx_m4" Content="4"></ComboBoxItem>
@@ -71,7 +55,6 @@
                             <ComboBoxItem  x:Name="cbx_m24" Content="24"/>
                             <ComboBoxItem  x:Name="cbx_m30" Content="30"/>
                             <ComboBoxItem  x:Name="cbx_m36" Content="36"/>
->>>>>>> Stashed changes
                         </ComboBox>
                     </StackPanel>
 
