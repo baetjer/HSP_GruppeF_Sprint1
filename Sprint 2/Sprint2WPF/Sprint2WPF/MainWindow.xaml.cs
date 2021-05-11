@@ -46,7 +46,7 @@ namespace Sprint2WPF
         private void button_visible()
         {
 
-            if (cbx_gew.Triggers == true|| cbx_Triggers == true ||cbx_laenge.Triggers == true)
+            if (cbx_gew. == true|| cbx_ == true ||cbx_laenge. == true)
             {
                 butt_auswahl.Visibility = Visibility.Visible;
             }
@@ -456,18 +456,6 @@ namespace Sprint2WPF
                 stueckzahl_ausgabe.Content = stueckzahl[0];
                 stueckzahl_output = stueckzahl[0];
             }
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            excelControl.Excel_Quit();
-            System.Windows.Application.Current.Shutdown();
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            excelControl.Excel_Quit();
-            System.Windows.Application.Current.Shutdown();
         }
     }
 }
