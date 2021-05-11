@@ -25,6 +25,8 @@ namespace Sprint2WPF
         public MainWindow()
         {
             InitializeComponent();
+            button_visible();
+            
         }
 
         int sheet_sk;
@@ -38,6 +40,19 @@ namespace Sprint2WPF
         double volumen_output;
         double schraube_preis_output = 0.5;
         double werkstoff_preis_output = 0.1;
+
+        // Button Visibility 
+
+        private void button_visible()
+        {
+
+            if (cbx_gew.Triggers == true|| cbx_Triggers == true ||cbx_laenge.Triggers == true)
+            {
+                butt_auswahl.Visibility = Visibility.Visible;
+            }
+
+        }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -61,7 +76,7 @@ namespace Sprint2WPF
 
             ti_Ausgabe.Visibility = Visibility.Visible;
 
-
+            
            
 
         }
