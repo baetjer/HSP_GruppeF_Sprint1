@@ -43,7 +43,7 @@
             </TreeViewItem>
         </TreeView>
 
-        <TabControl x:Name="tc_main" Grid.Column="1" Margin="20" SelectionChanged="TabControl_SelectionChanged" Visibility="Hidden">
+        <TabControl x:Name="tc_main" Grid.Column="1" Margin="20" SelectionChanged="TabControl_SelectionChanged" Visibility="visible">
             <TabItem Header="Eingabe">
                 <Grid Background="#FFFDF9F9">
                     <Grid.RowDefinitions>
