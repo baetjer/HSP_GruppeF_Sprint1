@@ -20,7 +20,7 @@
 
         <Button Height="30" Width="150" Grid.Column="0" Margin="0,280,0,0" Click="Button_Click_2" Background="#FFE48282">Exit</Button>
 
-        <TreeView Width="180" Height="200" Grid.Column="0">
+        <TreeView x:Name="treeview" Width="180" Height="200" Grid.Column="0">
             <TreeViewItem x:Name="tvi_sk" Header="Sechskant DIN 4014" Selected="tvi_sk_Selected" Margin="0,10,0,0" Background="{x:Null}" ClipToBounds="True" BorderThickness="1">
                 <TreeViewItem.BorderBrush>
                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
@@ -44,7 +44,7 @@
         </TreeView>
 
         <TabControl x:Name="tc_main" Grid.Column="1" Margin="20" SelectionChanged="TabControl_SelectionChanged" Visibility="Hidden">
-            <TabItem Header="Eingabe">
+            <TabItem x:Name="ti_eingabe" Header="Eingabe">
                 <Grid Background="#FFFDF9F9">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -112,7 +112,7 @@
                         <RadioButton x:Name="rb_9_8" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="45">9.8</RadioButton>
                         <RadioButton x:Name="rb_10_9" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="45">10.9</RadioButton>
 
-                        <Button x:Name="butt_auswahl" Margin="10,260,10,0" Height="50" FontSize="14" Click="Button_Click" Visibility="Visible">Auswahl bestätigen</Button>
+                        <Button x:Name="butt_auswahl" Margin="10,260,10,0" Height="50" FontSize="14" Click="Button_Click" Visibility="Visible" Loaded="butt_auswahl_Loaded">Auswahl bestätigen</Button>
                     </StackPanel>
                 </Grid>
             </TabItem>
