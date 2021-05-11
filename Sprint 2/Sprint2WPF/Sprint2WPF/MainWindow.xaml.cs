@@ -108,6 +108,11 @@ namespace Sprint2WPF
             //Visibility Gewinde
             showallgewinde();
             cbx_m14.Visibility = Visibility.Hidden;
+
+            //Visibility tc Main 
+
+            tc_main.Visibility = Visibility.Visible;
+
         }
 
         private void tvi_zy1_Selected(object sender, RoutedEventArgs e)
@@ -119,6 +124,11 @@ namespace Sprint2WPF
             //visibility Gewinde
             showallgewinde();
             cbx_m14.Visibility = Visibility.Hidden;
+
+            //Visibility tc Main 
+
+            tc_main.Visibility = Visibility.Visible;
+
         }
 
         private void tvi_zy2_Selected(object sender, RoutedEventArgs e)
@@ -136,6 +146,11 @@ namespace Sprint2WPF
             cbx_m24.Visibility = Visibility.Hidden;
             cbx_m30.Visibility = Visibility.Hidden;
             cbx_m36.Visibility = Visibility.Hidden;
+
+            //Visibility tc Main 
+
+            tc_main.Visibility = Visibility.Visible;
+
         }
 
         private void tvi_ss_Selected(object sender, RoutedEventArgs e)
@@ -151,6 +166,11 @@ namespace Sprint2WPF
             cbx_m24.Visibility = Visibility.Hidden;
             cbx_m30.Visibility = Visibility.Hidden;
             cbx_m36.Visibility = Visibility.Hidden;
+
+            //Visibility tc Main 
+
+            tc_main.Visibility = Visibility.Visible;
+
         }
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
