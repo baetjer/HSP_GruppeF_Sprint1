@@ -25,8 +25,7 @@ namespace Sprint2WPF
         public MainWindow()
         {
             InitializeComponent();
-            button_visible();
-            
+            //button_visible();
         }
 
         int sheet_sk;
@@ -42,17 +41,14 @@ namespace Sprint2WPF
         double werkstoff_preis_output = 0.1;
 
         // Button Visibility 
-
         private void button_visible()
         {
 
-            if (cbx_gew.is true|| cbx_stkz. == true ||cbx_laenge. == true)
+            if (cbx_gew.IsDropDownOpen == true|| cbx_stkz.IsDropDownOpen == true ||cbx_laenge.IsDropDownOpen== true)
             {
                 butt_auswahl.Visibility = Visibility.Visible;
             }
-
         }
-
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -456,6 +452,18 @@ namespace Sprint2WPF
                 stueckzahl_ausgabe.Content = stueckzahl[0];
                 stueckzahl_output = stueckzahl[0];
             }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+            excelControl.Excel_Quit();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+            excelControl.Excel_Quit();
         }
     }
 }
