@@ -118,12 +118,18 @@
   <ItemGroup>
     <Resource Include="Bilder\DIN 4014_.png" />
   </ItemGroup>
-
   <ItemGroup>
-
     <Resource Include="Bilder\jade.png" />
     <Resource Include="Bilder\HSP bild.png" />
-
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\ISO 10642.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\ISO 1207.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\ISO 4762.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
