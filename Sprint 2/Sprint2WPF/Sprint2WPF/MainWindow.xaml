@@ -18,8 +18,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-
-
+        <Button Height="50" Width="150" Grid.Column="0" Margin="0,280,0,0" Click="Button_Click_2" Background="#FFE48282">Exit</Button>
 
         <TreeView Width="180" Height="200" Grid.Column="0">
             <TreeViewItem x:Name="tvi_sk" Header="Sechskant DIN 4014" Selected="tvi_sk_Selected" Margin="0,10,0,0" Background="{x:Null}" ClipToBounds="True" BorderThickness="1">
@@ -327,6 +326,14 @@
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
                                 </Label.Background> ---
                             </Label>
+
+                            <Button Margin="10,30,10,0" Height="50" FontSize="15" Click="Button_Click_1" BorderThickness="1">
+                                <Button.BorderBrush>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+                                </Button.BorderBrush>
+                                <Button.Background>
+                                    <SolidColorBrush Color="#FF97DA94"/>
+                                </Button.Background> Bestätigen</Button>
                         </StackPanel>
                     </Grid>
                 </Grid>

@@ -27,5 +27,10 @@ namespace Sprint2WPF
 
             return liste;
         }
+
+        public void Excel_Quit()
+        {
+            excel.ExcelQuit();
+        }
     }
 }

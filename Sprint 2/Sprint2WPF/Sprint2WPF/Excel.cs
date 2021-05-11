@@ -16,9 +16,10 @@ namespace Sprint2WPF
         Workbook wb;
         Worksheet ws;
 
+        _Application excel = new _Excel.Application();
+
         public Excel(string path)
         {
-            _Application excel = new _Excel.Application();
             excel.Visible = true;
 
             this.path = path;
@@ -44,6 +45,10 @@ namespace Sprint2WPF
                 return ws.Cells[i, j].Value2;
             else
                 return 0;
+        }
+        public void ExcelQuit()
+        {
+            excel.Quit();
         }
     }
 }
