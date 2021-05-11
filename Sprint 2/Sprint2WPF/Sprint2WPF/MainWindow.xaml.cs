@@ -25,7 +25,7 @@ namespace Sprint2WPF
         public MainWindow()
         {
             InitializeComponent();
-            button_visible();
+            //button_visible();
         }
 
         int sheet_sk;
@@ -40,14 +40,16 @@ namespace Sprint2WPF
         double schraube_preis_output = 0.5;
         double werkstoff_preis_output = 0.1;
 
-        // Button Visibility 
+        //Button Visibility 
         private void button_visible()
         {
-            
-                butt_auswahl.Click -= butt_auswahl.Click;
-            
+            if (cbx_gew.SelectedIndex == -1)
+            {
+                butt_auswahl.Visibility = Visibility.Visible;
+            }
         }
 
+        //Auswahl bestätigen
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             getFestigkeit();
@@ -65,18 +67,17 @@ namespace Sprint2WPF
             material_ausgabe.Content = "unlegierter Stahl";
 			preis_ausgabe.Content = berechnungen.getPreis(stueckzahl_output, schraube_preis_output, werkstoff_preis_output);
 			
-			
-            //TAbcontrol visibility
-
+            //Tabcontrol visibility
             ti_Ausgabe.Visibility = Visibility.Visible;
-
-            
-           
-
+            tc_main.SelectedIndex = 1;
         }
 
         private void cbx_gew_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (cbx_gew.SelectedIndex > -1)
+            {
+                butt_auswahl.Visibility = Visibility.Visible;
+            }
         }
 
         private void cbx_laenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -467,7 +468,5 @@ namespace Sprint2WPF
             System.Windows.Application.Current.Shutdown();
             excelControl.Excel_Quit();
         }
-
-
     }
 }
