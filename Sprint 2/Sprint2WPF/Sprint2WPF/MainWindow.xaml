@@ -44,7 +44,7 @@
             </TreeViewItem>
         </TreeView>
 
-        <TabControl Grid.Column="1" Margin="20" SelectionChanged="TabControl_SelectionChanged">
+        <TabControl x:Name="tc_main" Grid.Column="1" Margin="20" SelectionChanged="TabControl_SelectionChanged" Visibility="Hidden">
             <TabItem Header="Eingabe ">
                 <Grid Background="#FFFDF9F9">
                     <Grid.RowDefinitions>
@@ -334,19 +334,19 @@
 
         </TabControl>
 
-        <Grid x:Name="Img_DIN_10642" Height=" 250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
+        <Grid x:Name="Img_DIN_10642" Height=" 250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Hidden">
             <Image Source="/Bilder/ISO 10642.png" />
         </Grid>
 
-        <Grid x:Name="img_DIN_1207" Height=" 250" Width="300"  Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
+        <Grid x:Name="img_DIN_1207" Height=" 250" Width="300"  Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Hidden">
             <Image Source="/Bilder/ISO 1207.png" />
         </Grid>
 
-        <Grid  x:Name="img_DIN_4014" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
+        <Grid  x:Name="img_DIN_4014" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Hidden">
             <Image Source="/Bilder/DIN 4014_.png" />
         </Grid>
 
-        <Grid  x:Name="img_DIN_4762" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
+        <Grid  x:Name="img_DIN_4762" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Hidden">
             <Image Source="/Bilder/ISO 4762.png" />
         </Grid>
 
