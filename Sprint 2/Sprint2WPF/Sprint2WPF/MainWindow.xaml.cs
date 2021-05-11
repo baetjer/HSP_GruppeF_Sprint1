@@ -198,7 +198,14 @@ namespace Sprint2WPF
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            if (ti_Ausgabe.IsSelected == true)
+            {
+                treeview.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                treeview.Visibility = Visibility.Visible;
+            }
         }
 
         private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
@@ -465,5 +472,7 @@ namespace Sprint2WPF
             System.Windows.Application.Current.Shutdown();
             excelControl.Excel_Quit();
         }
+
+
     }
 }
