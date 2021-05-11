@@ -52,6 +52,11 @@ namespace Sprint2WPF
             volumen_ausgabe.Content = volumen_output;
             gewicht_ausgabe.Content = Math.Round(berechnungen.getMasse(volumen_output, dichte_output, stueckzahl_output), 3);
             material_ausgabe.Content = "unlegierter Stahl";
+
+            //TAbcontrol visibility
+
+            ti_Ausgabe.Visibility = Visibility.Visible;
+
         }
 
         private void cbx_gew_SelectionChanged(object sender, SelectionChangedEventArgs e)
