@@ -25,7 +25,7 @@ namespace Sprint2WPF
         public MainWindow()
         {
             InitializeComponent();
-            //button_visible();
+            button_visible();
         }
 
         int sheet_sk;
@@ -43,14 +43,9 @@ namespace Sprint2WPF
         // Button Visibility 
         private void button_visible()
         {
-            if (cbx_gew.SelectedIndex > -1)
-            {
-                butt_auswahl.Visibility = Visibility.Visible;
-            }
-            else
-            {
-
-            }
+            
+                butt_auswahl.Click -= butt_auswahl.Click;
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
