@@ -46,7 +46,7 @@ namespace Sprint2WPF
         private void button_visible()
         {
 
-            if (cbx_gew. == true|| cbx_ == true ||cbx_laenge. == true)
+            if (cbx_gew.is true|| cbx_stkz. == true ||cbx_laenge. == true)
             {
                 butt_auswahl.Visibility = Visibility.Visible;
             }
