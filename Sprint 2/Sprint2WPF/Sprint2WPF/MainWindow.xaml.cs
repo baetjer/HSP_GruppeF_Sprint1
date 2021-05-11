@@ -51,6 +51,7 @@ namespace Sprint2WPF
             volumen_output = Math.Round(berechnungen.getVolumen(wert1_output, wert2_output, gw_output, laenge_output), 3);
             volumen_ausgabe.Content = volumen_output;
             gewicht_ausgabe.Content = Math.Round(berechnungen.getMasse(volumen_output, dichte_output, stueckzahl_output), 3);
+            material_ausgabe.Content = "unlegierter Stahl";
         }
 
         private void cbx_gew_SelectionChanged(object sender, SelectionChangedEventArgs e)
