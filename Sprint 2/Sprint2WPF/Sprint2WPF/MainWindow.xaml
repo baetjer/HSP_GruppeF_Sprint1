@@ -59,7 +59,7 @@
                     </Grid.ColumnDefinitions>
 
                     <StackPanel Grid.Column="0">
-                        <Label Width="60" Height="25">Gewinde</Label>
+                        <Label HorizontalAlignment="Center" Margin="0,10,0,0">Gewinde</Label>
                         <ComboBox x:Name="cbx_gew" MaxDropDownHeight="200" SelectionChanged="cbx_gew_SelectionChanged" IsSynchronizedWithCurrentItem="True" Width="80" Grid.RowSpan="3">
                             <ComboBoxItem x:Name="cbx_m3" Content="M3" Visibility="Collapsed"/>
                             <ComboBoxItem  x:Name="cbx_m4" Content="M4"></ComboBoxItem>
@@ -78,7 +78,7 @@
                     </StackPanel>
 
                     <StackPanel Grid.Column="1">
-                        <Label Width="110" Height="25" >Schaftlänge (mm)</Label>
+                        <Label HorizontalAlignment="Center" Margin="0,10,0,0">Schaftlänge (mm)</Label>
                         <ComboBox x:Name="cbx_laenge" MaxDropDownHeight="100" Width="80" SelectionChanged="cbx_laenge_SelectionChanged">
                             <ComboBoxItem x:Name="l10" Content="10"/>
                             <ComboBoxItem x:Name="l16" Content="16"/>
@@ -89,7 +89,7 @@
                     </StackPanel>
 
                     <StackPanel Grid.Column="2">
-                        <Label Width="100" Height="25">Stückzahl</Label>
+                        <Label Margin="0,10,0,0" HorizontalAlignment="Center">Stückzahl</Label>
                         <ComboBox x:Name="cbx_stkz" MaxDropDownHeight="100" Width="80" RenderTransformOrigin="0.5,0.5" SelectionChanged="cbx_stkz_SelectionChanged">
                             <ComboBox.RenderTransform>
                                 <TransformGroup>
@@ -107,13 +107,13 @@
                     </StackPanel>
 
                     <StackPanel Grid.Column="3">
-                        <Label Width="120" Height="25">Festigkeitsklasse</Label>
+                        <Label HorizontalAlignment="Center" Margin="0,10,0,10">Festigkeitsklasse</Label>
                         <RadioButton x:Name="rb_5_8" GroupName="fst" IsChecked="True" Height=" 20"  HorizontalAlignment="Left" Width="49" Grid.RowSpan="3">5.8</RadioButton>
                         <RadioButton x:Name="rb_8_8" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="49">8.8</RadioButton>
                         <RadioButton x:Name="rb_9_8" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="45">9.8</RadioButton>
                         <RadioButton x:Name="rb_10_9" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="45">10.9</RadioButton>
 
-                        <Button Margin="10,280,10,0" Height="50" FontSize="14" Click="Button_Click">Auswahl bestätigen</Button>
+                        <Button Margin="10,260,10,0" Height="50" FontSize="14" Click="Button_Click">Auswahl bestätigen</Button>
                     </StackPanel>
                 </Grid>
             </TabItem>
