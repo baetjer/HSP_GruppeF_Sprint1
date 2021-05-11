@@ -442,5 +442,17 @@ namespace Sprint2WPF
                 stueckzahl_output = stueckzahl[0];
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            excelControl.Excel_Quit();
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            excelControl.Excel_Quit();
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }
