@@ -43,10 +43,13 @@ namespace Sprint2WPF
         // Button Visibility 
         private void button_visible()
         {
-
-            if (cbx_gew.IsDropDownOpen == true|| cbx_stkz.IsDropDownOpen == true ||cbx_laenge.IsDropDownOpen== true)
+            if (cbx_gew.SelectedIndex > -1)
             {
                 butt_auswahl.Visibility = Visibility.Visible;
+            }
+            else
+            {
+
             }
         }
 
@@ -79,17 +82,14 @@ namespace Sprint2WPF
 
         private void cbx_gew_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
         }
 
         private void cbx_laenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
         }
 
         private void cbx_stkz_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
         }
 
         // Treeview Actions 
