@@ -18,14 +18,30 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-       
+
 
 
         <TreeView Width="180" Height="200" Grid.Column="0">
-            <TreeViewItem x:Name="tvi_sk" Header="Sechskant DIN 4014" Selected="tvi_sk_Selected" Margin="0,10,0,0"/>
-            <TreeViewItem x:Name="tvi_zy1"  Header="Zylinderschraube DIN 4762 " Selected="tvi_zy1_Selected" Margin="0,10,0,0"></TreeViewItem>
-            <TreeViewItem x:Name="tvi_zy2" Header="Zylinderschraube DIN 1207" Selected="tvi_zy2_Selected" Margin="0,10,0,0"></TreeViewItem>
-            <TreeViewItem x:Name="tvi_ss" Header="Senkschraube DIN 10642" Selected="tvi_ss_Selected" Margin="0,10,0,0"></TreeViewItem>
+            <TreeViewItem x:Name="tvi_sk" Header="Sechskant DIN 4014" Selected="tvi_sk_Selected" Margin="0,10,0,0" Background="{x:Null}" ClipToBounds="True" BorderThickness="1">
+                <TreeViewItem.BorderBrush>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                </TreeViewItem.BorderBrush>
+            </TreeViewItem>
+            <TreeViewItem x:Name="tvi_zy1"  Header="Zylinderschraube ISO 4762 " Selected="tvi_zy1_Selected" Margin="0,10,0,0" Background="{x:Null}" BorderThickness="1">
+                <TreeViewItem.BorderBrush>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                </TreeViewItem.BorderBrush>
+            </TreeViewItem>
+            <TreeViewItem x:Name="tvi_zy2" Header="Zylinderschraube ISO 1207" Selected="tvi_zy2_Selected" Margin="0,10,0,0" BorderThickness="1">
+                <TreeViewItem.BorderBrush>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                </TreeViewItem.BorderBrush>
+            </TreeViewItem>
+            <TreeViewItem x:Name="tvi_ss" Header="Senkschraube ISO 10642" Selected="tvi_ss_Selected" Margin="0,10,0,0" BorderThickness="1">
+                <TreeViewItem.BorderBrush>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                </TreeViewItem.BorderBrush>
+            </TreeViewItem>
         </TreeView>
 
         <TabControl Grid.Column="1" Margin="20" SelectionChanged="TabControl_SelectionChanged">
@@ -101,9 +117,9 @@
                     </StackPanel>
                 </Grid>
             </TabItem>
-            
+
             <TabItem Header="Ausgabe">
-                <Grid>
+                <Grid Background="#FFFDF9F9">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -124,21 +140,69 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Margin="10">
-                            <Label>Schraubenart:</Label>
-                            <Label x:Name="sk_ausgabe">---</Label>
-                            <Label>Gewinde:</Label>
-                            <Label x:Name="gw_ausgabe">---</Label>
-                            <Label>Länge:</Label>
-                            <Label x:Name="laenge">---</Label>
+                            <Label>
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                                </Label.Background> Schraubenart:
+                            </Label>
+                            <Label x:Name="sk_ausgabe">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
+                            <Label>
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightColorKey}}"/>
+                                </Label.Background> Gewinde:
+                            </Label>
+                            <Label x:Name="gw_ausgabe">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
+                            <Label>
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                                </Label.Background> Länge:
+                            </Label>
+                            <Label x:Name="laenge">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
                         </StackPanel>
 
                         <StackPanel Margin="10" Grid.Column="1">
-                            <Label x:Name="wert1">Wert1</Label>
-                            <Label x:Name="wert1_ausgabe">---</Label>
-                            <Label x:Name="wert2">Wert2</Label>
-                            <Label x:Name="wert2_ausgabe">---</Label>
-                            <Label x:Name="wert3">Wert3</Label>
-                            <Label x:Name="wert3_ausgabe">---</Label>
+                            <Label x:Name="wert1">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                                </Label.Background> Wert1
+                            </Label>
+                            <Label x:Name="wert1_ausgabe">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
+                            <Label x:Name="wert2">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightColorKey}}"/>
+                                </Label.Background> Wert2
+                            </Label>
+                            <Label x:Name="wert2_ausgabe">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
+                            <Label x:Name="wert3">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                                </Label.Background> Wert3
+                            </Label>
+                            <Label x:Name="wert3_ausgabe">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
                         </StackPanel>
                     </Grid>
 
@@ -153,29 +217,116 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Margin="10" Grid.Column="0">
-                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="10">Festigkeitsklasse:</Label>
-                            <Label x:Name="festigkeit_ausgabe" TextBlock.FontSize="10">---</Label>
-                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="10">Material:</Label>
-                            <Label x:Name="material_ausgabe" TextBlock.FontSize="10">---</Label>
-                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="10">Volumen:</Label>
-                            <Label x:Name="volumen_ausgabe" TextBlock.FontSize="10">---</Label>
-                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="10">Gewicht:</Label>
-                            <Label x:Name="gewicht_ausgabe" TextBlock.FontSize="10">---</Label>
-                            <Label>Stückzahl</Label>
-                            <Label x:Name="stueckzahl_ausgabe">---</Label>
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="12">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+                                </Label.Background> Festigkeitsklasse:
+                            </Label>
+                            <Label x:Name="festigkeit_ausgabe" TextBlock.FontSize="14">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+                                </Label.Background>
+                                <Label.BorderBrush>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="Black" Offset="0"/>
+                                        <GradientStop Color="White" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Label.BorderBrush> ---
+                            </Label>
+                            <Label Margin="0, 10, 0, 0" TextBlock.FontSize="12">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+                                </Label.Background> Zugfestigkeit [N/mm²]:
+                            </Label>
+                            <Label x:Name="zugfestigkeit_ausgabe" TextBlock.FontSize="14">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
+                            <Label Margin="0, 10, 0, 0" TextBlock.FontSize="12">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+                                </Label.Background> Streckgrenze [N/mm²]:
+                            </Label>
+                            <Label x:Name="streckgrenze_ausgabe" TextBlock.FontSize="14">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
+                            <Label Margin="0, 20, 0, 0" TextBlock.FontSize="12">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.InfoColorKey}}"/>
+                                </Label.Background> Material:
+                            </Label>
+                            <Label x:Name="material_ausgabe" TextBlock.FontSize="14">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.InfoColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
+                            <Label Margin="0, 10, 0, 0" TextBlock.FontSize="12">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.InfoColorKey}}"/>
+                                </Label.Background> Dichte:
+                            </Label>
+                            <Label x:Name="dichte_ausgabe" TextBlock.FontSize="14">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.InfoColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
                         </StackPanel>
 
                         <StackPanel Margin="10" Grid.Column="1">
-                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="7">Zugfestigkeit [N/mm²]:</Label>
-                            <Label x:Name="zugfestigkeit_ausgabe" TextBlock.FontSize="7">---</Label>
-                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="7">Streckgrenze [N/mm²]:</Label>
-                            <Label x:Name="streckgrenze_ausgabe" TextBlock.FontSize="7">---</Label>
-                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="7">Dichte:</Label>
-                            <Label x:Name="dichte_ausgabe" TextBlock.FontSize="7">---</Label>
-                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="7">Flächenträgheitsmoment:</Label>
-                            <Label x:Name="traegheit_ausgabe" TextBlock.FontSize="7">---</Label>
-                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="9">Preis:</Label>
-                            <Label x:Name="preis_ausgabe" TextBlock.FontSize="10">---</Label>
+
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="10">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
+                                </Label.Background> Flächenträgheitsmoment:
+                            </Label>
+                            <Label x:Name="traegheit_ausgabe" TextBlock.FontSize="14">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
+                            <Label Margin="0, 20, 0, 0" TextBlock.FontSize="12">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuColorKey}}"/>
+                                </Label.Background> Volumen:
+                            </Label>
+                            <Label x:Name="volumen_ausgabe" TextBlock.FontSize="14">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
+                            <Label Margin="0, 20, 0, 0">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionColorKey}}"/>
+                                </Label.Background> Stückzahl
+                            </Label>
+                            <Label x:Name="stueckzahl_ausgabe">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
+                            <Label Margin="0, 10, 0, 0" TextBlock.FontSize="12">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionColorKey}}"/>
+                                </Label.Background> Gewicht:
+                            </Label>
+                            <Label x:Name="gewicht_ausgabe" TextBlock.FontSize="14">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
+                            <Label Margin="0, 20, 0, 0" TextBlock.FontSize="14">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                                </Label.Background> Preis:
+                            </Label>
+                            <Label x:Name="preis_ausgabe" TextBlock.FontSize="16">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
                         </StackPanel>
                     </Grid>
                 </Grid>
@@ -183,20 +334,20 @@
 
         </TabControl>
 
-        <Grid x:Name="Img_DIN_10642" Height=" 200" Width="250" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
-            <Image Source="/Bilder/DIN 10642.jpg" />
+        <Grid x:Name="Img_DIN_10642" Height=" 250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
+            <Image Source="/Bilder/ISO 10642.png" />
         </Grid>
 
-        <Grid x:Name="img_DIN_1207" Height=" 200" Width="250"  Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
-            <Image Source="/Bilder/DIN 1207.jpg" />
+        <Grid x:Name="img_DIN_1207" Height=" 250" Width="300"  Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
+            <Image Source="/Bilder/ISO 1207.png" />
         </Grid>
 
-        <Grid  x:Name="img_DIN_4014" Height=" 200" Width="250" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
+        <Grid  x:Name="img_DIN_4014" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
             <Image Source="/Bilder/DIN 4014_.png" />
         </Grid>
 
-        <Grid  x:Name="img_DIN_4762" Height=" 200" Width="250" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
-            <Image Source="/Bilder/DIN 4762.jpg" />
+        <Grid  x:Name="img_DIN_4762" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40">
+            <Image Source="/Bilder/ISO 4762.png" />
         </Grid>
 
         <Grid Height="90" Width="180" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20" Grid.ColumnSpan="2">
