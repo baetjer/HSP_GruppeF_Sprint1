@@ -36,6 +36,8 @@ namespace Sprint2WPF
         double dichte_output = 7.85;
         double stueckzahl_output;
         double volumen_output;
+        double schraube_preis_output = 0.5;
+        double werkstoff_preis_output = 0.1;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -52,10 +54,15 @@ namespace Sprint2WPF
             volumen_ausgabe.Content = volumen_output;
             gewicht_ausgabe.Content = Math.Round(berechnungen.getMasse(volumen_output, dichte_output, stueckzahl_output), 3);
             material_ausgabe.Content = "unlegierter Stahl";
-
+			preis_ausgabe.Content = berechnungen.getPreis(stueckzahl_output, schraube_preis_output, werkstoff_preis_output);
+			
+			
             //TAbcontrol visibility
 
             ti_Ausgabe.Visibility = Visibility.Visible;
+
+
+           
 
         }
 

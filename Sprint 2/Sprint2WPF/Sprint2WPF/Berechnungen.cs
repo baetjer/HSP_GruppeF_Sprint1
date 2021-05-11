@@ -43,7 +43,7 @@ namespace Sprint2WPF
         {
             double m_packung_ergebnis;
 
-            m_packung_ergebnis = v_ergebnis * dichte * stkzahl * Math.Pow(10, -6);
+            m_packung_ergebnis = v_ergebnis * 0.001 * dichte * stkzahl;
 
             return m_packung_ergebnis;
         }
@@ -55,7 +55,7 @@ namespace Sprint2WPF
 
             p_ergebnis = stkzahl * m_einzel_ergebnis * wspreis;
 
-            return p_ergebnis;
+            return Math.Round(p_ergebnis, 2);
         }
     }
 }

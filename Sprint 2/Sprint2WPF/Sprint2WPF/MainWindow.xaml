@@ -277,10 +277,10 @@
 
                         <StackPanel Margin="10" Grid.Column="1">
 
-                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="10">
+                            <Label Margin="0, 0, 0, 0" TextBlock.FontSize="9">
                                 <Label.Background>
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
-                                </Label.Background> Flächenträgheitsmoment:
+                                </Label.Background> Flächenträgheitsmoment [mm⁴]:
                             </Label>
                             <Label x:Name="traegheit_ausgabe" TextBlock.FontSize="14">
                                 <Label.Background>
@@ -290,7 +290,7 @@
                             <Label Margin="0, 20, 0, 0" TextBlock.FontSize="12">
                                 <Label.Background>
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuColorKey}}"/>
-                                </Label.Background> Volumen:
+                                </Label.Background> Volumen [mm³]:
                             </Label>
                             <Label x:Name="volumen_ausgabe" TextBlock.FontSize="14">
                                 <Label.Background>
@@ -310,7 +310,7 @@
                             <Label Margin="0, 10, 0, 0" TextBlock.FontSize="12">
                                 <Label.Background>
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionColorKey}}"/>
-                                </Label.Background> Gewicht:
+                                </Label.Background> Gewicht [g]:
                             </Label>
                             <Label x:Name="gewicht_ausgabe" TextBlock.FontSize="14">
                                 <Label.Background>
@@ -320,7 +320,7 @@
                             <Label Margin="0, 20, 0, 0" TextBlock.FontSize="14">
                                 <Label.Background>
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
-                                </Label.Background> Preis:
+                                </Label.Background> Preis [€]:
                             </Label>
                             <Label x:Name="preis_ausgabe" TextBlock.FontSize="16">
                                 <Label.Background>
