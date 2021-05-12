@@ -235,7 +235,7 @@ namespace Sprint2WPF
         {
             if (tvi_sk.IsSelected == true)
             {
-                sk_ausgabe.Content = "Sechskant DIN 4014";
+                sk_ausgabe.Content = "Sechskant ISO 4014";
             }
             else if (tvi_zy1.IsSelected == true)
             {
