@@ -239,15 +239,15 @@ namespace Sprint2WPF
             }
             else if (tvi_zy1.IsSelected == true)
             {
-                sk_ausgabe.Content = "Zylinderschraube DIN 4762";
+                sk_ausgabe.Content = "Zylinderschraube ISO 4762";
             }
             else if (tvi_zy2.IsSelected == true)
             {
-                sk_ausgabe.Content = "Zylinderschraube DIN 1207";
+                sk_ausgabe.Content = "Zylinderschraube ISO 1207";
             }
             else if (tvi_ss.IsSelected == true)
             {
-                sk_ausgabe.Content = "Senkschraube DIN 10642";
+                sk_ausgabe.Content = "Senkschraube ISO 10642";
             }
         }
 
