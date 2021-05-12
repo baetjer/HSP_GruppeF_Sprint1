@@ -265,7 +265,7 @@
                             <Label Margin="0, 10, 0, 0" TextBlock.FontSize="12">
                                 <Label.Background>
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.InfoColorKey}}"/>
-                                </Label.Background> Dichte:
+                                </Label.Background> Dichte [g/cm³]:
                             </Label>
                             <Label x:Name="dichte_ausgabe" TextBlock.FontSize="14">
                                 <Label.Background>
