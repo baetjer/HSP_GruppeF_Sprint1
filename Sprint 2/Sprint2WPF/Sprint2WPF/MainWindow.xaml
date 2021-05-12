@@ -144,7 +144,7 @@
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
                                 </Label.Background> Schraubenart:
                             </Label>
-                            <Label x:Name="sk_ausgabe">
+                            <Label x:Name="sk_ausgabe" FontSize="10">
                                 <Label.Background>
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
                                 </Label.Background> ---
