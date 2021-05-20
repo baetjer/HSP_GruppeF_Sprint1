@@ -106,7 +106,8 @@ namespace Sprint2WPF
             cbx_m30.Visibility = Visibility.Visible;
             cbx_m36.Visibility = Visibility.Visible;
         }
-
+            
+        
 
         private void tvi_sk_Selected(object sender, RoutedEventArgs e)
         {
@@ -121,6 +122,11 @@ namespace Sprint2WPF
             //Visibility tc Main 
 
             tc_main.Visibility = Visibility.Visible;
+
+
+            //visibility gewindelaenge
+
+
 
         }
 
@@ -137,6 +143,9 @@ namespace Sprint2WPF
             //Visibility tc Main 
 
             tc_main.Visibility = Visibility.Visible;
+
+
+
 
         }
 
@@ -457,6 +466,11 @@ namespace Sprint2WPF
         {
             System.Windows.Application.Current.Shutdown();
             excelControl.Excel_Quit();
+        }
+
+        private void cbx_m3_SourceUpdated(object sender, DataTransferEventArgs e)
+        {
+            
         }
     }
 }
