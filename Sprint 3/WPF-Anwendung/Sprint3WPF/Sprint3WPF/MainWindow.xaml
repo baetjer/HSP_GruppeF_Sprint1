@@ -83,6 +83,10 @@
                             <ComboBoxItem x:Name="l20" Content="20"/>
                             <ComboBoxItem x:Name="l30" Content="30"/>
                             <ComboBoxItem x:Name="l40" Content="40"/>
+                            <ComboBoxItem x:Name="l50" Content="50"/>
+                            <ComboBoxItem x:Name="l60" Content="60"/>
+                            <ComboBoxItem x:Name="l80" Content="80"/>
+                            <ComboBoxItem x:Name="l100" Content="100"/>
                         </ComboBox>
                     </StackPanel>
 
