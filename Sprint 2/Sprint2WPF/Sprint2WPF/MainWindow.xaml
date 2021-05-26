@@ -98,13 +98,24 @@
                             <ComboBoxItem x:Name="gewl_14" Content="14"/>
                             <ComboBoxItem x:Name="gewl_16" Content="16"/>
                             <ComboBoxItem x:Name="gewl_18" Content="18"/>
+                            <ComboBoxItem x:Name="gewl_20" Content="20"/>
                             <ComboBoxItem x:Name="gewl_22" Content="22"/>
+                            <ComboBoxItem x:Name="gewl_24" Content="24"/>
                             <ComboBoxItem x:Name="gewl_26" Content="26"/>
+                            <ComboBoxItem x:Name="gewl_28" Content="28"/>
                             <ComboBoxItem x:Name="gewl_30" Content="30"/>
+                            <ComboBoxItem x:Name="gewl_32" Content="32"/>
+                            <ComboBoxItem x:Name="gewl_36" Content="36"/>
                             <ComboBoxItem x:Name="gewl_38" Content="38"/>
+                            <ComboBoxItem x:Name="gewl_44" Content="44"/>
                             <ComboBoxItem x:Name="gewl_46" Content="46"/>
+                            <ComboBoxItem x:Name="gewl_52" Content="52"/>
                             <ComboBoxItem x:Name="gewl_54" Content="54"/>
+                            <ComboBoxItem x:Name="gewl_60" Content="60"/>
                             <ComboBoxItem x:Name="gewl_66" Content="66"/>
+                            <ComboBoxItem x:Name="gewl_72" Content="72"/>
+                            <ComboBoxItem x:Name="gewl_73" Content="73"/>
+                            <ComboBoxItem x:Name="gewl_85" Content="85"/>
                         </ComboBox>
                     </StackPanel>
                     <StackPanel Grid.Column="3">
