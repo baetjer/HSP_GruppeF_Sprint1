@@ -472,5 +472,10 @@ namespace Sprint2WPF
         {
             
         }
+
+        private void cbx_gewlaenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
