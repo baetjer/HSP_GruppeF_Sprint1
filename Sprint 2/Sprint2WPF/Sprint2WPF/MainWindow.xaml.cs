@@ -33,11 +33,14 @@ namespace Sprint2WPF
         double wert1_output;
         double wert2_output;
         double laenge_output;
+        double Gewindelaenge_output;
         double dichte_output = 7.85;
         double stueckzahl_output;
         double volumen_output;
         double schraube_preis_output = 0.5;
         double werkstoff_preis_output = 0.1;
+
+        
 
         //Auswahl bestätigen
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -47,6 +50,7 @@ namespace Sprint2WPF
             getGewindeSheet();
             readGewinde(getGewinde(sheet_sk));
             setLaenge();
+            setgewindelaenge();
             setStckzahl();
             Berechnungen berechnungen = new Berechnungen();
             dichte_ausgabe.Content = dichte_output;
@@ -425,7 +429,24 @@ namespace Sprint2WPF
                 laenge_output = laenge_liste[0];
             }
         }
-                
+        public void setgewindelaenge()
+        {
+            List<double> Gewindelaenge = new List<double>();
+
+            if (gewl_12.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 3);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_14.IsSealed == true);
+            {
+                Gewindelaenge = excelControl.getWerte(9, 4);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+         }  
+        
         public void setStckzahl()
         {
             List<double> stueckzahl = new List<double>();
