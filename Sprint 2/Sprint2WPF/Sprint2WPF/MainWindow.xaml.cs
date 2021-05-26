@@ -425,7 +425,7 @@ namespace Sprint2WPF
                 laenge_output = laenge_liste[0];
             }
         }
-
+                
         public void setStckzahl()
         {
             List<double> stueckzahl = new List<double>();
