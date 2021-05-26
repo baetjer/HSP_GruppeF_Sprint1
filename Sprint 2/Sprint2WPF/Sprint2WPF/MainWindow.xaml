@@ -55,6 +55,7 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
                     <StackPanel Grid.Column="0">
@@ -90,8 +91,23 @@
                             <ComboBoxItem x:Name="l100" Content="100"/>
                         </ComboBox>
                     </StackPanel>
-
                     <StackPanel Grid.Column="2">
+                        <Label HorizontalAlignment="Center" Margin="0,10,0,0">Gewindelänge (mm)</Label>
+                        <ComboBox x:Name="cbx_gewlaenge" MaxDropDownHeight="100" Width="80" SelectionChanged="cbx_gewlaenge_SelectionChanged">
+                            <ComboBoxItem x:Name="gewl_12" Content="12"/>
+                            <ComboBoxItem x:Name="gewl_14" Content="14"/>
+                            <ComboBoxItem x:Name="gewl_16" Content="16"/>
+                            <ComboBoxItem x:Name="gewl_18" Content="18"/>
+                            <ComboBoxItem x:Name="gewl_22" Content="22"/>
+                            <ComboBoxItem x:Name="gewl_26" Content="26"/>
+                            <ComboBoxItem x:Name="gewl_30" Content="30"/>
+                            <ComboBoxItem x:Name="gewl_38" Content="38"/>
+                            <ComboBoxItem x:Name="gewl_46" Content="46"/>
+                            <ComboBoxItem x:Name="gewl_54" Content="54"/>
+                            <ComboBoxItem x:Name="gewl_66" Content="66"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3">
                         <Label Margin="0,10,0,0" HorizontalAlignment="Center">Stückzahl</Label>
                         <ComboBox x:Name="cbx_stkz" MaxDropDownHeight="100" Width="80" RenderTransformOrigin="0.5,0.5" SelectionChanged="cbx_stkz_SelectionChanged">
                             <ComboBox.RenderTransform>
@@ -109,7 +125,7 @@
                         </ComboBox>
                     </StackPanel>
 
-                    <StackPanel Grid.Column="3">
+                    <StackPanel Grid.Column="4">
                         <Label HorizontalAlignment="Center" Margin="0,10,0,10">Festigkeitsklasse</Label>
                         <RadioButton x:Name="rb_5_8" GroupName="fst" IsChecked="True" Height=" 20"  HorizontalAlignment="Left" Width="49" Grid.RowSpan="3">5.8</RadioButton>
                         <RadioButton x:Name="rb_8_8" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="49">8.8</RadioButton>
