@@ -200,6 +200,16 @@
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
                                 </Label.Background> ---
                             </Label>
+                            <Label>
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+                                </Label.Background> Gewindelänge:
+                            </Label>
+                            <Label x:Name="gewindelaenge">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
                         </StackPanel>
 
                         <StackPanel Margin="10" Grid.Column="1">
