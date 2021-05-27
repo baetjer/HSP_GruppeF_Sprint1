@@ -53,6 +53,7 @@ namespace Sprint3WPF
                 //    "Fehler", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
+
             catHybridBody1.set_Name("Profile");
             // neue Skizze im ausgewaehlten geometrischen Set anlegen
             Sketches catSketches1 = catHybridBody1.HybridSketches;
@@ -115,6 +116,25 @@ namespace Sprint3WPF
             hsp_catiaPart.Part.Update();
         }
 
+        public void ErzeugeSchaft(double l, double d)
+        {
+            //Skizze umbenennen
+            hsp_catiaProfil.set_Name("Schaft");
+
+            //Skizze öffnen
+            Factory2D catFactory2D1 = hsp_catiaProfil.OpenEdition();
+
+            //Erzeugen
+            
+            //Punkte
+
+            //Linien
+
+            //Skizzierer verlassen
+
+            //Part aktualisieren
+        }
+
         public void ErzeugeBalken(Double l)
         {
             // Hauptkoerper in Bearbeitung definieren
@@ -131,7 +151,13 @@ namespace Sprint3WPF
             hsp_catiaPart.Part.Update();
         }
 
+        public void ErzeugeWelle()
+        {
+            // Hauptkoerper in Bearbeitung definieren
+            hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
 
+            //
+        }
 
     }
 }
