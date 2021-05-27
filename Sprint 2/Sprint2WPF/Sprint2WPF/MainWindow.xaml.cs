@@ -225,6 +225,11 @@ namespace Sprint2WPF
             {
                 treeview.Visibility = Visibility.Visible;
             }
+
+            if (ti_eingabe.IsSelected == true)
+            {
+                ti_Ausgabe.Visibility = Visibility.Hidden;
+            }
         }
 
         private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
