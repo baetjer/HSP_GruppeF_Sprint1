@@ -47,12 +47,6 @@ namespace Sprint3WPF
             }
             Console.WriteLine("Fertig - Taste drücken.");
             Console.ReadKey();
-
-        }
-
-        static void Main(string[] args)
-        {
-            new CatiaControl();
         }
     }
 }
