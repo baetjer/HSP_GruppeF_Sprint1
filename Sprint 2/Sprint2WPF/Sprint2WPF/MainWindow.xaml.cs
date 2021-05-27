@@ -108,12 +108,17 @@ namespace Sprint2WPF
             {
                 cbx_stkz.Visibility = Visibility.Visible;
             }
+            else if (cbx_laenge.SelectedIndex == -1)
+            {
+              
+            }
 
             if (cbx_laenge.SelectedIndex == 0)
             {
                 gewl_12.Visibility = Visibility.Visible;
                 gewl_14.Visibility = Visibility.Visible;
                 gewl_16.Visibility = Visibility.Visible;
+                cbx_gewlaenge.SelectedIndex = -1;
             }
             else if (cbx_laenge.SelectedIndex == 1)
             {
