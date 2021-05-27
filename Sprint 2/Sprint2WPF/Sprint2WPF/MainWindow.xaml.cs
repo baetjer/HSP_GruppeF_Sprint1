@@ -108,6 +108,7 @@ namespace Sprint2WPF
 
             if (cbx_laenge.SelectedIndex == 0)
             {
+                HideAllGewindeLaenge();
                 gewl_12.Visibility = Visibility.Visible;
                 gewl_14.Visibility = Visibility.Visible;
                 gewl_16.Visibility = Visibility.Visible;
