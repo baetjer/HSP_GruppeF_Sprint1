@@ -29,12 +29,21 @@ namespace Sprint3WPF
                     Console.WriteLine("2");
 
                     // Generiere ein Profil
-                    cc.ErzeugeProfil(20, 10);
-                    Console.WriteLine("3");
+                    // cc.ErzeugeProfil(20, 10);
+                    // Console.WriteLine("3");
 
                     // Extrudiere Balken
-                    cc.ErzeugeBalken(300);
-                    Console.WriteLine("4");
+                    // cc.ErzeugeBalken(300);
+                    // Console.WriteLine("4");
+
+                    Schraube dieSchraube = new Schraube(60, 50, "Standartgewinde", "M8", 5.3d, 4d, 1.25d);
+
+                    cc.ErzeugeZylinder(dieSchraube);
+                    Console.WriteLine("Schaft");
+
+                    // cc.ErzeugeGewindeFeature();
+                    //cc.ErzeugeGewindeHelix(dieSchraube);
+                    Console.WriteLine("Gewinde");
                 }
                 else
                 {
@@ -47,6 +56,7 @@ namespace Sprint3WPF
             }
             Console.WriteLine("Fertig - Taste drücken.");
             Console.ReadKey();
+
         }
     }
 }
