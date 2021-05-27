@@ -403,6 +403,7 @@ namespace Sprint2WPF
                 laenge_liste = excelControl.getWerte(5, 2);
                 laenge.Content = laenge_liste[0];
                 laenge_output = laenge_liste[0];
+
             }
             else if (l16.IsSelected == true)
             {
