@@ -115,7 +115,134 @@ namespace Sprint2WPF
             }
             else if (cbx_laenge.SelectedIndex == 1)
             {
+                HideAllGewindeLaenge();
+                gewl_12.Visibility = Visibility.Visible;
+                gewl_14.Visibility = Visibility.Visible;
+                gewl_16.Visibility = Visibility.Visible;
+                gewl_18.Visibility = Visibility.Visible;
+                gewl_20.Visibility = Visibility.Visible;
+            }
+            else if (cbx_laenge.SelectedIndex == 2)
+            {
+                HideAllGewindeLaenge();
+                gewl_12.Visibility = Visibility.Visible;
+                gewl_14.Visibility = Visibility.Visible;
+                gewl_16.Visibility = Visibility.Visible;
+                gewl_18.Visibility = Visibility.Visible;
+                gewl_20.Visibility = Visibility.Visible;
+                gewl_22.Visibility = Visibility.Visible;
+                gewl_24.Visibility = Visibility.Visible;
+                gewl_26.Visibility = Visibility.Visible;
+                gewl_28.Visibility = Visibility.Visible;
+                gewl_30.Visibility = Visibility.Visible;
+            }
+            else if (cbx_laenge.SelectedIndex == 3)
+            {
+                HideAllGewindeLaenge();
+                gewl_12.Visibility = Visibility.Visible;
+                gewl_14.Visibility = Visibility.Visible;
+                gewl_16.Visibility = Visibility.Visible;
+                gewl_18.Visibility = Visibility.Visible;
+                gewl_20.Visibility = Visibility.Visible;
+                gewl_22.Visibility = Visibility.Visible;
+                gewl_24.Visibility = Visibility.Visible;
+                gewl_26.Visibility = Visibility.Visible;
+                gewl_28.Visibility = Visibility.Visible;
+                gewl_30.Visibility = Visibility.Visible;
+                gewl_32.Visibility = Visibility.Visible;
+                gewl_36.Visibility = Visibility.Visible;
+                gewl_38.Visibility = Visibility.Visible;
+            }
+            else if (cbx_laenge.SelectedIndex == 4)
+            {
+                HideAllGewindeLaenge();
+                gewl_12.Visibility = Visibility.Visible;
+                gewl_14.Visibility = Visibility.Visible;
+                gewl_16.Visibility = Visibility.Visible;
+                gewl_18.Visibility = Visibility.Visible;
+                gewl_20.Visibility = Visibility.Visible;
+                gewl_22.Visibility = Visibility.Visible;
+                gewl_24.Visibility = Visibility.Visible;
+                gewl_26.Visibility = Visibility.Visible;
+                gewl_28.Visibility = Visibility.Visible;
+                gewl_30.Visibility = Visibility.Visible;
+                gewl_32.Visibility = Visibility.Visible;
+                gewl_36.Visibility = Visibility.Visible;
+                gewl_38.Visibility = Visibility.Visible;
+                gewl_44.Visibility = Visibility.Visible;
+                gewl_46.Visibility = Visibility.Visible;
+            }
+            else if (cbx_laenge.SelectedIndex == 5)
+            {
+                HideAllGewindeLaenge();
+                gewl_12.Visibility = Visibility.Visible;
+                gewl_14.Visibility = Visibility.Visible;
+                gewl_16.Visibility = Visibility.Visible;
+                gewl_18.Visibility = Visibility.Visible;
+                gewl_20.Visibility = Visibility.Visible;
+                gewl_22.Visibility = Visibility.Visible;
+                gewl_24.Visibility = Visibility.Visible;
+                gewl_26.Visibility = Visibility.Visible;
+                gewl_28.Visibility = Visibility.Visible;
+                gewl_30.Visibility = Visibility.Visible;
+                gewl_32.Visibility = Visibility.Visible;
+                gewl_36.Visibility = Visibility.Visible;
+                gewl_38.Visibility = Visibility.Visible;
+                gewl_44.Visibility = Visibility.Visible;
+                gewl_46.Visibility = Visibility.Visible;
+                gewl_52.Visibility = Visibility.Visible;
+                gewl_54.Visibility = Visibility.Visible;
+                gewl_60.Visibility = Visibility.Visible;
+            }
+            else if (cbx_laenge.SelectedIndex == 6)
+            {
+                HideAllGewindeLaenge();
+                gewl_12.Visibility = Visibility.Visible;
+                gewl_14.Visibility = Visibility.Visible;
+                gewl_16.Visibility = Visibility.Visible;
+                gewl_18.Visibility = Visibility.Visible;
+                gewl_20.Visibility = Visibility.Visible;
+                gewl_22.Visibility = Visibility.Visible;
+                gewl_24.Visibility = Visibility.Visible;
+                gewl_26.Visibility = Visibility.Visible;
+                gewl_28.Visibility = Visibility.Visible;
+                gewl_30.Visibility = Visibility.Visible;
+                gewl_32.Visibility = Visibility.Visible;
+                gewl_36.Visibility = Visibility.Visible;
+                gewl_38.Visibility = Visibility.Visible;
+                gewl_44.Visibility = Visibility.Visible;
+                gewl_46.Visibility = Visibility.Visible;
+                gewl_52.Visibility = Visibility.Visible;
+                gewl_54.Visibility = Visibility.Visible;
+                gewl_60.Visibility = Visibility.Visible;
+                gewl_66.Visibility = Visibility.Visible;
+                gewl_72.Visibility = Visibility.Visible;
 
+            }
+            else if (cbx_laenge.SelectedIndex == 7)
+            {
+                HideAllGewindeLaenge();
+                gewl_12.Visibility = Visibility.Visible;
+                gewl_14.Visibility = Visibility.Visible;
+                gewl_16.Visibility = Visibility.Visible;
+                gewl_18.Visibility = Visibility.Visible;
+                gewl_20.Visibility = Visibility.Visible;
+                gewl_22.Visibility = Visibility.Visible;
+                gewl_24.Visibility = Visibility.Visible;
+                gewl_26.Visibility = Visibility.Visible;
+                gewl_28.Visibility = Visibility.Visible;
+                gewl_30.Visibility = Visibility.Visible;
+                gewl_32.Visibility = Visibility.Visible;
+                gewl_36.Visibility = Visibility.Visible;
+                gewl_38.Visibility = Visibility.Visible;
+                gewl_44.Visibility = Visibility.Visible;
+                gewl_46.Visibility = Visibility.Visible;
+                gewl_52.Visibility = Visibility.Visible;
+                gewl_54.Visibility = Visibility.Visible;
+                gewl_60.Visibility = Visibility.Visible;
+                gewl_66.Visibility = Visibility.Visible;
+                gewl_72.Visibility = Visibility.Visible;
+                gewl_85.Visibility = Visibility.Visible;
             }
         }
 
