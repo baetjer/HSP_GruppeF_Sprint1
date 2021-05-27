@@ -135,9 +135,37 @@ namespace Sprint2WPF
             cbx_m24.Visibility = Visibility.Visible;
             cbx_m30.Visibility = Visibility.Visible;
             cbx_m36.Visibility = Visibility.Visible;
-        }
-    
+        }  
         
+        //Gewindelaenge Actions
+        private void showallgewindelaenge()
+        {
+            gewl_12.Visibility = Visibility.Visible;
+            gewl_14.Visibility = Visibility.Visible;
+            gewl_16.Visibility = Visibility.Visible;
+            gewl_18.Visibility = Visibility.Visible;
+            gewl_20.Visibility = Visibility.Visible;
+            gewl_22.Visibility = Visibility.Visible;
+            gewl_24.Visibility = Visibility.Visible;
+            gewl_26.Visibility = Visibility.Visible;
+            gewl_28.Visibility = Visibility.Visible;
+            gewl_30.Visibility = Visibility.Visible;
+            gewl_32.Visibility = Visibility.Visible;
+            gewl_36.Visibility = Visibility.Visible;
+            gewl_38.Visibility = Visibility.Visible;
+            gewl_44.Visibility = Visibility.Visible;
+            gewl_46.Visibility = Visibility.Visible;
+            gewl_52.Visibility = Visibility.Visible;
+            gewl_54.Visibility = Visibility.Visible;
+            gewl_60.Visibility = Visibility.Visible;
+            gewl_66.Visibility = Visibility.Visible;
+            gewl_72.Visibility = Visibility.Visible;
+            gewl_73.Visibility = Visibility.Visible;
+            gewl_85.Visibility = Visibility.Visible;
+            
+        }
+
+
         private void tvi_sk_Selected(object sender, RoutedEventArgs e)
         {
             //Visibility Image
