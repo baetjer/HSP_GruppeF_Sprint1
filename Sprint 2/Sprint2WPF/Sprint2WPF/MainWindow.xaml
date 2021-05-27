@@ -193,7 +193,7 @@
                             <Label>
                                 <Label.Background>
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
-                                </Label.Background> Länge:
+                                </Label.Background> Schaftlänge:
                             </Label>
                             <Label x:Name="laenge">
                                 <Label.Background>
