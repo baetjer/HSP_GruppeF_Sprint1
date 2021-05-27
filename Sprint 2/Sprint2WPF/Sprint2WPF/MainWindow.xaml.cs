@@ -35,6 +35,8 @@ namespace Sprint2WPF
             cbx_gewlaenge.Visibility = Visibility.Hidden;
             cbx_stkz.Visibility = Visibility.Hidden;
             butt_auswahl.Visibility = Visibility.Hidden;
+
+            HideAllGewindeLaenge();
         }
 
         int sheet_sk;
@@ -103,6 +105,17 @@ namespace Sprint2WPF
             {
                 cbx_gewlaenge.Visibility = Visibility.Visible;
             }
+
+            if (cbx_laenge.SelectedIndex == 0)
+            {
+                gewl_12.Visibility = Visibility.Visible;
+                gewl_14.Visibility = Visibility.Visible;
+                gewl_16.Visibility = Visibility.Visible;
+            }
+            else if (cbx_laenge.SelectedIndex == 1)
+            {
+
+            }
         }
 
         private void cbx_gewlaenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -117,17 +130,6 @@ namespace Sprint2WPF
             else if (cbx_laenge.SelectedIndex == -1)
             {
               
-            }
-
-            if (cbx_laenge.SelectedIndex == 0)
-            {
-                gewl_12.Visibility = Visibility.Visible;
-                gewl_14.Visibility = Visibility.Visible;
-                gewl_16.Visibility = Visibility.Visible;
-            }
-            else if (cbx_laenge.SelectedIndex == 1)
-            {
-
             }
         }
 
@@ -171,30 +173,30 @@ namespace Sprint2WPF
         }  
         
         //Gewindelaenge Actions
-        private void showallgewindelaenge()
+        private void HideAllGewindeLaenge()
         {
-            gewl_12.Visibility = Visibility.Visible;
-            gewl_14.Visibility = Visibility.Visible;
-            gewl_16.Visibility = Visibility.Visible;
-            gewl_18.Visibility = Visibility.Visible;
-            gewl_20.Visibility = Visibility.Visible;
-            gewl_22.Visibility = Visibility.Visible;
-            gewl_24.Visibility = Visibility.Visible;
-            gewl_26.Visibility = Visibility.Visible;
-            gewl_28.Visibility = Visibility.Visible;
-            gewl_30.Visibility = Visibility.Visible;
-            gewl_32.Visibility = Visibility.Visible;
-            gewl_36.Visibility = Visibility.Visible;
-            gewl_38.Visibility = Visibility.Visible;
-            gewl_44.Visibility = Visibility.Visible;
-            gewl_46.Visibility = Visibility.Visible;
-            gewl_52.Visibility = Visibility.Visible;
-            gewl_54.Visibility = Visibility.Visible;
-            gewl_60.Visibility = Visibility.Visible;
-            gewl_66.Visibility = Visibility.Visible;
-            gewl_72.Visibility = Visibility.Visible;
-            gewl_73.Visibility = Visibility.Visible;
-            gewl_85.Visibility = Visibility.Visible;
+            gewl_12.Visibility = Visibility.Hidden;
+            gewl_14.Visibility = Visibility.Hidden;
+            gewl_16.Visibility = Visibility.Hidden;
+            gewl_18.Visibility = Visibility.Hidden;
+            gewl_20.Visibility = Visibility.Hidden;
+            gewl_22.Visibility = Visibility.Hidden;
+            gewl_24.Visibility = Visibility.Hidden;
+            gewl_26.Visibility = Visibility.Hidden;
+            gewl_28.Visibility = Visibility.Hidden;
+            gewl_30.Visibility = Visibility.Hidden;
+            gewl_32.Visibility = Visibility.Hidden;
+            gewl_36.Visibility = Visibility.Hidden;
+            gewl_38.Visibility = Visibility.Hidden;
+            gewl_44.Visibility = Visibility.Hidden;
+            gewl_46.Visibility = Visibility.Hidden;
+            gewl_52.Visibility = Visibility.Hidden;
+            gewl_54.Visibility = Visibility.Hidden;
+            gewl_60.Visibility = Visibility.Hidden;
+            gewl_66.Visibility = Visibility.Hidden;
+            gewl_72.Visibility = Visibility.Hidden;
+            gewl_73.Visibility = Visibility.Hidden;
+            gewl_85.Visibility = Visibility.Hidden;
         }
 
         private void tvi_sk_Selected(object sender, RoutedEventArgs e)
