@@ -85,8 +85,12 @@ namespace Sprint2WPF
             else if (cbx_gew.SelectedIndex == -1)
             {
                 cbx_laenge.Visibility = Visibility.Hidden;
+                cbx_laenge.SelectedIndex = -1;
                 cbx_gewlaenge.Visibility = Visibility.Hidden;
+                cbx_gewlaenge.SelectedIndex = -1;
                 cbx_stkz.Visibility = Visibility.Hidden;
+                cbx_stkz.SelectedIndex = -1;
+                butt_auswahl.Visibility = Visibility.Hidden;
             }
         }
 
@@ -103,6 +107,17 @@ namespace Sprint2WPF
             if (cbx_laenge.SelectedIndex > -1)
             {
                 cbx_stkz.Visibility = Visibility.Visible;
+            }
+
+            if (cbx_laenge.SelectedIndex == 0)
+            {
+                gewl_12.Visibility = Visibility.Visible;
+                gewl_14.Visibility = Visibility.Visible;
+                gewl_16.Visibility = Visibility.Visible;
+            }
+            else if (cbx_laenge.SelectedIndex == 1)
+            {
+
             }
         }
 
