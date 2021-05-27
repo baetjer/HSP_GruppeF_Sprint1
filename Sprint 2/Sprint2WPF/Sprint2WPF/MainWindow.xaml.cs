@@ -25,6 +25,16 @@ namespace Sprint2WPF
         public MainWindow()
         {
             InitializeComponent();
+            tc_main.Visibility = Visibility.Hidden;
+            ti_Ausgabe.Visibility = Visibility.Hidden;
+            Img_DIN_10642.Visibility = Visibility.Hidden;
+            img_DIN_1207.Visibility = Visibility.Hidden;
+            img_DIN_4014.Visibility = Visibility.Hidden;
+            img_DIN_4762.Visibility = Visibility.Hidden;
+            cbx_laenge.Visibility = Visibility.Hidden;
+            cbx_gewlaenge.Visibility = Visibility.Hidden;
+            cbx_stkz.Visibility = Visibility.Hidden;
+            butt_auswahl.Visibility = Visibility.Hidden;
         }
 
         int sheet_sk;
@@ -70,16 +80,32 @@ namespace Sprint2WPF
         {
             if (cbx_gew.SelectedIndex > -1)
             {
-                butt_auswahl.Visibility = Visibility.Visible;
+                cbx_laenge.Visibility = Visibility.Visible;
             }
         }
 
         private void cbx_laenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (cbx_gew.SelectedIndex > -1)
+            {
+                cbx_gewlaenge.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void cbx_gewlaenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cbx_gew.SelectedIndex > -1)
+            {
+                cbx_stkz.Visibility = Visibility.Visible;
+            }
         }
 
         private void cbx_stkz_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (cbx_gew.SelectedIndex > -1)
+            {
+               butt_auswahl.Visibility = Visibility.Visible;
+            }
         }
 
         // Treeview Actions 
@@ -204,6 +230,11 @@ namespace Sprint2WPF
             else
             {
                 treeview.Visibility = Visibility.Visible;
+            }
+
+            if (ti_eingabe.IsSelected == true)
+            {
+                ti_Ausgabe.Visibility = Visibility.Hidden;
             }
         }
 
@@ -642,9 +673,5 @@ namespace Sprint2WPF
             
         }
 
-        private void cbx_gewlaenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }

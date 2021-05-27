@@ -43,7 +43,7 @@
             </TreeViewItem>
         </TreeView>
 
-        <TabControl x:Name="tc_main" Grid.Column="1" Margin="20" SelectionChanged="TabControl_SelectionChanged" Visibility="Hidden">
+        <TabControl x:Name="tc_main" Grid.Column="1" Margin="20" SelectionChanged="TabControl_SelectionChanged" Visibility="Visible">
             <TabItem x:Name="ti_eingabe" Header="Eingabe">
                 <Grid Background="#FFFDF9F9">
                     <Grid.RowDefinitions>
@@ -143,12 +143,12 @@
                         <RadioButton x:Name="rb_9_8" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="45">9.8</RadioButton>
                         <RadioButton x:Name="rb_10_9" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="45">10.9</RadioButton>
 
-                        <Button x:Name="butt_auswahl" Margin="0,260,0,0" Height="50" FontSize="14" Click="Button_Click" Visibility="Hidden">Auswahl bestätigen</Button>
+                        <Button x:Name="butt_auswahl" Margin="0,260,0,0" Height="50" FontSize="14" Click="Button_Click" Visibility="Visible">Auswahl bestätigen</Button>
                     </StackPanel>
                 </Grid>
             </TabItem>
 
-            <TabItem x:Name="ti_Ausgabe" Header="Ausgabe" Visibility="Hidden">
+            <TabItem x:Name="ti_Ausgabe" Header="Ausgabe" Visibility="Visible">
                 <Grid Background="#FFFDF9F9">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -382,19 +382,19 @@
 
         </TabControl>
 
-        <Grid x:Name="Img_DIN_10642" Height=" 250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Hidden">
+        <Grid x:Name="Img_DIN_10642" Height=" 250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Visible">
             <Image Source="/Bilder/ISO 10642.png" />
         </Grid>
 
-        <Grid x:Name="img_DIN_1207" Height=" 250" Width="300"  Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Hidden">
+        <Grid x:Name="img_DIN_1207" Height=" 250" Width="300"  Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Visible">
             <Image Source="/Bilder/ISO 1207.png" />
         </Grid>
 
-        <Grid  x:Name="img_DIN_4014" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Hidden">
+        <Grid  x:Name="img_DIN_4014" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Visible">
             <Image Source="/Bilder/DIN 4014_.png" />
         </Grid>
 
-        <Grid  x:Name="img_DIN_4762" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Hidden">
+        <Grid  x:Name="img_DIN_4762" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Visible">
             <Image Source="/Bilder/ISO 4762.png" />
         </Grid>
 
