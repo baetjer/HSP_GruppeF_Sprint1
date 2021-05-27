@@ -96,6 +96,9 @@ namespace Sprint2WPF
 
         private void cbx_laenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            cbx_gewlaenge.SelectedIndex = -1;
+            butt_auswahl.Visibility = Visibility.Hidden;
+
             if (cbx_gew.SelectedIndex > -1)
             {
                 cbx_gewlaenge.Visibility = Visibility.Visible;
@@ -104,6 +107,9 @@ namespace Sprint2WPF
 
         private void cbx_gewlaenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            cbx_stkz.SelectedIndex = -1;
+            butt_auswahl.Visibility = Visibility.Hidden;
+
             if (cbx_laenge.SelectedIndex > -1)
             {
                 cbx_stkz.Visibility = Visibility.Visible;
@@ -118,7 +124,6 @@ namespace Sprint2WPF
                 gewl_12.Visibility = Visibility.Visible;
                 gewl_14.Visibility = Visibility.Visible;
                 gewl_16.Visibility = Visibility.Visible;
-                cbx_gewlaenge.SelectedIndex = -1;
             }
             else if (cbx_laenge.SelectedIndex == 1)
             {
@@ -131,6 +136,10 @@ namespace Sprint2WPF
             if (cbx_gewlaenge.SelectedIndex > -1)
             {
                butt_auswahl.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                butt_auswahl.Visibility = Visibility.Hidden;
             }
         }
 
@@ -466,57 +475,52 @@ namespace Sprint2WPF
         {
             List<double> laenge_liste = new List<double>();
 
-            if (l10.IsSelected == true)
+            
+            if (l16.IsSelected == true)
             {
                 laenge_liste = excelControl.getWerte(5, 2);
-                laenge.Content = laenge_liste[0];
-                laenge_output = laenge_liste[0]; 
-            } 
-            else if (l16.IsSelected == true)
-            {
-                laenge_liste = excelControl.getWerte(5, 3);
                 laenge.Content = laenge_liste[0];
                 laenge_output = laenge_liste[0];
             }
             else if (l20.IsSelected == true)
             {
-                laenge_liste = excelControl.getWerte(5, 4);
+                laenge_liste = excelControl.getWerte(5, 3);
                 laenge.Content = laenge_liste[0];
                 laenge_output = laenge_liste[0];
             }
             else if (l30.IsSelected == true)
             {
-                laenge_liste = excelControl.getWerte(5, 5);
+                laenge_liste = excelControl.getWerte(5, 4);
                 laenge.Content = laenge_liste[0];
                 laenge_output = laenge_liste[0];
             }
             else if (l40.IsSelected == true)
             {
-                laenge_liste = excelControl.getWerte(5, 6);
+                laenge_liste = excelControl.getWerte(5, 5);
                 laenge.Content = laenge_liste[0];
                 laenge_output = laenge_liste[0];
             }
             else if (l50.IsSelected == true)
             {
-                laenge_liste = excelControl.getWerte(5, 7);
+                laenge_liste = excelControl.getWerte(5, 6);
                 laenge.Content = laenge_liste[0];
                 laenge_output = laenge_liste[0];
             }
             else if (l60.IsSelected == true)
             {
-                laenge_liste = excelControl.getWerte(5, 8);
+                laenge_liste = excelControl.getWerte(5, 7);
                 laenge.Content = laenge_liste[0];
                 laenge_output = laenge_liste[0];
             }
             else if (l80.IsSelected == true)
             {
-                laenge_liste = excelControl.getWerte(5, 9);
+                laenge_liste = excelControl.getWerte(5, 8);
                 laenge.Content = laenge_liste[0];
                 laenge_output = laenge_liste[0];
             }
             else if (l100.IsSelected == true)
             {
-                laenge_liste = excelControl.getWerte(5, 10);
+                laenge_liste = excelControl.getWerte(5, 9);
                 laenge.Content = laenge_liste[0];
                 laenge_output = laenge_liste[0];
             }
