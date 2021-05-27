@@ -143,7 +143,7 @@
                         <RadioButton x:Name="rb_9_8" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="45">9.8</RadioButton>
                         <RadioButton x:Name="rb_10_9" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="45">10.9</RadioButton>
 
-                        <Button x:Name="butt_auswahl" Margin="10,260,10,0" Height="50" FontSize="14" Click="Button_Click" Visibility="Hidden">Auswahl bestätigen</Button>
+                        <Button x:Name="butt_auswahl" Margin="0,260,0,0" Height="50" FontSize="14" Click="Button_Click" Visibility="Hidden">Auswahl bestätigen</Button>
                     </StackPanel>
                 </Grid>
             </TabItem>
