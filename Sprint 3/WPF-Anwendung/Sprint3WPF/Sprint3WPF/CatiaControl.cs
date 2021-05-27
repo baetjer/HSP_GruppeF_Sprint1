@@ -42,7 +42,7 @@ namespace Sprint3WPF
                     Console.WriteLine("Schaft");
 
                     // cc.ErzeugeGewindeFeature();
-                    //cc.ErzeugeGewindeHelix(dieSchraube);
+                    cc.ErzeugeGewindeHelix(dieSchraube);
                     Console.WriteLine("Gewinde");
                 }
                 else
