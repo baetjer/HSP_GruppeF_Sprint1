@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="CatiaControl.cs" />
     <Compile Include="CatiaConnect.cs" />
+    <Compile Include="Schraube.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -115,6 +116,15 @@
     <Resource Include="Bilder\DIN 4014_.png" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="GenKwe">
+      <Guid>{00B6EC0E-BCFE-11D2-9B5B-006094EB7ECA}</Guid>
+      <VersionMajor>0</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
     <COMReference Include="INFITF">
       <Guid>{14F197B2-0771-11D1-A5B1-00A0C9575177}</Guid>
       <VersionMajor>0</VersionMajor>
@@ -160,6 +170,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Interop.HybridShapeTypeLib.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
