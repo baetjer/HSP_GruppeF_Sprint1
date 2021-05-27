@@ -241,6 +241,7 @@ namespace Sprint2WPF
                 gewl_54.Visibility = Visibility.Visible;
                 gewl_60.Visibility = Visibility.Visible;
                 gewl_66.Visibility = Visibility.Visible;
+                gewl_73.Visibility = Visibility.Visible;
                 gewl_72.Visibility = Visibility.Visible;
                 gewl_85.Visibility = Visibility.Visible;
             }
