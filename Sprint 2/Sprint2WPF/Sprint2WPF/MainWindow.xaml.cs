@@ -82,6 +82,12 @@ namespace Sprint2WPF
             {
                 cbx_laenge.Visibility = Visibility.Visible;
             }
+            else if (cbx_gew.SelectedIndex == -1)
+            {
+                cbx_laenge.Visibility = Visibility.Hidden;
+                cbx_gewlaenge.Visibility = Visibility.Hidden;
+                cbx_stkz.Visibility = Visibility.Hidden;
+            }
         }
 
         private void cbx_laenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -94,7 +100,7 @@ namespace Sprint2WPF
 
         private void cbx_gewlaenge_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (cbx_gew.SelectedIndex > -1)
+            if (cbx_laenge.SelectedIndex > -1)
             {
                 cbx_stkz.Visibility = Visibility.Visible;
             }
@@ -102,7 +108,7 @@ namespace Sprint2WPF
 
         private void cbx_stkz_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (cbx_gew.SelectedIndex > -1)
+            if (cbx_gewlaenge.SelectedIndex > -1)
             {
                butt_auswahl.Visibility = Visibility.Visible;
             }
@@ -116,8 +122,6 @@ namespace Sprint2WPF
             img_DIN_4762.Visibility = Visibility.Hidden;
             Img_DIN_10642.Visibility = Visibility.Hidden;
         }
-
-
 
         //Gewinde Actions
         private void showallgewinde()
@@ -162,9 +166,7 @@ namespace Sprint2WPF
             gewl_72.Visibility = Visibility.Visible;
             gewl_73.Visibility = Visibility.Visible;
             gewl_85.Visibility = Visibility.Visible;
-            
         }
-
 
         private void tvi_sk_Selected(object sender, RoutedEventArgs e)
         {
@@ -177,9 +179,7 @@ namespace Sprint2WPF
             cbx_m14.Visibility = Visibility.Hidden;
 
             //Visibility tc Main 
-
             tc_main.Visibility = Visibility.Visible;
-
         }
 
         private void tvi_zy1_Selected(object sender, RoutedEventArgs e)
@@ -193,12 +193,7 @@ namespace Sprint2WPF
             cbx_m14.Visibility = Visibility.Hidden;
 
             //Visibility tc Main 
-
             tc_main.Visibility = Visibility.Visible;
-
-
-
-
         }
 
         private void tvi_zy2_Selected(object sender, RoutedEventArgs e)
@@ -694,5 +689,14 @@ namespace Sprint2WPF
             
         }
 
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            tc_main.SelectedIndex = 0;
+        }
+
+        private void treeview_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            cbx_gew.SelectedIndex = -1;
+        }
     }
 }
