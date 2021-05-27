@@ -136,9 +136,8 @@ namespace Sprint2WPF
             cbx_m30.Visibility = Visibility.Visible;
             cbx_m36.Visibility = Visibility.Visible;
         }
-            
+    
         
-
         private void tvi_sk_Selected(object sender, RoutedEventArgs e)
         {
             //Visibility Image
@@ -152,11 +151,6 @@ namespace Sprint2WPF
             //Visibility tc Main 
 
             tc_main.Visibility = Visibility.Visible;
-
-
-            //visibility gewindelaenge
-
-
 
         }
 
@@ -428,9 +422,8 @@ namespace Sprint2WPF
             {
                 laenge_liste = excelControl.getWerte(5, 2);
                 laenge.Content = laenge_liste[0];
-                laenge_output = laenge_liste[0];
-
-            }
+                laenge_output = laenge_liste[0]; 
+            } 
             else if (l16.IsSelected == true)
             {
                 laenge_liste = excelControl.getWerte(5, 3);
