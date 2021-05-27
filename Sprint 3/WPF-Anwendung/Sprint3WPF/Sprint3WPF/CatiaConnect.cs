@@ -17,7 +17,7 @@ namespace Sprint3WPF
         MECMOD.Sketch hsp_catiaSkizze;
 
         ShapeFactory SF;
-        //HybridShapeFactory HSF;
+        HybridShapeFactory HSF;
         Pad mySchaft;
         Body myBody;
         Part myPart;
@@ -206,85 +206,85 @@ namespace Sprint3WPF
         }
 
         // Erzeugt eine Helix 
-        //internal void ErzeugeGewindeHelix(Schraube mySchraube)
-        //{
-        //    Double P = mySchraube.P;
-        //    Double Ri = mySchraube.Ri;
-        //    HSF = (HybridShapeFactory)myPart.HybridShapeFactory;
+        internal void ErzeugeGewindeHelix(Schraube mySchraube)
+        {
+            Double P = mySchraube.P;
+            Double Ri = mySchraube.Ri;
+            HSF = (HybridShapeFactory)myPart.HybridShapeFactory;
 
-        //    Sketch myGewinde = makeGewindeSkizze(mySchraube);
+            Sketch myGewinde = makeGewindeSkizze(mySchraube);
 
-        //    HybridShapeDirection HelixDir = HSF.AddNewDirectionByCoord(1, 0, 0);
-        //    Reference RefHelixDir = myPart.CreateReferenceFromObject(HelixDir);
+            HybridShapeDirection HelixDir = HSF.AddNewDirectionByCoord(1, 0, 0);
+            Reference RefHelixDir = myPart.CreateReferenceFromObject(HelixDir);
 
-        //    HybridShapePointCoord HelixStartpunkt = HSF.AddNewPointCoord(0, 0, Ri);
-        //    Reference RefHelixStartpunkt = myPart.CreateReferenceFromObject(HelixStartpunkt);
+            HybridShapePointCoord HelixStartpunkt = HSF.AddNewPointCoord(0, 0, Ri);
+            Reference RefHelixStartpunkt = myPart.CreateReferenceFromObject(HelixStartpunkt);
 
-        //    HybridShapeHelix Helix = HSF.AddNewHelix(RefHelixDir, false, RefHelixStartpunkt, P, mySchraube.gewindeLaenge, false, 0, 0, false);
+            HybridShapeHelix Helix = HSF.AddNewHelix(RefHelixDir, false, RefHelixStartpunkt, P, mySchraube.gewindeLaenge, false, 0, 0, false);
 
-        //    Reference RefHelix = myPart.CreateReferenceFromObject(Helix);
-        //    Reference RefmyGewinde = myPart.CreateReferenceFromObject(myGewinde);
+            Reference RefHelix = myPart.CreateReferenceFromObject(Helix);
+            Reference RefmyGewinde = myPart.CreateReferenceFromObject(myGewinde);
 
-        //    myPart.Update();
+            myPart.Update();
 
-        //    myPart.InWorkObject = myBody;
+            myPart.InWorkObject = myBody;
 
-        //    OriginElements catOriginElements = this.hsp_catiaPartDoc.Part.OriginElements;
-        //    Reference RefmyPlaneZX = (Reference)catOriginElements.PlaneZX;
+            OriginElements catOriginElements = this.hsp_catiaPartDoc.Part.OriginElements;
+            Reference RefmyPlaneZX = (Reference)catOriginElements.PlaneZX;
 
-        //    Sketch ChamferSkizze = mySketches.Add(RefmyPlaneZX);
-        //    myPart.InWorkObject = ChamferSkizze;
-        //    ChamferSkizze.set_Name("Fase");
+            Sketch ChamferSkizze = mySketches.Add(RefmyPlaneZX);
+            myPart.InWorkObject = ChamferSkizze;
+            ChamferSkizze.set_Name("Fase");
 
-        //    double H_links = Ri;
-        //    double V_links = 0.65 * P;
+            double H_links = Ri;
+            double V_links = 0.65 * P;
 
-        //    double H_rechts = Ri;
-        //    double V_rechts = 0;
+            double H_rechts = Ri;
+            double V_rechts = 0;
 
-        //    double H_unten = Ri - 0.65 * P;
-        //    double V_unten = 0;
+            double H_unten = Ri - 0.65 * P;
+            double V_unten = 0;
 
-        //    Factory2D catFactory2D3 = ChamferSkizze.OpenEdition();
+            Factory2D catFactory2D3 = ChamferSkizze.OpenEdition();
 
-        //    Point2D links = catFactory2D3.CreatePoint(H_links, V_links);
-        //    Point2D rechts = catFactory2D3.CreatePoint(H_rechts, V_rechts);
-        //    Point2D unten = catFactory2D3.CreatePoint(H_unten, V_unten);
+            Point2D links = catFactory2D3.CreatePoint(H_links, V_links);
+            Point2D rechts = catFactory2D3.CreatePoint(H_rechts, V_rechts);
+            Point2D unten = catFactory2D3.CreatePoint(H_unten, V_unten);
 
-        //    Line2D Oben = catFactory2D3.CreateLine(H_links, V_links, H_rechts, V_rechts);
-        //    Oben.StartPoint = links;
-        //    Oben.EndPoint = rechts;
+            Line2D Oben = catFactory2D3.CreateLine(H_links, V_links, H_rechts, V_rechts);
+            Oben.StartPoint = links;
+            Oben.EndPoint = rechts;
 
-        //    Line2D hypo = catFactory2D3.CreateLine(H_links, V_links, H_unten, V_unten);
-        //    hypo.StartPoint = links;
-        //    hypo.EndPoint = unten;
+            Line2D hypo = catFactory2D3.CreateLine(H_links, V_links, H_unten, V_unten);
+            hypo.StartPoint = links;
+            hypo.EndPoint = unten;
 
-        //    Line2D seite = catFactory2D3.CreateLine(H_unten, V_unten, H_rechts, V_rechts);
-        //    seite.StartPoint = unten;
-        //    seite.EndPoint = rechts;
+            Line2D seite = catFactory2D3.CreateLine(H_unten, V_unten, H_rechts, V_rechts);
+            seite.StartPoint = unten;
+            seite.EndPoint = rechts;
 
-        //    ChamferSkizze.CloseEdition();
+            ChamferSkizze.CloseEdition();
 
-        //    myPart.InWorkObject = myBody;
-        //    myPart.Update();
+            myPart.InWorkObject = myBody;
+            myPart.Update();
 
-        //    Groove myChamfer = SF.AddNewGroove(ChamferSkizze);
-        //    myChamfer.RevoluteAxis = RefHelixDir;
+            Groove myChamfer = SF.AddNewGroove(ChamferSkizze);
+            myChamfer.RevoluteAxis = RefHelixDir;
 
-        //    myPart.Update();
+            myPart.Update();
 
-        //    Slot GewindeRille = SF.AddNewSlotFromRef(RefmyGewinde, RefHelix);
+            Slot GewindeRille = SF.AddNewSlotFromRef(RefmyGewinde, RefHelix);
 
-        //    Reference RefmyPad = myPart.CreateReferenceFromObject(mySchaft);
-        //    HybridShapeSurfaceExplicit GewindestangenSurface = HSF.AddNewSurfaceDatum(RefmyPad);
-        //    Reference RefGewindestangenSurface = myPart.CreateReferenceFromObject(GewindestangenSurface);
+            Reference RefmyPad = myPart.CreateReferenceFromObject(mySchaft);
+            HybridShapeSurfaceExplicit GewindestangenSurface = HSF.AddNewSurfaceDatum(RefmyPad);
+            Reference RefGewindestangenSurface = myPart.CreateReferenceFromObject(GewindestangenSurface);
 
-        //    GewindeRille.ReferenceSurfaceElement = RefGewindestangenSurface;
+            GewindeRille.ReferenceSurfaceElement = RefGewindestangenSurface;
 
-        //    Reference RefGewindeRille = myPart.CreateReferenceFromObject(GewindeRille);
+            Reference RefGewindeRille = myPart.CreateReferenceFromObject(GewindeRille);
 
-        //    myPart.Update();
-        //}
+            myPart.Update();
+        }
 
         // Separate Skizzenerzeugung für de Helix
         private Sketch makeGewindeSkizze(Schraube dieSchraube)
