@@ -430,23 +430,146 @@ namespace Sprint2WPF
                 laenge_output = laenge_liste[0];
             }
         }
+        
         public void setgewindelaenge()
         {
             List<double> Gewindelaenge = new List<double>();
 
-            if (gewl_12.IsSelected == true)
+
+            if(gewl_12.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 2);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if(gewl_14.IsSelected == true)
             {
                 Gewindelaenge = excelControl.getWerte(9, 3);
                 gewindelaenge.Content = Gewindelaenge[0];
                 Gewindelaenge_output = Gewindelaenge[0];
             }
-            else if (gewl_14.IsSealed == true);
+            else if(gewl_16.IsSelected == true)
             {
                 Gewindelaenge = excelControl.getWerte(9, 4);
                 gewindelaenge.Content = Gewindelaenge[0];
                 Gewindelaenge_output = Gewindelaenge[0];
             }
-         }  
+            else if (gewl_18.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 5);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_20.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 6);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_22.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 7);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_24.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 8);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_26.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 9);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_28.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 10);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_30.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 11);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_32.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 12);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_36.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 13);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_38.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 14);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_44.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 15);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_46.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 16);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_52.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 17);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_54.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 18);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_60.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 19);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_66.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 20);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_72.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 21);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_73.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 22);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+            else if (gewl_85.IsSelected == true)
+            {
+                Gewindelaenge = excelControl.getWerte(9, 23);
+                gewindelaenge.Content = Gewindelaenge[0];
+                Gewindelaenge_output = Gewindelaenge[0];
+            }
+
+        }  
         
         public void setStckzahl()
         {
