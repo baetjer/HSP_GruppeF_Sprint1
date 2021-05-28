@@ -44,6 +44,8 @@ namespace Sprint3WPF
                     // cc.ErzeugeGewindeFeature();
                     cc.ErzeugeGewindeHelix(dieSchraube);
                     Console.WriteLine("Gewinde");
+
+                    cc.ErzeugeSechskant();
                 }
                 else
                 {
