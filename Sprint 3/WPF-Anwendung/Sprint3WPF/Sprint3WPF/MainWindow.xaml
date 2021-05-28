@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Sprint3WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="900" ResizeMode="NoResize">
-    
+
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -19,7 +19,7 @@
 
         <Button FontSize="20" Height="40" Width="150" Grid.Column="0" Margin="0,280,0,0" Click="Button_Click_2" Background="#FFDC5F5F" BorderThickness="2" BorderBrush="#FF4F4848">Exit</Button>
 
-        <TreeView x:Name="treeview" Width="180" Height="200" Grid.Column="0">
+        <TreeView x:Name="treeview" Width="180" Height="200" Grid.Column="0" SelectedItemChanged="treeview_SelectedItemChanged">
             <TreeViewItem x:Name="tvi_sk" Header="Sechskant ISO 4014" Selected="tvi_sk_Selected" Margin="0,10,0,0" Background="{x:Null}" ClipToBounds="True" BorderThickness="1">
                 <TreeViewItem.BorderBrush>
                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
@@ -54,6 +54,7 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
                     <StackPanel Grid.Column="0">
@@ -77,8 +78,7 @@
 
                     <StackPanel Grid.Column="1">
                         <Label HorizontalAlignment="Center" Margin="0,10,0,0">Schaftlänge (mm)</Label>
-                        <ComboBox x:Name="cbx_laenge" MaxDropDownHeight="100" Width="80" SelectionChanged="cbx_laenge_SelectionChanged">
-                            <ComboBoxItem x:Name="l10" Content="10"/>
+                        <ComboBox x:Name="cbx_laenge" MaxDropDownHeight="200" Width="80" SelectionChanged="cbx_laenge_SelectionChanged">
                             <ComboBoxItem x:Name="l16" Content="16"/>
                             <ComboBoxItem x:Name="l20" Content="20"/>
                             <ComboBoxItem x:Name="l30" Content="30"/>
@@ -89,8 +89,34 @@
                             <ComboBoxItem x:Name="l100" Content="100"/>
                         </ComboBox>
                     </StackPanel>
-
                     <StackPanel Grid.Column="2">
+                        <Label HorizontalAlignment="Center" Margin="0,10,0,0">Gewindelänge (mm)</Label>
+                        <ComboBox x:Name="cbx_gewlaenge" MaxDropDownHeight="200" Width="80" SelectionChanged="cbx_gewlaenge_SelectionChanged">
+                            <ComboBoxItem x:Name="gewl_12" Content="12"/>
+                            <ComboBoxItem x:Name="gewl_14" Content="14"/>
+                            <ComboBoxItem x:Name="gewl_16" Content="16"/>
+                            <ComboBoxItem x:Name="gewl_18" Content="18"/>
+                            <ComboBoxItem x:Name="gewl_20" Content="20"/>
+                            <ComboBoxItem x:Name="gewl_22" Content="22"/>
+                            <ComboBoxItem x:Name="gewl_24" Content="24"/>
+                            <ComboBoxItem x:Name="gewl_26" Content="26"/>
+                            <ComboBoxItem x:Name="gewl_28" Content="28"/>
+                            <ComboBoxItem x:Name="gewl_30" Content="30"/>
+                            <ComboBoxItem x:Name="gewl_32" Content="32"/>
+                            <ComboBoxItem x:Name="gewl_36" Content="36"/>
+                            <ComboBoxItem x:Name="gewl_38" Content="38"/>
+                            <ComboBoxItem x:Name="gewl_44" Content="44"/>
+                            <ComboBoxItem x:Name="gewl_46" Content="46"/>
+                            <ComboBoxItem x:Name="gewl_52" Content="52"/>
+                            <ComboBoxItem x:Name="gewl_54" Content="54"/>
+                            <ComboBoxItem x:Name="gewl_60" Content="60"/>
+                            <ComboBoxItem x:Name="gewl_66" Content="66"/>
+                            <ComboBoxItem x:Name="gewl_72" Content="72"/>
+                            <ComboBoxItem x:Name="gewl_73" Content="73"/>
+                            <ComboBoxItem x:Name="gewl_85" Content="85"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3">
                         <Label Margin="0,10,0,0" HorizontalAlignment="Center">Stückzahl</Label>
                         <ComboBox x:Name="cbx_stkz" MaxDropDownHeight="100" Width="80" RenderTransformOrigin="0.5,0.5" SelectionChanged="cbx_stkz_SelectionChanged">
                             <ComboBox.RenderTransform>
@@ -108,19 +134,19 @@
                         </ComboBox>
                     </StackPanel>
 
-                    <StackPanel Grid.Column="3">
+                    <StackPanel Grid.Column="4">
                         <Label HorizontalAlignment="Center" Margin="0,10,0,10">Festigkeitsklasse</Label>
                         <RadioButton x:Name="rb_5_8" GroupName="fst" IsChecked="True" Height=" 20"  HorizontalAlignment="Left" Width="49" Grid.RowSpan="3">5.8</RadioButton>
                         <RadioButton x:Name="rb_8_8" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="49">8.8</RadioButton>
                         <RadioButton x:Name="rb_9_8" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="45">9.8</RadioButton>
                         <RadioButton x:Name="rb_10_9" GroupName="fst" Height="20" HorizontalAlignment="Left" Width="45">10.9</RadioButton>
 
-                        <Button x:Name="butt_auswahl" Margin="10,260,10,0" Height="50" FontSize="14" Click="Button_Click" Visibility="Visible">Auswahl bestätigen</Button>
+                        <Button x:Name="butt_auswahl" Margin="0,260,0,0" Height="50" FontSize="14" Click="Button_Click" Visibility="Visible">Auswahl bestätigen</Button>
                     </StackPanel>
                 </Grid>
             </TabItem>
 
-            <TabItem x:Name="ti_Ausgabe" Header="Ausgabe" Visibility="Hidden">
+            <TabItem x:Name="ti_Ausgabe" Header="Ausgabe" Visibility="Visible">
                 <Grid Background="#FFFDF9F9">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -165,11 +191,21 @@
                             <Label>
                                 <Label.Background>
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
-                                </Label.Background> Länge:
+                                </Label.Background> Schaftlänge:
                             </Label>
                             <Label x:Name="laenge">
                                 <Label.Background>
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                                </Label.Background> ---
+                            </Label>
+                            <Label>
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+                                </Label.Background> Gewindelänge:
+                            </Label>
+                            <Label x:Name="gewindelaenge">
+                                <Label.Background>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
                                 </Label.Background> ---
                             </Label>
                         </StackPanel>
@@ -275,6 +311,7 @@
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.InfoColorKey}}"/>
                                 </Label.Background> ---
                             </Label>
+                            <Button Margin="10,50,10,0" Height="50" FontSize="15" BorderThickness="1" Click="Button_Click_3">Zurück</Button>
                         </StackPanel>
 
                         <StackPanel Margin="10" Grid.Column="1">
@@ -345,19 +382,19 @@
 
         </TabControl>
 
-        <Grid x:Name="Img_DIN_10642" Height=" 250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Hidden">
+        <Grid x:Name="Img_DIN_10642" Height=" 250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Visible">
             <Image Source="/Bilder/ISO 10642.png" />
         </Grid>
 
-        <Grid x:Name="img_DIN_1207" Height=" 250" Width="300"  Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Hidden">
+        <Grid x:Name="img_DIN_1207" Height=" 250" Width="300"  Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Visible">
             <Image Source="/Bilder/ISO 1207.png" />
         </Grid>
 
-        <Grid  x:Name="img_DIN_4014" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Hidden">
+        <Grid  x:Name="img_DIN_4014" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Visible">
             <Image Source="/Bilder/DIN 4014_.png" />
         </Grid>
 
-        <Grid  x:Name="img_DIN_4762" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Hidden">
+        <Grid  x:Name="img_DIN_4762" Height="250" Width="300" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40" Visibility="Visible">
             <Image Source="/Bilder/ISO 4762.png" />
         </Grid>
 
@@ -373,5 +410,4 @@
             <Image Source="/Bilder/HSP bild.png" />
         </Grid>
     </Grid>
-    
 </Window>
