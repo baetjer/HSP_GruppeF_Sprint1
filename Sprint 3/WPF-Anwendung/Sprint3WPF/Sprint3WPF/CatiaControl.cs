@@ -41,13 +41,14 @@ namespace Sprint3WPF
                     cc.ErzeugeZylinder(dieSchraube);
                     Console.WriteLine("Schaft");
 
-                    // cc.ErzeugeGewindeFeature();
+                    cc.ErzeugeGewindeFeature();
                     cc.ErzeugeGewindeHelix(dieSchraube);
                     Console.WriteLine("Gewinde");
 
-                    Schraubenkopf derSchraubenkopf = new Schraubenkopf(7, 7.66, 2.8);
+                    //Schraubenkopf derSchraubenkopf = new Schraubenkopf(7, 7.66, 2.8);
 
-                    cc.ErzeugeSechskant(derSchraubenkopf);
+                    //cc.ErzeugeSechskant(derSchraubenkopf);
+                    //cc.ErzeugeZylinderKopf(derSchraubenkopf);
                 }
                 else
                 {
