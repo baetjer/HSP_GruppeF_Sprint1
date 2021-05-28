@@ -347,37 +347,53 @@ namespace Sprint3WPF
 
         #endregion
 
-        public void ErzeugeSechskant()
+        public void ErzeugeSechskant(Schraubenkopf mySchraubenkopf)
         {
-            SF = (ShapeFactory)hsp_catiaPartDoc.Part.ShapeFactory;
-            HybridBodies catHybridBodies1 = hsp_catiaPartDoc.Part.HybridBodies;
-            HybridBody catHybridBody1;
-            try
-            {
-                catHybridBody1 = catHybridBodies1.Item("Geometrisches Set.1");
-            }
-            catch (Exception)
-            {
-                //MessageBox.Show("Kein geometrisches Set gefunden! " + Environment.NewLine +
-                //    "Ein PART manuell erzeugen und ein darauf achten, dass 'Geometisches Set' aktiviert ist.",
-                //    "Fehler", MessageBoxButton.OK, MessageBoxImage.Information);
-                return;
-            }
-            catHybridBody1.set_Name("Profile");
-            // neue Skizze im ausgewaehlten geometrischen Set anlegen
-            mySketches = catHybridBody1.HybridSketches;
-            OriginElements catOriginElements = hsp_catiaPartDoc.Part.OriginElements;
-            Reference catReference1 = (Reference)catOriginElements.PlaneYZ;
-            hsp_catiaSkizze = mySketches.Add(catReference1);
+            myPart = hsp_catiaPartDoc.Part;
+            Bodies bodies = myPart.Bodies;
+            myBody = myPart.MainBody;
+            // myBody = bodies.Add();
 
-            // Achsensystem in Skizze erstellen 
-            ErzeugeAchsensystem();
+            // Hauptkoerper in Bearbeitung definieren
+            myPart.InWorkObject = myPart.MainBody;
 
-            // Part aktualisieren
-            hsp_catiaPartDoc.Part.Update();
+            // Skizze umbenennen
+            hsp_catiaSkizze.set_Name("Sechskant");
+
+            // Skizze...
+            // ... oeffnen für die Bearbeitung
+            Factory2D catFactory2D1 = hsp_catiaSkizze.OpenEdition();
+
+            // ... Sechskant Form
+            double H0 = 0;
+            double V0 = 0;
+            Point2D Ursprung = catFactory2D1.CreatePoint(H0, V0);
+            Circle2D GeschlossenerKreis = catFactory2D1.CreateClosedCircle(H0, V0, mySchraubenkopf.wert1);
+           GeschlossenerKreis.CenterPoint = Ursprung;
+
+            // ... schliessen
+            hsp_catiaSkizze.CloseEdition();
+
+            // Schraubenschaft durch ein Pad erstellen
+            Reference RefMySchaft = myPart.CreateReferenceFromObject(hsp_catiaSkizze);
+            mySchaft = SF.AddNewPadFromRef(RefMySchaft, mySchraubenkopf.wert3);
+            myPart.Update();
+        }
+
+        public void ErzeugeZylinderIS()
+        {
 
         }
 
+        public void ErzeugeZylinderS()
+        {
+
+        }
+
+        public void ErzeugeSenk()
+        {
+
+        }
     }
 }
 
