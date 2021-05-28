@@ -369,7 +369,19 @@ namespace Sprint3WPF
             double V0 = 0;
             Point2D Ursprung = catFactory2D1.CreatePoint(H0, V0);
             Circle2D GeschlossenerKreis = catFactory2D1.CreateClosedCircle(H0, V0, mySchraubenkopf.wert1);
-           GeschlossenerKreis.CenterPoint = Ursprung;
+            //Punkte
+            Point2D point2D3 = catFactory2D1.CreatePoint(3, -mySchraubenkopf.wert1);
+            Point2D point2D4 = catFactory2D1.CreatePoint(7, 0);
+            Point2D point2D5 = catFactory2D1.CreatePoint(3, mySchraubenkopf.wert1);
+            Point2D point2D6 = catFactory2D1.CreatePoint(-3, mySchraubenkopf.wert1);
+            Point2D point2D7 = catFactory2D1.CreatePoint(-7, 0);
+            Point2D point2D8 = catFactory2D1.CreatePoint(-3, mySchraubenkopf.wert1);
+            //Linien
+            Line2D catLine2D3 = catFactory2D1.CreateLine(3, -mySchraubenkopf.wert1, 7, 0);
+            catLine2D3.StartPoint = point2D3;
+            catLine2D3.EndPoint = point2D4;
+
+            GeschlossenerKreis.CenterPoint = Ursprung;
 
             // ... schliessen
             hsp_catiaSkizze.CloseEdition();
