@@ -94,6 +94,7 @@
     <Compile Include="Berechnungen.cs" />
     <Compile Include="CatiaControl.cs" />
     <Compile Include="CatiaConnect.cs" />
+    <Compile Include="Schraubenkopf.cs" />
     <Compile Include="Excel.cs" />
     <Compile Include="ExcelControl.cs" />
     <Compile Include="Schraube.cs" />
