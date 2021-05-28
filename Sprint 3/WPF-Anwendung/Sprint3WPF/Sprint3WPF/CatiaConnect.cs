@@ -180,7 +180,7 @@ namespace Sprint3WPF
         }
 
         // Erzeugt ein Gewindefeature auf dem vorher erzeugten Schaft.
-        internal void ErzeugeGewindeFeature()
+        internal void ErzeugeGewindeFeature(Schraube mySchraube)
         {
             // Gewinde...
             // ... Referenzen lateral und limit erzeugen
@@ -192,14 +192,14 @@ namespace Sprint3WPF
             // ... Gewinde erzeugen, Parameter setzen
             PARTITF.Thread thread1 = SF.AddNewThreadWithOutRef();
             thread1.Side = CatThreadSide.catRightSide;
-            thread1.Diameter = 8.000000;
-            thread1.Depth = 50.000000;
+            thread1.Diameter = mySchraube.Ri * 2;
+            thread1.Depth = mySchraube.gewindeLaenge;
             thread1.LateralFaceElement = RefMantelflaeche; // Referenz lateral
             thread1.LimitFaceElement = RefFrontflaeche; // Referenz limit
 
             // ... Standardgewinde gesteuert über eine Konstruktionstabelle
             thread1.CreateUserStandardDesignTable("Metric_Thick_Pitch", @"C:\Program Files\Dassault Systemes\B28\win_b64\resources\standard\thread\Metric_Thick_Pitch.xml");
-            thread1.Diameter = 8.000000;
+            thread1.Diameter = mySchraube.Ri * 2;
             thread1.Pitch = 1.250000;
 
             // Part update und fertig
