@@ -8,7 +8,7 @@ namespace Sprint3WPF
 {
     class CatiaControl
     {
-        CatiaControl()
+        public CatiaControl()
         {
             try
             {
@@ -55,8 +55,6 @@ namespace Sprint3WPF
                 //MessageBox.Show(ex.Message, "Exception aufgetreten");
             }
             Console.WriteLine("Fertig - Taste drücken.");
-            Console.ReadKey();
-
         }
     }
 }
