@@ -76,6 +76,10 @@ namespace Sprint2WPF
             //Tabcontrol visibility
             ti_Ausgabe.Visibility = Visibility.Visible;
             tc_main.SelectedIndex = 1;
+
+            Window MB1 = new Window();
+            MB1.Content = MessageBox.Show("yo", "ye", MessageBoxButton.OK);
+            MB1.SizeToContent = SizeToContent.WidthAndHeight;
         }
 
         private void cbx_gew_SelectionChanged(object sender, SelectionChangedEventArgs e)
