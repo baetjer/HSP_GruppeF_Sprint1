@@ -8,7 +8,7 @@ namespace Sprint3WPF
 {
     class CatiaControl
     {
-        public CatiaControl(string gw, double laenge, double gw_laenge)
+        public CatiaControl(string gw_string, double laenge, double gw_laenge, double gw_double)
         {
             try
             {
@@ -36,12 +36,12 @@ namespace Sprint3WPF
                     // cc.ErzeugeBalken(300);
                     // Console.WriteLine("4");
 
-                    Schraube dieSchraube = new Schraube(laenge, gw_laenge, "Standartgewinde", gw, 5.3d, 4d, 1.25d);
+                    Schraube dieSchraube = new Schraube(laenge, gw_laenge, "Standartgewinde", gw_string, 5.3d, gw_double / 2, 1.25d);
 
                     cc.ErzeugeZylinder(dieSchraube);
                     Console.WriteLine("Schaft");
 
-                    cc.ErzeugeGewindeFeature();
+                    cc.ErzeugeGewindeFeature(dieSchraube);
                     cc.ErzeugeGewindeHelix(dieSchraube);
                     Console.WriteLine("Gewinde");
 
