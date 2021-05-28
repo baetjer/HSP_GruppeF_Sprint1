@@ -45,7 +45,9 @@ namespace Sprint3WPF
                     cc.ErzeugeGewindeHelix(dieSchraube);
                     Console.WriteLine("Gewinde");
 
-                    cc.ErzeugeSechskant();
+                    Schraubenkopf derSchraubenkopf = new Schraubenkopf(7, 7.66, 2.8);
+
+                    cc.ErzeugeSechskant(derSchraubenkopf);
                 }
                 else
                 {
