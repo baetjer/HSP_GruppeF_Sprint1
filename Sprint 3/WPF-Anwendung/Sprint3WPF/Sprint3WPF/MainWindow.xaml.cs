@@ -27,7 +27,7 @@ namespace Sprint3WPF
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-
+            CatiaControl catiaControl = new CatiaControl();
         }
 
         private void tvi_sk_Selected(object sender, RoutedEventArgs e)
