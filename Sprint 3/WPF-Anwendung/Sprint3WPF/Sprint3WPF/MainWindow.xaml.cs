@@ -841,7 +841,7 @@ namespace Sprint3WPF
             gewinde_zahl = Convert.ToString(gw_output);
             gewinde = "M" + gewinde_zahl;
 
-            CatiaControl catia = new CatiaControl(gewinde, laenge_output, Gewindelaenge_output);
+            CatiaControl catia = new CatiaControl(gewinde, laenge_output, Gewindelaenge_output, gw_output);
 
             CatiaConnect cc = new CatiaConnect();
 
