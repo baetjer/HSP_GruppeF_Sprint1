@@ -86,61 +86,61 @@ namespace Sprint3WPF
             hsp_catiaSkizze.SetAbsoluteAxisData(arr);
         }
 
-        //public void ErzeugeProfil(Double b, Double h)
-        //{
-        //    // Skizze umbenennen
-        //    hsp_catiaSkizze.set_Name("Rechteck");
+        public void ErzeugeProfil(Double b, Double h)
+        {
+            // Skizze umbenennen
+            hsp_catiaSkizze.set_Name("Rechteck");
 
-        //    // Rechteck in Skizze einzeichnen
-        //    // Skizze oeffnen
-        //    Factory2D catFactory2D1 = hsp_catiaSkizze.OpenEdition();
+            // Rechteck in Skizze einzeichnen
+            // Skizze oeffnen
+            Factory2D catFactory2D1 = hsp_catiaSkizze.OpenEdition();
 
-        //    // Rechteck erzeugen
+            // Rechteck erzeugen
 
-        //    // erst die Punkte
-        //    Point2D catPoint2D1 = catFactory2D1.CreatePoint(-50, 50);
-        //    Point2D catPoint2D2 = catFactory2D1.CreatePoint(50, 50);
-        //    Point2D catPoint2D3 = catFactory2D1.CreatePoint(50, -50);
-        //    Point2D catPoint2D4 = catFactory2D1.CreatePoint(-50, -50);
+            // erst die Punkte
+            Point2D catPoint2D1 = catFactory2D1.CreatePoint(-50, 50);
+            Point2D catPoint2D2 = catFactory2D1.CreatePoint(50, 50);
+            Point2D catPoint2D3 = catFactory2D1.CreatePoint(50, -50);
+            Point2D catPoint2D4 = catFactory2D1.CreatePoint(-50, -50);
 
-        //    // dann die Linien
-        //    Line2D catLine2D1 = catFactory2D1.CreateLine(-50, 50, 50, 50);
-        //    catLine2D1.StartPoint = catPoint2D1;
-        //    catLine2D1.EndPoint = catPoint2D2;
+            // dann die Linien
+            Line2D catLine2D1 = catFactory2D1.CreateLine(-50, 50, 50, 50);
+            catLine2D1.StartPoint = catPoint2D1;
+            catLine2D1.EndPoint = catPoint2D2;
 
-        //    Line2D catLine2D2 = catFactory2D1.CreateLine(50, 50, 50, -50);
-        //    catLine2D2.StartPoint = catPoint2D2;
-        //    catLine2D2.EndPoint = catPoint2D3;
+            Line2D catLine2D2 = catFactory2D1.CreateLine(50, 50, 50, -50);
+            catLine2D2.StartPoint = catPoint2D2;
+            catLine2D2.EndPoint = catPoint2D3;
 
-        //    Line2D catLine2D3 = catFactory2D1.CreateLine(50, -50, -50, -50);
-        //    catLine2D3.StartPoint = catPoint2D3;
-        //    catLine2D3.EndPoint = catPoint2D4;
+            Line2D catLine2D3 = catFactory2D1.CreateLine(50, -50, -50, -50);
+            catLine2D3.StartPoint = catPoint2D3;
+            catLine2D3.EndPoint = catPoint2D4;
 
-        //    Line2D catLine2D4 = catFactory2D1.CreateLine(-50, -50, -50, 50);
-        //    catLine2D4.StartPoint = catPoint2D4;
-        //    catLine2D4.EndPoint = catPoint2D1;
+            Line2D catLine2D4 = catFactory2D1.CreateLine(-50, -50, -50, 50);
+            catLine2D4.StartPoint = catPoint2D4;
+            catLine2D4.EndPoint = catPoint2D1;
 
-        //    // Skizzierer verlassen
-        //    hsp_catiaSkizze.CloseEdition();
-        //    // Part aktualisieren
-        //    hsp_catiaPartDoc.Part.Update();
-        //}
+            // Skizzierer verlassen
+            hsp_catiaSkizze.CloseEdition();
+            // Part aktualisieren
+            hsp_catiaPartDoc.Part.Update();
+        }
 
-        //public void ErzeugeBalken(Double l)
-        //{
-        //    // Hauptkoerper in Bearbeitung definieren
-        //    hsp_catiaPartDoc.Part.InWorkObject = hsp_catiaPartDoc.Part.MainBody;
+        public void ErzeugeBalken(Double l)
+        {
+            // Hauptkoerper in Bearbeitung definieren
+            hsp_catiaPartDoc.Part.InWorkObject = hsp_catiaPartDoc.Part.MainBody;
 
-        //    // Block(Balken) erzeugen
-        //    ShapeFactory catShapeFactory1 = (ShapeFactory)hsp_catiaPartDoc.Part.ShapeFactory;
-        //    Pad catPad1 = catShapeFactory1.AddNewPad(hsp_catiaSkizze, l);
+            // Block(Balken) erzeugen
+            ShapeFactory catShapeFactory1 = (ShapeFactory)hsp_catiaPartDoc.Part.ShapeFactory;
+            Pad catPad1 = catShapeFactory1.AddNewPad(hsp_catiaSkizze, l);
 
-        //    // Block umbenennen
-        //    catPad1.set_Name("Balken");
+            // Block umbenennen
+            catPad1.set_Name("Balken");
 
-        //    // Part aktualisieren
-        //    hsp_catiaPartDoc.Part.Update();
-        //}
+            // Part aktualisieren
+            hsp_catiaPartDoc.Part.Update();
+        }
         #endregion
 
         #region Schraube
@@ -347,6 +347,36 @@ namespace Sprint3WPF
 
         #endregion
 
+        public void ErzeugeSechskant()
+        {
+            SF = (ShapeFactory)hsp_catiaPartDoc.Part.ShapeFactory;
+            HybridBodies catHybridBodies1 = hsp_catiaPartDoc.Part.HybridBodies;
+            HybridBody catHybridBody1;
+            try
+            {
+                catHybridBody1 = catHybridBodies1.Item("Geometrisches Set.1");
+            }
+            catch (Exception)
+            {
+                //MessageBox.Show("Kein geometrisches Set gefunden! " + Environment.NewLine +
+                //    "Ein PART manuell erzeugen und ein darauf achten, dass 'Geometisches Set' aktiviert ist.",
+                //    "Fehler", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+            catHybridBody1.set_Name("Profile");
+            // neue Skizze im ausgewaehlten geometrischen Set anlegen
+            mySketches = catHybridBody1.HybridSketches;
+            OriginElements catOriginElements = hsp_catiaPartDoc.Part.OriginElements;
+            Reference catReference1 = (Reference)catOriginElements.PlaneYZ;
+            hsp_catiaSkizze = mySketches.Add(catReference1);
+
+            // Achsensystem in Skizze erstellen 
+            ErzeugeAchsensystem();
+
+            // Part aktualisieren
+            hsp_catiaPartDoc.Part.Update();
+
+        }
 
     }
 }
