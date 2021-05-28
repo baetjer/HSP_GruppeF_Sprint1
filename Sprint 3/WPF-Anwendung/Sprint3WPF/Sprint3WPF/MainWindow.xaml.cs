@@ -40,6 +40,8 @@ namespace Sprint3WPF
         }
 
         int sheet_sk;
+        string gewinde_zahl;
+        string gewinde;
 
         double gw_output;
         double wert1_output;
@@ -77,9 +79,6 @@ namespace Sprint3WPF
             ti_Ausgabe.Visibility = Visibility.Visible;
             tc_main.SelectedIndex = 1;
 
-            Window MB1 = new Window();
-            MB1.Content = MessageBox.Show("yo", "ye", MessageBoxButton.OK);
-            MB1.SizeToContent = SizeToContent.WidthAndHeight;
         }
 
         private void cbx_gew_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -839,8 +838,19 @@ namespace Sprint3WPF
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
-            excelControl.Excel_Quit();
+            gewinde_zahl = Convert.ToString(gw_output);
+            gewinde = "M" + gewinde_zahl;
+
+            CatiaControl catia = new CatiaControl(gewinde, laenge_output, Gewindelaenge_output);
+
+            CatiaConnect cc = new CatiaConnect();
+
+            if (cc.CATIALaeuft() == false)
+            {
+                Window MB1 = new Window();
+                MB1.Content = MessageBox.Show("Laufende Catia Application nicht gefunden", "Fehler", MessageBoxButton.OK);
+                MB1.SizeToContent = SizeToContent.WidthAndHeight;
+            }
         }
 
         private void cbx_m3_SourceUpdated(object sender, DataTransferEventArgs e)
