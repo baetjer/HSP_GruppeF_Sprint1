@@ -8,7 +8,7 @@ namespace Sprint3WPF
 {
     class CatiaControl
     {
-        public CatiaControl()
+        public CatiaControl(string gw, double laenge, double gw_laenge)
         {
             try
             {
@@ -36,7 +36,7 @@ namespace Sprint3WPF
                     // cc.ErzeugeBalken(300);
                     // Console.WriteLine("4");
 
-                    Schraube dieSchraube = new Schraube(60, 50, "Standartgewinde", "M8", 5.3d, 4d, 1.25d);
+                    Schraube dieSchraube = new Schraube(laenge, gw_laenge, "Standartgewinde", gw, 5.3d, 4d, 1.25d);
 
                     cc.ErzeugeZylinder(dieSchraube);
                     Console.WriteLine("Schaft");
@@ -52,7 +52,7 @@ namespace Sprint3WPF
                 }
                 else
                 {
-                    Console.WriteLine("Laufende Catia Application nicht gefunden");
+
                 }
             }
             catch (Exception ex)
