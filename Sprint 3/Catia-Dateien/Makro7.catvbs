@@ -1,0 +1,247 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set partDocument1 = CATIA.ActiveDocument
+
+Set part1 = partDocument1.Part
+
+Set hybridBodies1 = part1.HybridBodies
+
+Set hybridBody1 = hybridBodies1.Item("Geometrisches Set.1")
+
+Set sketches1 = hybridBody1.HybridSketches
+
+Set sketch1 = sketches1.Item("Skizze.1")
+
+Set geometricElements1 = sketch1.GeometricElements
+
+Set axis2D1 = geometricElements1.Item("Absolute Achse")
+
+Set line2D1 = axis2D1.GetItem("H-Richtung")
+
+line2D1.ReportName = 1
+
+Set line2D2 = axis2D1.GetItem("V-Richtung")
+
+line2D2.ReportName = 2
+
+Set factory2D1 = sketch1.Factory2D
+
+Set point2D1 = factory2D1.CreatePoint(3.436953, 1.943893)
+
+point2D1.ReportName = 3
+
+Set circle2D1 = factory2D1.CreateClosedCircle(0.000000, 0.000000, 4.559439)
+
+Set point2D2 = axis2D1.GetItem("Ursprung")
+
+circle2D1.CenterPoint = point2D2
+
+circle2D1.ReportName = 4
+
+circle2D1.Construction = True
+
+Set circle2D2 = factory2D1.CreateClosedCircle(0.000000, 0.000000, 3.948590)
+
+circle2D2.CenterPoint = point2D2
+
+circle2D2.ReportName = 5
+
+circle2D2.Construction = True
+
+Set point2D3 = factory2D1.CreatePoint(4.559260, -0.040433)
+
+point2D3.ReportName = 6
+
+Set point2D4 = factory2D1.CreatePoint(2.314646, 3.928218)
+
+point2D4.ReportName = 7
+
+Set point2D5 = factory2D1.CreatePoint(-2.244614, 3.968652)
+
+point2D5.ReportName = 8
+
+Set point2D6 = factory2D1.CreatePoint(-4.559260, 0.040433)
+
+point2D6.ReportName = 9
+
+Set point2D7 = factory2D1.CreatePoint(-2.314646, -3.928218)
+
+point2D7.ReportName = 10
+
+Set point2D8 = factory2D1.CreatePoint(2.244614, -3.968652)
+
+point2D8.ReportName = 11
+
+Set line2D3 = factory2D1.CreateLine(4.559260, -0.040433, 2.314646, 3.928218)
+
+line2D3.ReportName = 12
+
+line2D3.StartPoint = point2D3
+
+line2D3.EndPoint = point2D4
+
+Set line2D4 = factory2D1.CreateLine(2.314646, 3.928218, -2.244614, 3.968652)
+
+line2D4.ReportName = 13
+
+line2D4.StartPoint = point2D4
+
+line2D4.EndPoint = point2D5
+
+Set line2D5 = factory2D1.CreateLine(-2.244614, 3.968652, -4.559260, 0.040433)
+
+line2D5.ReportName = 14
+
+line2D5.StartPoint = point2D5
+
+line2D5.EndPoint = point2D6
+
+Set line2D6 = factory2D1.CreateLine(-4.559260, 0.040433, -2.314646, -3.928218)
+
+line2D6.ReportName = 15
+
+line2D6.StartPoint = point2D6
+
+line2D6.EndPoint = point2D7
+
+Set line2D7 = factory2D1.CreateLine(-2.314646, -3.928218, 2.244614, -3.968652)
+
+line2D7.ReportName = 16
+
+line2D7.StartPoint = point2D7
+
+line2D7.EndPoint = point2D8
+
+Set line2D8 = factory2D1.CreateLine(2.244614, -3.968652, 4.559260, -0.040433)
+
+line2D8.ReportName = 17
+
+line2D8.StartPoint = point2D8
+
+line2D8.EndPoint = point2D3
+
+Set line2D9 = factory2D1.CreateLine(0.000000, 0.000000, 3.436953, 1.943893)
+
+line2D9.ReportName = 18
+
+line2D9.Construction = True
+
+line2D9.StartPoint = point2D2
+
+line2D9.EndPoint = point2D1
+
+Set constraints1 = sketch1.Constraints
+
+Set reference1 = part1.CreateReferenceFromObject(circle2D1)
+
+Set reference2 = part1.CreateReferenceFromObject(point2D3)
+
+Set constraint1 = constraints1.AddBiEltCst(catCstTypeOn, reference1, reference2)
+
+constraint1.Mode = catCstModeDrivingDimension
+
+Set reference3 = part1.CreateReferenceFromObject(circle2D1)
+
+Set reference4 = part1.CreateReferenceFromObject(point2D4)
+
+Set constraint2 = constraints1.AddBiEltCst(catCstTypeOn, reference3, reference4)
+
+constraint2.Mode = catCstModeDrivingDimension
+
+Set reference5 = part1.CreateReferenceFromObject(circle2D1)
+
+Set reference6 = part1.CreateReferenceFromObject(point2D5)
+
+Set constraint3 = constraints1.AddBiEltCst(catCstTypeOn, reference5, reference6)
+
+constraint3.Mode = catCstModeDrivingDimension
+
+Set reference7 = part1.CreateReferenceFromObject(circle2D1)
+
+Set reference8 = part1.CreateReferenceFromObject(point2D6)
+
+Set constraint4 = constraints1.AddBiEltCst(catCstTypeOn, reference7, reference8)
+
+constraint4.Mode = catCstModeDrivingDimension
+
+Set reference9 = part1.CreateReferenceFromObject(circle2D1)
+
+Set reference10 = part1.CreateReferenceFromObject(point2D7)
+
+Set constraint5 = constraints1.AddBiEltCst(catCstTypeOn, reference9, reference10)
+
+constraint5.Mode = catCstModeDrivingDimension
+
+Set reference11 = part1.CreateReferenceFromObject(circle2D1)
+
+Set reference12 = part1.CreateReferenceFromObject(point2D8)
+
+Set constraint6 = constraints1.AddBiEltCst(catCstTypeOn, reference11, reference12)
+
+constraint6.Mode = catCstModeDrivingDimension
+
+Set reference13 = part1.CreateReferenceFromObject(circle2D2)
+
+Set reference14 = part1.CreateReferenceFromObject(line2D3)
+
+Set constraint7 = constraints1.AddBiEltCst(catCstTypeTangency, reference13, reference14)
+
+constraint7.Mode = catCstModeDrivingDimension
+
+Set reference15 = part1.CreateReferenceFromObject(circle2D2)
+
+Set reference16 = part1.CreateReferenceFromObject(line2D4)
+
+Set constraint8 = constraints1.AddBiEltCst(catCstTypeTangency, reference15, reference16)
+
+constraint8.Mode = catCstModeDrivingDimension
+
+Set reference17 = part1.CreateReferenceFromObject(circle2D2)
+
+Set reference18 = part1.CreateReferenceFromObject(line2D5)
+
+Set constraint9 = constraints1.AddBiEltCst(catCstTypeTangency, reference17, reference18)
+
+constraint9.Mode = catCstModeDrivingDimension
+
+Set reference19 = part1.CreateReferenceFromObject(circle2D2)
+
+Set reference20 = part1.CreateReferenceFromObject(line2D6)
+
+Set constraint10 = constraints1.AddBiEltCst(catCstTypeTangency, reference19, reference20)
+
+constraint10.Mode = catCstModeDrivingDimension
+
+Set reference21 = part1.CreateReferenceFromObject(circle2D2)
+
+Set reference22 = part1.CreateReferenceFromObject(line2D7)
+
+Set constraint11 = constraints1.AddBiEltCst(catCstTypeTangency, reference21, reference22)
+
+constraint11.Mode = catCstModeDrivingDimension
+
+Set reference23 = part1.CreateReferenceFromObject(circle2D2)
+
+Set reference24 = part1.CreateReferenceFromObject(line2D8)
+
+Set constraint12 = constraints1.AddBiEltCst(catCstTypeTangency, reference23, reference24)
+
+constraint12.Mode = catCstModeDrivingDimension
+
+Set reference25 = part1.CreateReferenceFromObject(point2D1)
+
+Set reference26 = part1.CreateReferenceFromObject(line2D3)
+
+Set constraint13 = constraints1.AddBiEltCst(catCstTypeMidPoint, reference25, reference26)
+
+constraint13.Mode = catCstModeDrivingDimension
+
+sketch1.CloseEdition 
+
+part1.InWorkObject = hybridBody1
+
+part1.UpdateObject sketch1
+
+End Sub
