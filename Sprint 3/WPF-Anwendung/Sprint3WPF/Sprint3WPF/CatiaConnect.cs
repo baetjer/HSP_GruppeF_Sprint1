@@ -19,6 +19,7 @@ namespace Sprint3WPF
         ShapeFactory SF;
         HybridShapeFactory HSF;
         Pad mySchaft;
+        Pad myKopf;
         Body myBody;
         Part myPart;
         Sketches mySketches;
@@ -347,7 +348,7 @@ namespace Sprint3WPF
 
         #endregion
 
-        public void ErzeugeSechskant(Schraubenkopf mySchraubenkopf)
+        public void ErzeugeSechskantKopf(Schraubenkopf mySchraubenkopf)
         {
             myPart = hsp_catiaPartDoc.Part;
             Bodies bodies = myPart.Bodies;
@@ -367,21 +368,44 @@ namespace Sprint3WPF
             // ... Sechskant Form
             double H0 = 0;
             double V0 = 0;
+
+            double H1 = 0;
+            double V1 = 0;
             Point2D Ursprung = catFactory2D1.CreatePoint(H0, V0);
-            Circle2D GeschlossenerKreis = catFactory2D1.CreateClosedCircle(H0, V0, mySchraubenkopf.wert1);
+            Circle2D GeschlossenerKreis1 = catFactory2D1.CreateClosedCircle(H0, V0, mySchraubenkopf.wert1);
+            Circle2D GeschlossenerKreis2 = catFactory2D1.CreateClosedCircle(H0, V0, 6);
+            GeschlossenerKreis1.CenterPoint = Ursprung;
+            GeschlossenerKreis2.CenterPoint = Ursprung;
             //Punkte
-            Point2D point2D3 = catFactory2D1.CreatePoint(3, -mySchraubenkopf.wert1);
-            Point2D point2D4 = catFactory2D1.CreatePoint(7, 0);
-            Point2D point2D5 = catFactory2D1.CreatePoint(3, mySchraubenkopf.wert1);
-            Point2D point2D6 = catFactory2D1.CreatePoint(-3, mySchraubenkopf.wert1);
-            Point2D point2D7 = catFactory2D1.CreatePoint(-7, 0);
-            Point2D point2D8 = catFactory2D1.CreatePoint(-3, mySchraubenkopf.wert1);
+            //Point2D point2D1 = catFactory2D1.CreatePoint(6, -mySchraubenkopf.wert2 / 2);
+            //Point2D point2D2 = Ursprung;
+            Point2D point2D3 = catFactory2D1.CreatePoint(H1, V1);
+            Point2D point2D4 = catFactory2D1.CreatePoint(H1, V1);
+            Point2D point2D5 = catFactory2D1.CreatePoint(H1, V1);
+            Point2D point2D6 = catFactory2D1.CreatePoint(H1, V1);
+            Point2D point2D7 = catFactory2D1.CreatePoint(H1, V1);
+            Point2D point2D8 = catFactory2D1.CreatePoint(H1, V1);
             //Linien
-            Line2D catLine2D3 = catFactory2D1.CreateLine(3, -mySchraubenkopf.wert1, 7, 0);
+            Line2D catLine2D3 = catFactory2D1.CreateLine(mySchraubenkopf.wert2 / 2, -6, mySchraubenkopf.wert1, 0);
             catLine2D3.StartPoint = point2D3;
             catLine2D3.EndPoint = point2D4;
-
-            GeschlossenerKreis.CenterPoint = Ursprung;
+            Line2D catLine2D4 = catFactory2D1.CreateLine(mySchraubenkopf.wert1, 0, mySchraubenkopf.wert2/2, 6);
+            catLine2D3.StartPoint = point2D4;
+            catLine2D3.EndPoint = point2D5;
+            Line2D catLine2D5 = catFactory2D1.CreateLine(mySchraubenkopf.wert2 / 2, 6, -mySchraubenkopf.wert1, 6);
+            catLine2D3.StartPoint = point2D5;
+            catLine2D3.EndPoint = point2D6;
+            Line2D catLine2D6 = catFactory2D1.CreateLine(-mySchraubenkopf.wert2 / 2, 6, -mySchraubenkopf.wert1, 0);
+            catLine2D3.StartPoint = point2D6;
+            catLine2D3.EndPoint = point2D7;
+            Line2D catLine2D7 = catFactory2D1.CreateLine(-mySchraubenkopf.wert1, 0, -mySchraubenkopf.wert2 / 2, -6);
+            catLine2D3.StartPoint = point2D7;
+            catLine2D3.EndPoint = point2D8;
+            Line2D catLine2D8 = catFactory2D1.CreateLine(-mySchraubenkopf.wert2 / 2, -6, mySchraubenkopf.wert2 / 2, -mySchraubenkopf.wert1);
+            catLine2D3.StartPoint = point2D8;
+            catLine2D3.EndPoint = point2D3;
+            //Referenzen Punkte
+            //Reference reference1 = myPart.CreateReferenceFromName(GeschlossenerKreis1);
 
             // ... schliessen
             hsp_catiaSkizze.CloseEdition();
@@ -392,14 +416,34 @@ namespace Sprint3WPF
             myPart.Update();
         }
 
-        public void ErzeugeZylinderIS()
+        public void ErzeugeZylinderKopf(Schraubenkopf mySchraubenkopf)
         {
 
-        }
+            OriginElements catOriginElements = hsp_catiaPartDoc.Part.OriginElements;
+            Reference RefmyPlaneZX = (Reference)catOriginElements.PlaneZX;
 
-        public void ErzeugeZylinderS()
-        {
+            Sketch myGewinde = mySketches.Add(RefmyPlaneZX);
+            myPart.InWorkObject = myGewinde;
+            myGewinde.set_Name("Kopf");
 
+            // Skizze...
+            // ... oeffnen für die Bearbeitung
+            Factory2D catFactory2D1 = hsp_catiaSkizze.OpenEdition();
+
+            // ... Kreis erstellen
+            double H0 = 0;
+            double V0 = 0;
+            Point2D Ursprung = catFactory2D1.CreatePoint(H0, V0);
+            Circle2D Kreis = catFactory2D1.CreateCircle(H0, V0, mySchraubenkopf.wert2, 0, 0);
+            Kreis.CenterPoint = Ursprung;
+
+            // ... schliessen
+            hsp_catiaSkizze.CloseEdition();
+
+            // Schraubenkopf durch ein Pad erstellen
+            Reference RefMyKopf = myPart.CreateReferenceFromObject(hsp_catiaSkizze);
+            myKopf = SF.AddNewPadFromRef(RefMyKopf, mySchraubenkopf.wert3);
+            myPart.Update();
         }
 
         public void ErzeugeSenk()
