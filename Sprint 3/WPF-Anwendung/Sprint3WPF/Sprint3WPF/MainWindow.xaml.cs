@@ -296,7 +296,6 @@ namespace Sprint3WPF
             cbx_m8.Visibility = Visibility.Visible;
             cbx_m10.Visibility = Visibility.Visible;
             cbx_m12.Visibility = Visibility.Visible;
-            cbx_m14.Visibility = Visibility.Visible;
             cbx_m16.Visibility = Visibility.Visible;
             cbx_m20.Visibility = Visibility.Visible;
             cbx_m24.Visibility = Visibility.Visible;
@@ -339,7 +338,6 @@ namespace Sprint3WPF
 
             //Visibility Gewinde
             showallgewinde();
-            cbx_m14.Visibility = Visibility.Hidden;
 
             //Visibility tc Main 
             tc_main.Visibility = Visibility.Visible;
@@ -353,7 +351,6 @@ namespace Sprint3WPF
 
             //visibility Gewinde
             showallgewinde();
-            cbx_m14.Visibility = Visibility.Hidden;
 
             //Visibility tc Main 
             tc_main.Visibility = Visibility.Visible;
@@ -368,7 +365,6 @@ namespace Sprint3WPF
             // Visibility Gewinde
             showallgewinde();
             cbx_m12.Visibility = Visibility.Hidden;
-            cbx_m14.Visibility = Visibility.Hidden;
             cbx_m16.Visibility = Visibility.Hidden;
             cbx_m20.Visibility = Visibility.Hidden;
             cbx_m24.Visibility = Visibility.Hidden;
@@ -390,7 +386,6 @@ namespace Sprint3WPF
 
             // Visibility Gewinde
             showallgewinde();
-            cbx_m14.Visibility = Visibility.Hidden;
             cbx_m24.Visibility = Visibility.Hidden;
             cbx_m30.Visibility = Visibility.Hidden;
             cbx_m36.Visibility = Visibility.Hidden;
@@ -526,29 +521,25 @@ namespace Sprint3WPF
             {
                 gewinde = excelControl.getWerte(sheet, 8);
             }
-            else if (cbx_m14.IsSelected == true)
+            else if (cbx_m16.IsSelected == true)
             {
                 gewinde = excelControl.getWerte(sheet, 9);
             }
-            else if (cbx_m16.IsSelected == true)
+            else if (cbx_m20.IsSelected == true)
             {
                 gewinde = excelControl.getWerte(sheet, 10);
             }
-            else if (cbx_m20.IsSelected == true)
+            else if (cbx_m24.IsSelected == true)
             {
                 gewinde = excelControl.getWerte(sheet, 11);
             }
-            else if (cbx_m24.IsSelected == true)
+            else if (cbx_m30.IsSelected == true)
             {
                 gewinde = excelControl.getWerte(sheet, 12);
             }
-            else if (cbx_m30.IsSelected == true)
-            {
-                gewinde = excelControl.getWerte(sheet, 13);
-            }
             else if (cbx_m36.IsSelected == true)
             {
-                gewinde = excelControl.getWerte(sheet, 14);
+                gewinde = excelControl.getWerte(sheet, 13);
             }
 
             return gewinde;
