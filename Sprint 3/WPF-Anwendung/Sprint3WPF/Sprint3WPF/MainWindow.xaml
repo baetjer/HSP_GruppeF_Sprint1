@@ -67,7 +67,6 @@
                             <ComboBoxItem  x:Name="cbx_m8" Content="M8"/>
                             <ComboBoxItem  x:Name="cbx_m10" Content="M10"/>
                             <ComboBoxItem  x:Name="cbx_m12" Content="M12"/>
-                            <ComboBoxItem  x:Name="cbx_m14" Content="M14"/>
                             <ComboBoxItem  x:Name="cbx_m16" Content="M16"/>
                             <ComboBoxItem  x:Name="cbx_m20" Content="M20"/>
                             <ComboBoxItem  x:Name="cbx_m24" Content="M24"/>
