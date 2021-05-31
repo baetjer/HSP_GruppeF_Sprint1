@@ -420,30 +420,44 @@ namespace Sprint3WPF
         {
 
             OriginElements catOriginElements = hsp_catiaPartDoc.Part.OriginElements;
-            Reference RefmyPlaneZX = (Reference)catOriginElements.PlaneZX;
+            //Reference RefmyPlaneYZ = (Reference)catOriginElements.PlaneYZ;
+            Reference reference = myPart.CreateReferenceFromName("Selection_RSur:(Face:(Brp:(Pad.1;2);None:();Cf12:());Slot.1_ResultOUT;Z0;G9061)");
 
-            Sketch myGewinde = mySketches.Add(RefmyPlaneZX);
-            myPart.InWorkObject = myGewinde;
-            myGewinde.set_Name("Kopf");
+            Sketch mySK = mySketches.Add(reference);
+            myPart.InWorkObject = mySK;
+            mySK.set_Name("Kopf");
 
             // Skizze...
             // ... oeffnen für die Bearbeitung
-            Factory2D catFactory2D1 = hsp_catiaSkizze.OpenEdition();
+            Factory2D catFactory2D1 = mySK.OpenEdition();
 
             // ... Kreis erstellen
             double H0 = 0;
             double V0 = 0;
             Point2D Ursprung = catFactory2D1.CreatePoint(H0, V0);
-            Circle2D Kreis = catFactory2D1.CreateCircle(H0, V0, mySchraubenkopf.wert2, 0, 0);
+            Circle2D Kreis = catFactory2D1.CreateClosedCircle(H0, V0, mySchraubenkopf.wert2 / 2);
             Kreis.CenterPoint = Ursprung;
 
             // ... schliessen
-            hsp_catiaSkizze.CloseEdition();
+            mySK.CloseEdition();
+            myPart.Update();
 
             // Schraubenkopf durch ein Pad erstellen
-            Reference RefMyKopf = myPart.CreateReferenceFromObject(hsp_catiaSkizze);
-            myKopf = SF.AddNewPadFromRef(RefMyKopf, mySchraubenkopf.wert3);
+            //Reference RefMyKopf = myPart.CreateReferenceFromObject(mySK);
+            //myKopf = SF.AddNewPadFromRef(RefMyKopf, mySchraubenkopf.wert3);
+            //myPart.Update();
+
+            //Körper in Baerbeitung definieren
+            hsp_catiaPartDoc.Part.InWorkObject = hsp_catiaPartDoc.Part.MainBody;
+
+            //Block erzeugen
+            ShapeFactory catShapeFactory1 = (ShapeFactory)hsp_catiaPartDoc.Part.ShapeFactory;
+            Pad catPad1 = catShapeFactory1.AddNewPad(mySK, mySchraubenkopf.wert3);
+
+            catPad1.set_Name("Kopf");
             myPart.Update();
+
+
         }
 
         public void ErzeugeSenk()
