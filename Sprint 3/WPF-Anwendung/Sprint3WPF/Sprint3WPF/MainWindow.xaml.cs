@@ -837,8 +837,6 @@ namespace Sprint3WPF
             gewinde_zahl = Convert.ToString(gw_output);
             gewinde = "M" + gewinde_zahl;
 
-            CatiaControl catia = new CatiaControl(gewinde, laenge_output, Gewindelaenge_output, gw_output, wert1_output, wert2_output, wert3_output);
-
             CatiaConnect cc = new CatiaConnect();
 
             if (cc.CATIALaeuft() == false)
@@ -847,6 +845,13 @@ namespace Sprint3WPF
                 MB1.Content = MessageBox.Show("Laufende Catia Application nicht gefunden", "Fehler", MessageBoxButton.OK);
                 MB1.SizeToContent = SizeToContent.WidthAndHeight;
             }
+            else
+            {
+                CatiaControl catia = new CatiaControl(gewinde, laenge_output, Gewindelaenge_output, gw_output, wert1_output, wert2_output, wert3_output);
+                //Schraubenkopf schraubenkopf = new Schraubenkopf(wert1_output, wert2_output, wert3_output);
+                //cc.ErzeugeZylinderKopf(schraubenkopf);
+            }
+
         }
 
         private void cbx_m3_SourceUpdated(object sender, DataTransferEventArgs e)
