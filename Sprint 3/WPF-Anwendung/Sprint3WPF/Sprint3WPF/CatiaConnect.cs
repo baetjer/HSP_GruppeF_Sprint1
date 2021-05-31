@@ -456,8 +456,6 @@ namespace Sprint3WPF
 
             catPad1.set_Name("Kopf");
             myPart.Update();
-
-
         }
 
         public void ErzeugeSenk()
