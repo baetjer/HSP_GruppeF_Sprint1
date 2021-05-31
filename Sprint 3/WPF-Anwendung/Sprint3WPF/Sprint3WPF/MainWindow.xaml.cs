@@ -847,9 +847,16 @@ namespace Sprint3WPF
             }
             else
             {
-                CatiaControl catia = new CatiaControl(gewinde, laenge_output, Gewindelaenge_output, gw_output, wert1_output, wert2_output, wert3_output);
-                //Schraubenkopf schraubenkopf = new Schraubenkopf(wert1_output, wert2_output, wert3_output);
-                //cc.ErzeugeZylinderKopf(schraubenkopf);
+                if (tvi_zy2.IsSelected == true)
+                {
+                    CatiaControl catia = new CatiaControl(gewinde, laenge_output, Gewindelaenge_output, gw_output, wert2_output, wert1_output, wert3_output);
+                }
+                else
+                {
+                    CatiaControl catia = new CatiaControl(gewinde, laenge_output, Gewindelaenge_output, gw_output, wert1_output, wert2_output, wert3_output);
+                    //Schraubenkopf schraubenkopf = new Schraubenkopf(wert1_output, wert2_output, wert3_output);
+                    //cc.ErzeugeZylinderKopf(schraubenkopf);
+                }
             }
 
         }
