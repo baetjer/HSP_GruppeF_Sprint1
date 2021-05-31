@@ -1,0 +1,43 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set partDocument1 = CATIA.ActiveDocument
+
+Set part1 = partDocument1.Part
+
+Set bodies1 = part1.Bodies
+
+Set body1 = bodies1.Item("Hauptkörper")
+
+part1.InWorkObject = body1
+
+part1.InWorkObject = body1
+
+Set shapeFactory1 = part1.ShapeFactory
+
+Set reference1 = part1.CreateReferenceFromName("")
+
+Set pad1 = shapeFactory1.AddNewPadFromRef(reference1, 20.000000)
+
+Set hybridBodies1 = part1.HybridBodies
+
+Set hybridBody1 = hybridBodies1.Item("Profile")
+
+Set sketches1 = hybridBody1.HybridSketches
+
+Set sketch1 = sketches1.Item("Kopf")
+
+Set reference2 = part1.CreateReferenceFromObject(sketch1)
+
+pad1.SetProfileElement reference2
+
+Set limit1 = pad1.FirstLimit
+
+Set length1 = limit1.Dimension
+
+length1.Value = 10.000000
+
+part1.UpdateObject pad1
+
+End Sub
