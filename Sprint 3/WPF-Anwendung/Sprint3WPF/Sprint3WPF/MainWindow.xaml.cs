@@ -46,6 +46,7 @@ namespace Sprint3WPF
         double gw_output;
         double wert1_output;
         double wert2_output;
+        double wert3_output;
         double laenge_output;
         double Gewindelaenge_output;
         double dichte_output = 7.85;
@@ -560,6 +561,7 @@ namespace Sprint3WPF
                 wert2_output = gewinde[2];
                 wert3.Content = "k:";
                 wert3_ausgabe.Content = gewinde[3];
+                wert3_output = gewinde[3];
             }
             else if (tvi_zy1.IsSelected == true)
             {
@@ -571,6 +573,7 @@ namespace Sprint3WPF
                 wert2_output = gewinde[2];
                 wert3.Content = "k:";
                 wert3_ausgabe.Content = gewinde[3];
+                wert3_output = gewinde[3];
             }
             else if (tvi_zy2.IsSelected == true)
             {
@@ -582,6 +585,7 @@ namespace Sprint3WPF
                 wert2_output = gewinde[2];
                 wert3.Content = "k:";
                 wert3_ausgabe.Content = gewinde[3];
+                wert3_output = gewinde[3];
             }
             else if (tvi_ss.IsSelected == true)
             {
@@ -593,6 +597,7 @@ namespace Sprint3WPF
                 wert2_output = gewinde[2];
                 wert3.Content = "k:";
                 wert3_ausgabe.Content = gewinde[3];
+                wert3_output = gewinde[3];
             }
         }
 
@@ -832,7 +837,7 @@ namespace Sprint3WPF
             gewinde_zahl = Convert.ToString(gw_output);
             gewinde = "M" + gewinde_zahl;
 
-            CatiaControl catia = new CatiaControl(gewinde, laenge_output, Gewindelaenge_output, gw_output);
+            CatiaControl catia = new CatiaControl(gewinde, laenge_output, Gewindelaenge_output, gw_output, wert1_output, wert2_output, wert3_output);
 
             CatiaConnect cc = new CatiaConnect();
 
