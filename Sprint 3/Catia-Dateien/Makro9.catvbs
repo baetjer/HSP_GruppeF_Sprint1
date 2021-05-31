@@ -1,0 +1,91 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set partDocument1 = CATIA.ActiveDocument
+
+Set part1 = partDocument1.Part
+
+Set hybridShapeFactory1 = part1.HybridShapeFactory
+
+Set bodies1 = part1.Bodies
+
+Set body1 = bodies1.Item("Hauptkörper")
+
+Set shapes1 = body1.Shapes
+
+Set slot1 = shapes1.Item("Rille.1")
+
+Set reference1 = part1.CreateReferenceFromBRepName("RSur:(Face:(Brp:(Pad.1;2);None:();Cf12:());WithPermanentBody;WithoutBuildError;WithSelectingFeatureSupport;MFBRepVersion_CXR29)", slot1)
+
+Set hybridShapePlaneOffset1 = hybridShapeFactory1.AddNewPlaneOffset(reference1, 0.000000, True)
+
+body1.InsertHybridShape hybridShapePlaneOffset1
+
+part1.InWorkObject = hybridShapePlaneOffset1
+
+part1.Update 
+
+Set sketches1 = body1.Sketches
+
+Set hybridShapes1 = body1.HybridShapes
+
+Set reference2 = hybridShapes1.Item("Ebene.1")
+
+Set sketch1 = sketches1.Add(reference2)
+
+Dim arrayOfVariantOfDouble1(8)
+arrayOfVariantOfDouble1(0) = 40.000000
+arrayOfVariantOfDouble1(1) = 0.000000
+arrayOfVariantOfDouble1(2) = 0.000000
+arrayOfVariantOfDouble1(3) = 0.000000
+arrayOfVariantOfDouble1(4) = -1.000000
+arrayOfVariantOfDouble1(5) = 0.000000
+arrayOfVariantOfDouble1(6) = 0.000000
+arrayOfVariantOfDouble1(7) = 0.000000
+arrayOfVariantOfDouble1(8) = 1.000000
+sketch1.SetAbsoluteAxisData arrayOfVariantOfDouble1
+
+part1.InWorkObject = sketch1
+
+Set factory2D1 = sketch1.OpenEdition()
+
+Set geometricElements1 = sketch1.GeometricElements
+
+Set axis2D1 = geometricElements1.Item("Absolute Achse")
+
+Set line2D1 = axis2D1.GetItem("H-Richtung")
+
+line2D1.ReportName = 1
+
+Set line2D2 = axis2D1.GetItem("V-Richtung")
+
+line2D2.ReportName = 2
+
+Set circle2D1 = factory2D1.CreateClosedCircle(0.000000, 0.000000, 5.000000)
+
+Set point2D1 = axis2D1.GetItem("Ursprung")
+
+circle2D1.CenterPoint = point2D1
+
+circle2D1.ReportName = 3
+
+Set constraints1 = sketch1.Constraints
+
+Set reference3 = part1.CreateReferenceFromObject(circle2D1)
+
+Set constraint1 = constraints1.AddMonoEltCst(catCstTypeRadius, reference3)
+
+constraint1.Mode = catCstModeDrivingDimension
+
+Set length1 = constraint1.Dimension
+
+length1.Value = 5.000000
+
+sketch1.CloseEdition 
+
+part1.InWorkObject = sketch1
+
+part1.UpdateObject sketch1
+
+End Sub
