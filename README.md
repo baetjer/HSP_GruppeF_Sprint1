@@ -1,12 +1,12 @@
 HSP - Gruppe F [SS21]
 
-Schraube
+Schrauben
 
 Sprint 1:
-Consolen-Anwendung
+Consolen-Anwendung (Machbarkeit)
 
 Sprint 2:
-WPF-Anwendung
+WPF-Anwendung (Prototype)
 
 Sprint 3:
-API Catia V5-Anbindung
+API Catia V5-Anbindung (Lösung)
