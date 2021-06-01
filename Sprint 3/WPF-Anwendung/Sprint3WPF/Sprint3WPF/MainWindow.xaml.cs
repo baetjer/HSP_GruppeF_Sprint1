@@ -52,10 +52,8 @@ namespace Sprint3WPF
         double dichte_output = 7.85;
         double stueckzahl_output;
         double volumen_output;
-        double schraube_preis_output = 0.5;
-        double werkstoff_preis_output = 0.1;
 
-
+        double preis;
 
         //Auswahl bestätigen
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -73,8 +71,9 @@ namespace Sprint3WPF
             volumen_output = Math.Round(berechnungen.getVolumen(wert1_output, wert2_output, gw_output, laenge_output), 3);
             volumen_ausgabe.Content = volumen_output;
             gewicht_ausgabe.Content = Math.Round(berechnungen.getMasse(volumen_output, dichte_output, stueckzahl_output), 3);
+            double gewicht = Math.Round(berechnungen.getMasse(volumen_output, dichte_output, stueckzahl_output), 3);
             material_ausgabe.Content = "C20";
-            preis_ausgabe.Content = berechnungen.getPreis(stueckzahl_output, schraube_preis_output, werkstoff_preis_output);
+            preis_ausgabe.Content = berechnungen.getPreis(gewicht, preis);
 
             //Tabcontrol visibility
             ti_Ausgabe.Visibility = Visibility.Visible;
@@ -333,6 +332,8 @@ namespace Sprint3WPF
 
         private void tvi_sk_Selected(object sender, RoutedEventArgs e)
         {
+            preis = 0.00541;
+
             //Visibility Image
             hideallimages();
             img_DIN_4014.Visibility = Visibility.Visible;
@@ -346,6 +347,8 @@ namespace Sprint3WPF
 
         private void tvi_zy1_Selected(object sender, RoutedEventArgs e)
         {
+            preis = 0.00701;
+
             //Visibility Image
             hideallimages();
             img_DIN_4762.Visibility = Visibility.Visible;
@@ -359,6 +362,8 @@ namespace Sprint3WPF
 
         private void tvi_zy2_Selected(object sender, RoutedEventArgs e)
         {
+            preis = 0.01043;
+
             //Visibility Image
             hideallimages();
             img_DIN_1207.Visibility = Visibility.Visible;
@@ -380,6 +385,8 @@ namespace Sprint3WPF
 
         private void tvi_ss_Selected(object sender, RoutedEventArgs e)
         {
+            preis = 0.00669;
+
             //Visibility Image
             hideallimages();
             Img_DIN_10642.Visibility = Visibility.Visible;
