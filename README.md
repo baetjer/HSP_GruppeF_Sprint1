@@ -1,6 +1,6 @@
 HSP - Gruppe F [SS21]
 
-Schrauben
+Schrauben-Programm
 
 Sprint 1:
 Consolen-Anwendung (Machbarkeit)
