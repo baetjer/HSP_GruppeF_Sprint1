@@ -54,6 +54,7 @@ namespace Sprint3WPF
         double volumen_output;
 
         double preis;
+        double festigkeit_preis;
 
         //Auswahl bestätigen
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -73,7 +74,7 @@ namespace Sprint3WPF
             gewicht_ausgabe.Content = Math.Round(berechnungen.getMasse(volumen_output, dichte_output, stueckzahl_output), 3);
             double gewicht = Math.Round(berechnungen.getMasse(volumen_output, dichte_output, stueckzahl_output), 3);
             material_ausgabe.Content = "C20";
-            preis_ausgabe.Content = berechnungen.getPreis(gewicht, preis);
+            preis_ausgabe.Content = berechnungen.getPreis(gewicht, preis, festigkeit_preis);
 
             //Tabcontrol visibility
             ti_Ausgabe.Visibility = Visibility.Visible;
@@ -434,6 +435,7 @@ namespace Sprint3WPF
                 List<double> erg = excelControl.getWerte(6, 2);
                 zugfestigkeit_ausgabe.Content = erg[0];
                 streckgrenze_ausgabe.Content = erg[1];
+                festigkeit_preis = 1;
             }
             else if (rb_8_8.IsChecked == true)
             {
@@ -441,6 +443,7 @@ namespace Sprint3WPF
                 List<double> erg = excelControl.getWerte(6, 3);
                 zugfestigkeit_ausgabe.Content = erg[0];
                 streckgrenze_ausgabe.Content = erg[1];
+                festigkeit_preis = 1.1;
             }
             else if (rb_9_8.IsChecked == true)
             {
@@ -448,6 +451,7 @@ namespace Sprint3WPF
                 List<double> erg = excelControl.getWerte(6, 4);
                 zugfestigkeit_ausgabe.Content = erg[0];
                 streckgrenze_ausgabe.Content = erg[1];
+                festigkeit_preis = 1.2;
             }
             else if (rb_10_9.IsChecked == true)
             {
@@ -455,6 +459,7 @@ namespace Sprint3WPF
                 List<double> erg = excelControl.getWerte(6, 5);
                 zugfestigkeit_ausgabe.Content = erg[0];
                 streckgrenze_ausgabe.Content = erg[1];
+                festigkeit_preis = 1.3;
             }
         }
 
