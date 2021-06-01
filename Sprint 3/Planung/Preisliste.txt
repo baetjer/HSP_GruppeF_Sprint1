@@ -1,4 +1,4 @@
-Senkschraube ISO 10642		6,69€/kg
-Zylinderschraube ISO 1207	10,43€/kg
-Zylinderschraube ISO 4762	7,01€/kg
-Sechskant ISO 4014		5,41€/kg
+Senkschraube ISO 10642		6,69€/kg => 0,00669
+Zylinderschraube ISO 1207	10,43€/kg => 0,01043
+Zylinderschraube ISO 4762	7,01€/kg => 0,00701
+Sechskant ISO 4014		5,41€/kg => 0,00541
