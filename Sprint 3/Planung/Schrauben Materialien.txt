@@ -1,0 +1,4 @@
+Material:		Dichte:
+Stahl 			7,87 g/cm^3
+Aluminium		2,7 g/cm^3
+Titan			4,5 g/cm^3		
