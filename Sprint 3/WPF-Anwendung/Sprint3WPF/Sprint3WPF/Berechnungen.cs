@@ -49,11 +49,11 @@ namespace Sprint3WPF
         }
 
         //Preis
-        public double getPreis(double stkzahl, double m_einzel_ergebnis, double wspreis)
+        public double getPreis(double m_packung_ergebnis, double schraubenart_preis)
         {
             double p_ergebnis;
 
-            p_ergebnis = stkzahl * m_einzel_ergebnis * wspreis;
+            p_ergebnis = m_packung_ergebnis * schraubenart_preis;
 
             return Math.Round(p_ergebnis, 2);
         }
