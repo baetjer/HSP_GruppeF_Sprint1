@@ -79,7 +79,6 @@ namespace Sprint3WPF
             //Tabcontrol visibility
             ti_Ausgabe.Visibility = Visibility.Visible;
             tc_main.SelectedIndex = 1;
-
         }
 
         private void cbx_gew_SelectionChanged(object sender, SelectionChangedEventArgs e)
